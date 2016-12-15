@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'application#index'
 
   resources :charities, only: [:index, :show, :create]
 
