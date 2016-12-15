@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+// IMPORT styling for other sections
+@import "navigation";
+@import "front_page";
+
+
+// GLOBAL
+html body {
+  width: 85%;
+}
