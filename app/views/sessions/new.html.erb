@@ -1,0 +1,23 @@
+<%= form_tag '/login' do %>
+  <fieldset>
+  <div id="legend">
+    <legend class="signin">Sign In</legend>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="user_first_name">Email:</label>
+    <div class="controls">
+      <%= text_field_tag :email %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="user_first_name">Password:</label>
+    <div class="controls">
+      <%= password_field_tag :password %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag 'Submit', class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
