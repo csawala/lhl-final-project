@@ -1,0 +1,2 @@
+class GoodsType < ApplicationRecord
+end

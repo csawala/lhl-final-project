@@ -10,9 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161215004132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "goods_types", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "org_categories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "organization_id"
+    t.integer  "category_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.boolean  "offers"
+    t.boolean  "needs"
+    t.index ["category_id"], name: "index_org_categories_on_category_id", using: :btree
+    t.index ["organization_id"], name: "index_org_categories_on_organization_id", using: :btree
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "org_categories", "categories"
+  add_foreign_key "org_categories", "organizations"
 end

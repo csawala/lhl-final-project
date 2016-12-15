@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'welcome#index'
+
+  resources :charities, only: [:index, :show, :create]
+
+  resources :dashboard, only: [:show, :edit]
+
+  resources :do_good
+
+  # ----  NEW USER ROUTES  ----
+  get '/register' => 'users#new'
+  post '/users'   => 'users#create'
+
+  # ----  SESSION ROUTES  ----
+  get '/login'    => 'sessions#new'
+  post '/login'   => 'sessions#create'
+  get '/logout'   => 'sessions#destroy'
 end
