@@ -50,7 +50,6 @@ cat3 = Category.create!({ name: 'food' })
 cat4 = Category.create!({ name: 'humanitarian' })
 cat5 = Category.create!({ name: 'animal' })
 cat6 = Category.create!({ name: 'environment' })
-cat7 = Category.create!({ name: 'x`' })
 
 ## --- ORGANIZATIONS ---
 
@@ -85,10 +84,10 @@ org2 = Organization.create!({
 ## --- ORG-CATEGORIES ---
 OrgCategory.destroy_all
 puts "Re-creating OrgCategories"
-# cat1.org_category.create!({
+# org1.org_category.create!({
 #   offers:
 #   needs:
-#   organization_id:
+#   category_id:
 #   })
 
 ## --- GOODS-TYPE ---
