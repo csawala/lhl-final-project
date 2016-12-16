@@ -14,8 +14,6 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import "font-awesome";
 @import "materialize";
 // IMPORT styling for other sections
@@ -25,6 +23,6 @@
 
 // GLOBAL
 html body {
-  width: 85%;
+  // width: 85%;
   font-family: Roboto, sans-serif;
 }
