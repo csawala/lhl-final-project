@@ -17,8 +17,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
-
+@import "materialize";
 // IMPORT styling for other sections
 @import "navigation";
 @import "front_page";
@@ -27,4 +26,5 @@
 // GLOBAL
 html body {
   width: 85%;
+  font-family: Roboto, sans-serif;
 }

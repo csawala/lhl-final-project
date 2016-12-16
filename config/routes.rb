@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'application#index'
 
-  resources :charities, only: [:index, :show, :create]
+  resources :organizations, only: [:index, :show, :create]
 
   resources :dashboard, only: [:show, :edit]
 

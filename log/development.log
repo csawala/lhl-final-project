@@ -3128,3 +3128,1262 @@ Processing by CharitiesController#index as HTML
 Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-12-16 11:26:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.3ms)
+  Rendered application/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 4332ms (Views: 4324.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:44:42 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.2ms)
+  Rendered application/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sass.html" for ::1 at 2016-12-16 11:45:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sass.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.4ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.3ms)
+Started GET "/" for ::1 at 2016-12-16 11:45:29 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (1.1ms)
+  Rendered application/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+  Rendered layouts/_bottom_nav.html.erb (2.2ms)
+Completed 200 OK in 232ms (Views: 230.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:47:25 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.2ms)
+  Rendered application/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3474ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$button-border".):
+    4:     <title>inNeed</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/materlialize/_buttons.scss:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__206929345729015996_70352146738720'
+app/controllers/application_controller.rb:5:in `index'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.2ms)
+Started GET "/" for ::1 at 2016-12-16 11:49:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.4ms)
+  Rendered application/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 4439ms (Views: 4438.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:50:21 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.3ms)
+  Rendered application/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:50:28 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.3ms)
+  Rendered application/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:51:12 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.2ms)
+  Rendered application/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:51:16 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.4ms)
+  Rendered application/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sass.html" for ::1 at 2016-12-16 11:53:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sass.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (3.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.8ms)
+Started GET "/" for ::1 at 2016-12-16 11:53:12 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered application/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.9ms)
+Completed 200 OK in 135ms (Views: 134.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 11:53:37 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.4ms)
+  Rendered application/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 11:53:38 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered charities/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 66.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 11:54:39 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.6ms)
+  Rendered charities/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-12-16 11:54:40 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-12-16 11:55:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-12-16 11:55:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-12-16 11:57:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 11:58:28 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.6ms)
+  Rendered charities/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 198ms (Views: 196.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 11:58:32 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered charities/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:06:11 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered charities/index.html.erb within layouts/application (3.8ms)
+  [1m[36mOrganization Load (2.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+Completed 500 Internal Server Error in 3644ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `google_webfonts_init' for #<#<Class:0x007ff83d63bce8>:0x007ff84250a3b0>):
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:     <%= google_webfonts_init({
+    10:       google: ['Roboto']
+    11:       }) %>
+    12: 
+  
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__206929345729015996_70352120534360'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.0ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:06:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered charities/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 509ms (Views: 502.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:07:40 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.6ms)
+  Rendered charities/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 3583ms (Views: 3581.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:11:05 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.6ms)
+  Rendered charities/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 3587ms (Views: 3585.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:11:40 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.5ms)
+  Rendered charities/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 3444ms (Views: 3442.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:12:35 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.4ms)
+  Rendered charities/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 3374ms (Views: 3372.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:13:02 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered application/_header.html.erb (0.3ms)
+  Rendered charities/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:18:08 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:18:47 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:19:48 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:19:51 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:22:48 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.2ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:24:21 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:24:24 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 161ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:25:49 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_top_nav.html.erb (0.3ms)
+  Rendered layouts/_bottom_nav.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:26:35 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charities" for ::1 at 2016-12-16 12:26:53 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.6ms)
+  Rendered layouts/_bottom_nav.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:26:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (19.6ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.7ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.7ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:27:15 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.6ms)
+  Rendered layouts/_bottom_nav.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:27:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (12.1ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.3ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:27:19 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:27:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (14.4ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (127.6ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:29:48 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendered charities/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/micahbritton/lighthouse/inneed/app/views/charities/index.html.erb:4: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/micahbritton/lighthouse/inneed/app/views/charities/index.html.erb:6: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/charities/index.html.erb:4: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/charities/index.html.erb:6: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.8ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:30:06 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (1.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (0.3ms)
+  Rendered charities/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 70.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:30:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (8.8ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.6ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:31:22 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (307.8ms)
+  Rendered charities/index.html.erb within layouts/application (310.1ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x007fea24bad270>:0x007fea2b5c27c8>):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= c.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321898147960'
+app/views/charities/index.html.erb:3:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321863269100'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321863269100'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.8ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:31:46 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (130.0ms)
+  Rendered charities/index.html.erb within layouts/application (134.5ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `charity' for #<#<Class:0x007fea24bad270>:0x007fea313a9580>
+Did you mean?  charity_url):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= charity.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321821421000'
+app/views/charities/index.html.erb:3:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321912500340'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321912500340'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+Started PUT "/__web_console/repl_sessions/86171e044d32a8ab178d9836b31797c3" for ::1 at 2016-12-16 12:31:49 -0500
+Started PUT "/__web_console/repl_sessions/86171e044d32a8ab178d9836b31797c3" for ::1 at 2016-12-16 12:31:50 -0500
+Started PUT "/__web_console/repl_sessions/86171e044d32a8ab178d9836b31797c3" for ::1 at 2016-12-16 12:31:52 -0500
+Started PUT "/__web_console/repl_sessions/86171e044d32a8ab178d9836b31797c3" for ::1 at 2016-12-16 12:31:54 -0500
+Started PUT "/__web_console/repl_sessions/86171e044d32a8ab178d9836b31797c3" for ::1 at 2016-12-16 12:32:10 -0500
+Started GET "/charities" for ::1 at 2016-12-16 12:32:30 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (0.3ms)
+  Rendered charities/index.html.erb within layouts/application (123.1ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `charity' for #<#<Class:0x007fea24bad270>:0x007fea2da9f4d8>
+Did you mean?  charity_url):
+     6:       <img class="activator" src="images/office.jpg">
+     7:     </div>
+     8:     <div class="card-content">
+     9:       <span class="card-title activator grey-text text-darken-4"><%= charity.name %><i class="material-icons right">more_vert</i></span>
+    10:       <p><a href="#">This is a link</a></p>
+    11:     </div>
+    12:     <div class="card-reveal">
+  
+app/views/charities/index.html.erb:9:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321882849360'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321882849360'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.2ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:32:47 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (0.3ms)
+  Rendered charities/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:32:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (11.6ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.4ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:33:15 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (131.6ms)
+  Rendered charities/index.html.erb within layouts/application (134.0ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x007fea24bad270>:0x007fea265e9d28>):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= c.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321821521160'
+app/views/charities/index.html.erb:3:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321821406280'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321821406280'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:33:51 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (134.2ms)
+  Rendered charities/index.html.erb within layouts/application (4935.0ms)
+Completed 500 Internal Server Error in 4944ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x007fea2d3bfbb8>:0x007fea2d3be970>):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= c.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321823968380'
+app/views/charities/index.html.erb:4:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321893425860'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321893425860'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.8ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:34:25 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (229.9ms)
+  Rendered charities/index.html.erb within layouts/application (232.5ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `charity' for #<#<Class:0x007fea2d3bfbb8>:0x007fea2d2320e8>
+Did you mean?  charity_url):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= charity.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321883133320'
+app/views/charities/index.html.erb:3:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321878177960'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321878177960'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.1ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:34:39 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (128.2ms)
+  Rendered charities/index.html.erb within layouts/application (132.8ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `charity' for #<#<Class:0x007fea2d3bfbb8>:0x007fea26ac2570>
+Did you mean?  charity_url):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= charity.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321913562540'
+app/views/charities/index.html.erb:4:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321823946860'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321823946860'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:34:47 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/_smallcard.html.erb (128.8ms)
+  Rendered charities/index.html.erb within layouts/application (132.8ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `charity' for #<#<Class:0x007fea2d3bfbb8>:0x007fea2dddb0c0>
+Did you mean?  charity_url):
+     5:     <img class="activator" src="images/office.jpg">
+     6:   </div>
+     7:   <div class="card-content">
+     8:     <span class="card-title activator grey-text text-darken-4"><%= charity.name %><i class="material-icons right">more_vert</i></span>
+     9:     <p><a href="#">This is a link</a></p>
+    10:   </div>
+    11:   <div class="card-reveal">
+  
+app/views/charities/_smallcard.html.erb:8:in `_app_views_charities__smallcard_html_erb___1638824861119275603_70321884305300'
+app/views/charities/index.html.erb:4:in `block in _app_views_charities_index_html_erb__1040013467649147644_70321884290660'
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321884290660'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.1ms)
+Started PUT "/__web_console/repl_sessions/22d7c8d492aac1a7a34430952922efcd" for ::1 at 2016-12-16 12:34:50 -0500
+Started PUT "/__web_console/repl_sessions/22d7c8d492aac1a7a34430952922efcd" for ::1 at 2016-12-16 12:34:51 -0500
+Started PUT "/__web_console/repl_sessions/22d7c8d492aac1a7a34430952922efcd" for ::1 at 2016-12-16 12:34:53 -0500
+Started PUT "/__web_console/repl_sessions/22d7c8d492aac1a7a34430952922efcd" for ::1 at 2016-12-16 12:34:58 -0500
+Started GET "/charities" for ::1 at 2016-12-16 12:36:46 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."orgtype" = $1[0m  [["orgtype", "charity"]]
+  Rendered charities/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial organizations/_organization with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/micahbritton/lighthouse/inneed/app/views"
+):
+    1: <% render @charities %>
+  
+app/views/charities/index.html.erb:1:in `_app_views_charities_index_html_erb__1040013467649147644_70321811585960'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+Started GET "/charities" for ::1 at 2016-12-16 12:38:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/charities"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (3.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.1ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:38:32 -0500
+  
+ActionController::RoutingError (uninitialized constant OrganizationsController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.3ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.3ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:39:38 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  Rendered organizations/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% render @organization %>
+  
+app/views/organizations/index.html.erb:1:in `_app_views_organizations_index_html_erb__1909530053683353545_70321825459200'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:41:09 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  Rendered organizations/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% render @organization %>
+  
+app/views/organizations/index.html.erb:1:in `_app_views_organizations_index_html_erb__1909530053683353545_70321911225920'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:41:38 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  Rendered organizations/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% render @organizations %>
+  
+app/views/organizations/index.html.erb:1:in `_app_views_organizations_index_html_erb__1909530053683353545_70321892805460'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.2ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:42:01 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  Rendered organizations/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% render @organizations %>
+  
+app/views/organizations/index.html.erb:1:in `_app_views_organizations_index_html_erb__1909530053683353545_70321880367400'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.2ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:43:54 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  Rendered collection of organizations/_organization.html.erb [2 times] (146.1ms)
+  Rendered organizations/index.html.erb within layouts/application (159.8ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `org' for #<#<Class:0x007fea2d5c2960>:0x007fea2d5c1740>):
+    4:       <img class="activator" src="images/office.jpg">
+    5:     </div>
+    6:     <div class="card-content">
+    7:       <span class="card-title activator grey-text text-darken-4"><%= org.name %><i class="material-icons right">more_vert</i></span>
+    8:       <p><a href="#">This is a link</a></p>
+    9:     </div>
+   10:     <div class="card-reveal">
+  
+app/views/organizations/_organization.html.erb:7:in `_app_views_organizations__organization_html_erb___4070897260133708847_70321884500920'
+app/views/organizations/index.html.erb:1:in `_app_views_organizations_index_html_erb__1909530053683353545_70321880046020'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.9ms)
+Started GET "/organizations" for ::1 at 2016-12-16 12:45:09 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  Rendered collection of organizations/_organization.html.erb [2 times] (0.7ms)
+  Rendered organizations/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 3457ms (Views: 3455.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/organizations" for ::1 at 2016-12-16 12:48:23 -0500
+Processing by OrganizationsController#index as HTML
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  Rendered collection of organizations/_organization.html.erb [2 times] (1.0ms)
+  Rendered organizations/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_top_nav.html.erb (0.6ms)
+  Rendered layouts/_bottom_nav.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/office.jpg" for ::1 at 2016-12-16 12:48:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/office.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (9.6ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/micahbritton/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.1ms)
