@@ -181,6 +181,52 @@ org8 = Organization.create!({
   description: "Christian Children’s Fund of Canada creates a future of hope for children, families, and communities by helping them develop the skills and resources to overcome poverty and pursue justice. For more than 50 years, we have followed the example of Christ by serving the poor regardless of their faith, cultural, and ethnic background."
   })
 
+
+  org14 = Organization.create!({
+    name: 'KidSport',
+    address: '2041-875 Morningside Ave',
+    city: 'Toronto',
+    postal: 'M1C0C7',
+    province: 'ON',
+    email: 'donor-relations@ccfcanada.ca',
+    primaryphone:  4162830940,
+    url: 'http://www.kidsportcanada.ca/',
+    orgtype: 'charity',
+    user_id: 2,
+    description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
+    })
+
+   org15 = Organization.create!({
+      name: 'Earth Rangers',
+      address: '9520 Pine Valley Drive',
+      city: 'Woodbridge',
+      postal: 'L4L1A6',
+      province: 'ON',
+      email: 'donor-relations@ccfcanada.ca',
+      primaryphone:  9054173447,
+      url: 'http://www.earthrangers.com',
+      orgtype: 'charity',
+      user_id: 2,
+      description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
+      })
+
+      org16 = Organization.create!({
+         name: 'Toronto International Film Festival (TIFF)',
+         address: ' 350 King Street West',
+         city: 'Toronto',
+         postal: 'M5V3X5',
+         province: 'ON',
+         email: 'donate@tiff.net',
+         primaryphone:  18885998433,
+         secondaryphone: 4165998433,
+         url: 'http://tiff.net',
+         orgtype: 'charity',
+         user_id: 2,
+         description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
+         })
+
+
+
 # ------- BUSINESSES --------
 org9 = Organization.create!({
   name: 'The Kitchen Table',
@@ -248,16 +294,117 @@ org13 = Organization.create!({
   user_id: 3
   })
 
+
+
 ## --- ORG CATEGORIES ---
-CategoriesOrganization.destroy_all
-puts "Re-creating Organization category data"
+# CategoriesOrganization.destroy_all
+# puts "Re-creating Organization category data"
 # Category = 'causes' in our context
 
-# CategoriesOrganization.create!({
-#   category_id:
-#   organization_id:
-#   })
+cat_org1 = CategoriesOrganization.create!({
+  category_id: 1,
+  organization_id: 1
+})
 
+cat_org2 = CategoriesOrganization.create!({
+  category_id: 1,
+  organization_id: 2
+})
+
+cat_org3 = CategoriesOrganization.create!({
+  category_id: 3,
+  organization_id: 3
+})
+
+cat_org4 = CategoriesOrganization.create!({
+  category_id: 11,
+  organization_id: 3
+})
+
+cat_org5 = CategoriesOrganization.create!({
+  category_id: 8,
+  organization_id: 3
+})
+
+cat_org6 = CategoriesOrganization.create!({
+  category_id: 1,
+  organization_id: 4
+})
+
+cat_org7 = CategoriesOrganization.create!({
+  category_id: 2,
+  organization_id: 4
+})
+
+cat_org8 = CategoriesOrganization.create!({
+  category_id: 3,
+  organization_id: 5
+})
+
+cat_org9 = CategoriesOrganization.create!({
+  category_id: 4,
+  organization_id: 5
+})
+
+cat_org10 = CategoriesOrganization.create!({
+  category_id: 11,
+  organization_id: 5
+})
+
+cat_org11 = CategoriesOrganization.create!({
+  category_id: 5,
+  organization_id: 6
+})
+
+cat_org12 = CategoriesOrganization.create!({
+  category_id: 3,
+  organization_id: 7
+})
+
+cat_org13 = CategoriesOrganization.create!({
+  category_id: 4,
+  organization_id: 7
+})
+
+cat_org14 = CategoriesOrganization.create!({
+  category_id: 8,
+  organization_id: 7
+})
+
+cat_org15 = CategoriesOrganization.create!({
+  category_id: 3,
+  organization_id: 8
+})
+
+cat_org16 = CategoriesOrganization.create!({
+  category_id: 7,
+  organization_id: 8
+})
+
+cat_org17 = CategoriesOrganization.create!({
+  category_id: 10,
+  organization_id: 14
+})
+
+cat_org18 = CategoriesOrganization.create!({
+  category_id: 3,
+  organization_id: 14
+})
+
+cat_org19 = CategoriesOrganization.create!({
+  category_id: 6,
+  organization_id: 15
+})
+
+cat_org20 = CategoriesOrganization.create!({
+  category_id: 2,
+  organization_id: 15
+})
+
+cat_org21 = CategoriesOrganization.create!({
+  category_id: 9,
+  organization_id: 16
+})
 
 ## --- GOODS TYPES ---
 
