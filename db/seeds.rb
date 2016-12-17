@@ -210,20 +210,20 @@ org8 = Organization.create!({
       description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
       })
 
-      org16 = Organization.create!({
-         name: 'Toronto International Film Festival (TIFF)',
-         address: ' 350 King Street West',
-         city: 'Toronto',
-         postal: 'M5V3X5',
-         province: 'ON',
-         email: 'donate@tiff.net',
-         primaryphone:  18885998433,
-         secondaryphone: 4165998433,
-         url: 'http://tiff.net',
-         orgtype: 'charity',
-         user_id: 2,
-         description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
-         })
+   org16 = Organization.create!({
+     name: 'Toronto International Film Festival (TIFF)',
+     address: ' 350 King Street West',
+     city: 'Toronto',
+     postal: 'M5V3X5',
+     province: 'ON',
+     email: 'donate@tiff.net',
+     primaryphone:  18885998433,
+     secondaryphone: 4165998433,
+     url: 'http://tiff.net',
+     orgtype: 'charity',
+     user_id: 2,
+     description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
+     })
 
 
 
