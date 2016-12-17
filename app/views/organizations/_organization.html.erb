@@ -1,44 +1,48 @@
 <%# organization / charity card %>
-<div class="card medium">
-  <div class="card-image waves-effect waves-block waves-light">
-    <%# colourize and add icon according to category %>
-    <div class="category-image">
+<div class="col s12 m6 l4">
+  <div class="card medium">
+    <div class="card-image waves-effect waves-block waves-light">
+      <%# colourize and add icon according to category %>
+      <div class="category-image <%= organization.orgtype %>">
+        <%= render 'cause_icons' %>
+      </div>
     </div>
-  </div>
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">
-      <i class="material-icons right">more_vert</i>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">
+        <i class="material-icons right">more_vert</i>
+        <%= organization.name %>
+      </span>
+    </div>
+    <div class="card-action">
+      <%= link_to 'website', organization.url %>
+      <% if organization.orgtype == 'charity' %>
+        <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link' %>
+      <% end %>
+    </div>
+    <%# expand card to view contact details %>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">
       <%= organization.name %>
-    </span>
-  </div>
-  <div class="card-action">
-    <%= link_to 'website', organization.url %>
-    <% if organization.orgtype == 'charity' %>
-      <%= link_to 'learn how to help', organization.url %>
-    <% end %>
-  </div>
-  <%# expand card to view contact details %>
-  <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">
-    <%= organization.name %>
-    <i class="material-icons right">close</i></span>
-    <p>
-      <i class="tiny material-icons">email</i>
-      <%= mail_to 'email', organization.email %><br>
-      <i class="tiny material-icons">phone</i>
-      <%= number_to_phone(organization.primaryphone) %><br><br>
-      <%= organization.address %><br>
-      <% if organization.suite %><br>
-        <%= organization.suite %><br>
-      <% end %>
-      <%= organization.city %><br>
-      <%= organization.postal %><br>
-      <%= organization.province %><br>
-      <% if organization.secondaryphone %><br>
+      <i class="material-icons right">close</i></span>
+      <p>
+        <i class="tiny material-icons">email</i>
+        <%= mail_to 'email', organization.email %><br>
         <i class="tiny material-icons">phone</i>
-        <%= number_to_phone(organization.secondaryphone) %><br>
-      <% end %>
+        <%# format phone number %>
+        <%= number_to_phone(organization.primaryphone, area_code: true) %><br><br>
+        <% if organization.secondaryphone %><br>
+          <i class="tiny material-icons">phone</i>
+          <%= number_to_phone(organization.secondaryphone, area_code: true) %><br>
+        <% end %>
+        <%= organization.address %><br>
+        <% if organization.suite %><br>
+          <%= organization.suite %><br>
+        <% end %>
+        <%= organization.city %><br>
+        <%= organization.postal %><br>
+        <%= organization.province %><br>
 
-    </p>
+      </p>
+    </div>
   </div>
 </div>

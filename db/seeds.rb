@@ -82,13 +82,13 @@ org2 = Organization.create!({
   user_id: 3
   })
 ## --- ORG-CATEGORIES ---
-OrgCategory.destroy_all
-puts "Re-creating OrgCategories"
-# org1.org_category.create!({
-#   offers:
-#   needs:
-#   category_id:
-#   })
+OrganizationsCategories.destroy_all
+puts "Re-creating CategoriesOrganizations"
+org1.org_category.create!({
+  offers:
+  needs:
+  category_id:
+  })
 
 ## --- GOODS-TYPE ---
 

@@ -2,36 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.flexcontainer {
-  display: flex;
-  display: -webkit-flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 100%;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
+// div.flexcontainer {
+//   display: flex;
+//   display: -webkit-flex;
+//   -webkit-flex-direction: row;
+//   flex-direction: row;
+//   -webkit-align-items: center;
+//   align-items: center;
+//   -webkit-justify-content: center;
+//   justify-content: center;
+//   width: 100%;
+//   -webkit-flex-flow: row wrap;
+//   flex-flow: row wrap;
+// }
 
-div.card.medium:hover {
+div.card:hover {
   box-shadow: 2px 2px 10px gray;
 }
 div.card {
-  margin: 10px;
-  min-width: 300px;
-  max-width: 31%;
+  word-wrap: break-word;
+  margin: 5px;
+  // min-width: 250px;
+  // max-width: 30%;
   word-wrap: wrap;
-  margin: 10px;
+  margin: 5px;
   line-height: 1.2em;
   span.card-title.grey-text {
       line-height: 1.2em;
     }
+  a.help-link {
+    font-weight: 700;
+    color: darkorange;
+  }
+  max-height: 450px;
+
 }
 
 div.category-image {
-  width: 100%;
-  height: 200px;
+  min-height: 200px;
+}
+div.business {
+  background-color: #6666FF;
+}
+div.charity {
+  background-color: #ee6e73;
 }

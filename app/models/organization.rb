@@ -1,11 +1,6 @@
 class Organization < ApplicationRecord
+  has_and_belongs_to_many :categories
 
-  def category_colour
-    case category
-    when
-      true
-    else
-      true
-    end
-  end
+  has_many :goods_types_organizations
+  has_many :goods_types, through: :goods_types_organizations
 end
