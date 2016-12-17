@@ -29,10 +29,13 @@ ActiveRecord::Schema.define(version: 20161217181009) do
   end
 
   create_table "goods_types", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.boolean  "offers"
     t.boolean  "needs"
+    t.index ["category_id"], name: "index_goods_types_on_category_id", using: :btree
   end
 
   create_table "goods_types_organizations", force: :cascade do |t|
@@ -78,15 +81,6 @@ ActiveRecord::Schema.define(version: 20161217181009) do
     t.index ["user_id"], name: "index_organizations_on_user_id", using: :btree
   end
 
-  create_table "organizations_categories", force: :cascade do |t|
-    t.integer  "organization_id"
-    t.integer  "category_id"
-    t.boolean  "offers"
-    t.boolean  "needs"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -96,6 +90,7 @@ ActiveRecord::Schema.define(version: 20161217181009) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "goods_types", "categories"
   add_foreign_key "org_needs", "needs"
   add_foreign_key "org_needs", "organizations"
   add_foreign_key "organizations", "users"
