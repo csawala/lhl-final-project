@@ -16,7 +16,7 @@ class CreateOrganizations < ActiveRecord::Migration[5.0]
       t.string      :orgtype
       t.references  :user, index: true, foreign_key: true
 
-      t.timestamps null:false
+      t.timestamps  null:false
     end
   end
 end
