@@ -1,3 +1,32 @@
 // Place all the styles related to the organizations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.flexcontainer {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+div.card.medium:hover {
+  box-shadow: 2px 2px 10px gray;
+}
+div.card {
+  margin: 10px;
+  min-width: 300px;
+  max-width: 31%;
+  word-wrap: wrap;
+  margin: 10px;
+  line-height: 1.2em;
+  span.card-title.grey-text {
+      line-height: 1.2em;
+    }
+}
