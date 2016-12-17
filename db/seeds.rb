@@ -278,43 +278,43 @@ puts "Re-creating OrgCategories"
 
 ## --- NEEDS ---
 
-n1 = Needs.create!({
+n1 = Need.create!({
   name: "foods"
   })
 
-n2 = Needs.create!({
+n2 = Need.create!({
   name: "hygiene items"
   })
 
-n3 = Needs.create!({
+n3 = Need.create!({
   name: "furniture"
   })
 
-n4 = Needs.create!({
+n4 = Need.create!({
   name: "clothing"
   })
 
-n5 = Needs.create!({
+n5 = Need.create!({
   name: "home supplies"
   })
 
-n6 = Needs.create!({
+n6 = Need.create!({
   name: "business supplies"
   })
 
-n7 = Needs.create!({
+n7 = Need.create!({
   name: "volunteers"
   })
 
-n8 = Needs.create!({
+n8 = Need.create!({
   name: "skilled labour"
   })
 
-n9 = Needs.create!({
+n9 = Need.create!({
   name: "unskilled labour"
   })
 
-n10 = Needs.create!({
+n10 = Need.create!({
   name: "money donations"
   })
 
