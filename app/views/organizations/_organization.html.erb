@@ -1,9 +1,7 @@
 <%# organization / charity card %>
 <div class="card medium">
   <div class="card-image waves-effect waves-block waves-light">
-    <%# colourize and add icon according to category %>
-    <div class="category-image">
-    </div>
+    <div class="category-image"></div>
   </div>
   <div class="card-content">
     <span class="card-title activator grey-text text-darken-4">
@@ -14,7 +12,7 @@
   <div class="card-action">
     <%= link_to 'website', organization.url %>
     <% if organization.orgtype == 'charity' %>
-      <%= link_to 'learn how to help', organization.url %>
+      <%= link_to 'learn how to help', organization_path(id: organization.id), class: 'help-link' %>
     <% end %>
   </div>
   <%# expand card to view contact details %>
