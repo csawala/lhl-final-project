@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:index, :show, :create]
 
-  resources :dashboard, only: [:show, :edit]
+  resources :dashboard, only: [:show, :update]
 
-  resources :do_good 
+  resources :do_good
 
   # ----  NEW USER ROUTES  ----
   get '/register' => 'users#new'
