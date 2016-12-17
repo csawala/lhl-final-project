@@ -1,0 +1,2 @@
+class CategoriesOrganization < ApplicationRecord
+end

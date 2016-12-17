@@ -1,14 +1,47 @@
 <%# organization / charity card %>
-  <div class="card small">
+<div class="col s12 m6 l4">
+  <div class="card medium">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
+      <%# colourize and add icon according to category %>
+      <div class="category-image <%= organization.orgtype %>">
+        <%= render 'cause_icons' %>
+      </div>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><%= organization.name %><i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4">
+        <i class="material-icons right">more_vert</i>
+        <%= organization.name %>
+      </span>
     </div>
+    <div class="card-action">
+      <%= link_to 'website', organization.url %>
+      <% if organization.orgtype == 'charity' %>
+        <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link' %>
+      <% end %>
+    </div>
+    <%# expand card to view contact details %>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4">
+      <%= organization.name %>
+      <i class="material-icons right">close</i></span>
+      <p>
+        <i class="tiny material-icons">email</i>
+        <%= mail_to 'email', organization.email %><br>
+        <i class="tiny material-icons">phone</i>
+        <%# format phone number %>
+        <%= number_to_phone(organization.primaryphone, area_code: true) %><br><br>
+        <% if organization.secondaryphone %><br>
+          <i class="tiny material-icons">phone</i>
+          <%= number_to_phone(organization.secondaryphone, area_code: true) %><br>
+        <% end %>
+        <%= organization.address %><br>
+        <% if organization.suite %><br>
+          <%= organization.suite %><br>
+        <% end %>
+        <%= organization.city %><br>
+        <%= organization.postal %><br>
+        <%= organization.province %><br>
+      </p>
     </div>
   </div>
+</div>
