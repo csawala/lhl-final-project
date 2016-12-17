@@ -34,7 +34,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'materialize-sass'
 gem 'flexbox-rails'
-gem 'google-webfonts-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
