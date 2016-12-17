@@ -44,17 +44,17 @@ User.create!({
 Category.destroy_all
 puts "Re-creating Categories"
 
-cat1 = Category.create!({ name: 'health' })
-cat2 = Category.create!({ name: 'education' })
-cat3 = Category.create!({ name: 'poverty' })
-cat4 = Category.create!({ name: 'human rights' })
-cat5 = Category.create!({ name: 'animal rights' })
-cat6 = Category.create!({ name: 'environment' })
-cat7 = Category.create!({ name: 'religion' })
-cat8 = Category.create!({ name: 'community development' })
-cat9 = Category.create!({ name: 'arts, culture, heritage or science' })
+cat1  = Category.create!({ name: 'health' })
+cat2  = Category.create!({ name: 'education' })
+cat3  = Category.create!({ name: 'poverty' })
+cat4  = Category.create!({ name: 'human rights' })
+cat5  = Category.create!({ name: 'animal rights' })
+cat6  = Category.create!({ name: 'environment' })
+cat7  = Category.create!({ name: 'religion' })
+cat8  = Category.create!({ name: 'community development' })
+cat9  = Category.create!({ name: 'arts, culture, heritage or science' })
 cat10 = Category.create!({ name: 'sport' })
-cat11 = Category.create!({ name: 'disadvantage' })
+cat11 = Category.create!({ name: 'disadvantaged' })
 
 
 ## --- ORGANIZATIONS ---
@@ -73,7 +73,12 @@ org1 = Organization.create!({
   primaryphone: 18882366283,
   url: 'https://blood.ca/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "Canadian Blood Services is a not-for-profit, charitable organization
+      operating at arm's length from government. Its sole mission is to manage the blood
+      supply for Canadians. Created in 1998, it is the successor to the Canadian Red Cross
+      Blood Program and the Canadian Blood Agency (the former funding arm of Canada's
+      blood supply system)."
   })
 
 org2 = Organization.create!({
@@ -87,7 +92,10 @@ org2 = Organization.create!({
   secondaryphone: 4168136166,
   url: 'http://www.sickkidsfoundation.com/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "All of us at SickKids are fighting the same battle: to make every kid a healthy kid.
+    Our vision is simple: Healthier Children. A Better World. We believe fighting for the
+    health and wellbeing of children is one of the most powerful ways to improve society."
   })
 
 org3 = Organization.create!({
@@ -100,7 +108,9 @@ org3 = Organization.create!({
   primaryphone: 18007252769,
   url: 'http://www.salvationarmy.ca/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "The Salvation Army exists to share the love of Jesus Christ, meet human needs
+    and be a transforming influence in the communities of our world."
   })
 
 org4 = Organization.create!({
@@ -115,7 +125,9 @@ org4 = Organization.create!({
   secondaryphone: 4169877725,
   url: 'http://www.oacas.org/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "A leader and collaborator promoting the welfare of children,
+    youth and families through leadership, service excellence and advocacy."
   })
 
 org5 = Organization.create!({
@@ -128,7 +140,9 @@ org5 = Organization.create!({
   primaryphone: 4162030050,
   url: 'http://www.dailybread.ca/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "We believe that access to food is a basic human right, not a privilege.
+    No one should go hungry. We believe that no one should face barriers in accessing food."
   })
 
 org6 = Organization.create!({
@@ -141,7 +155,12 @@ org6 = Organization.create!({
   primaryphone: 4163922273,
   url: 'https://www.torontohumanesociety.com',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "It is the mission of The Toronto Humane Society to promote the humane care
+    and protection of all animals and to prevent cruelty and suffering. Following no kill
+    principles, the Toronto Humane Society aspires to be a best-in-class animal shelter –
+    working in partnership with the community to find creative solutions and improve
+    outcomes for all animals."
   })
 
 org7 = Organization.create!({
@@ -156,7 +175,10 @@ org7 = Organization.create!({
   secondaryphone: 4166440988,
   url: 'http://www.habitat.ca/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "Our vision is a world where everyone has a safe and decent place to live.
+    Our mission is to mobilize volunteers and community partners in building affordable housing
+    and promoting homeownership as a means to breaking the cycle of poverty."
   })
 
 org8 = Organization.create!({
@@ -170,7 +192,11 @@ org8 = Organization.create!({
   secondaryphone: 9057541001,
   url: 'https://www.ccfcanada.ca/',
   orgtype: 'charity',
-  user_id: 2
+  user_id: 2,
+  description: "Christian Children’s Fund of Canada creates a future of hope for children, families,
+    and communities by helping them develop the skills and resources to overcome poverty and
+    pursue justice. For more than 50 years, we have followed the example of Christ by serving
+    the poor regardless of their faith, cultural, and ethnic background."
   })
 
 # ------- BUSINESSES --------
@@ -180,7 +206,6 @@ org9 = Organization.create!({
   city: 'Toronto',
   postal: 'M5J2V7',
   province: 'ON',
-  email: 'noemail@kitchentable.ca',
   primaryphone: 4167784800,
   url: 'http://www.thekitchentable.ca/',
   orgtype: 'business',
@@ -244,12 +269,55 @@ org13 = Organization.create!({
 ## --- ORG-CATEGORIES ---
 OrgCategory.destroy_all
 puts "Re-creating OrgCategories"
+# Category = 'causes' in our context
+
 # org1.org_category.create!({
-#   offers:
-#   needs:
 #   category_id:
 #   })
 
-## --- GOODS-TYPE ---
+
+## --- NEEDS ---
+
+n1 = Needs.create!({
+  name: "foods"
+  })
+
+n2 = Needs.create!({
+  name: "hygiene items"
+  })
+
+n3 = Needs.create!({
+  name: "furniture"
+  })
+
+n4 = Needs.create!({
+  name: "clothing"
+  })
+
+n5 = Needs.create!({
+  name: "home supplies"
+  })
+
+n6 = Needs.create!({
+  name: "business supplies"
+  })
+
+n7 = Needs.create!({
+  name: "volunteers"
+  })
+
+n8 = Needs.create!({
+  name: "skilled labour"
+  })
+
+n9 = Needs.create!({
+  name: "unskilled labour"
+  })
+
+n10 = Needs.create!({
+  name: "money donations"
+  })
+
+
 
 puts "\nAll done!"
