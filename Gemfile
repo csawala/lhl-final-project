@@ -30,6 +30,15 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+## Image Upload & Processing
+# Carrierwave allows for easier image uploading
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+# MiniMagick will ONLY install if ImageMagick is already installed
+# Confirm version using CLI:    convert -version
+# MiniMagick will allow for adding multiple versions of image (e.g. scaled, thumbs, etc)
+gem "mini_magick"
+
+
 # Styling
 gem 'font-awesome-rails'
 gem 'materialize-sass'
