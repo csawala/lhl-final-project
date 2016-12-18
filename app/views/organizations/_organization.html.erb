@@ -25,8 +25,10 @@
       <%= organization.name %>
       <i class="material-icons right">close</i></span>
       <p>
-        <i class="tiny material-icons">email</i>
-        <%= mail_to 'email', organization.email %><br>
+        <% if organization.email %>
+          <span><i class="tiny material-icons">email</i>
+          <%= mail_to 'email', organization.email %><br></span>
+        <% end %>
         <i class="tiny material-icons">phone</i>
         <%# format phone number %>
         <%= number_to_phone(organization.primaryphone, area_code: true) %><br><br>

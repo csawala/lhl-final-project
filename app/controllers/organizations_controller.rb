@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
   def index
-    @organizations = Organization.all.order(name: :asc)
+    @organizations = Organization.filter_by_params(params).order(name: :asc)
   end
 
   def show
