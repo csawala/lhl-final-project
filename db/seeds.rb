@@ -197,48 +197,51 @@ org8 = Organization.create!({
   })
 
 
-  org14 = Organization.create!({
-    name: 'KidSport',
-    address: '2041-875 Morningside Ave',
-    city: 'Toronto',
-    postal: 'M1C0C7',
-    province: 'ON',
-    email: 'donor-relations@ccfcanada.ca',
-    primaryphone:  4162830940,
-    url: 'http://www.kidsportcanada.ca/',
-    orgtype: 'charity',
-    user_id: 2,
-    description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
-    })
+org14 = Organization.create!({
+  name: 'KidSport',
+  address: '2041-875 Morningside Ave',
+  city: 'Toronto',
+  postal: 'M1C0C7',
+  province: 'ON',
+  email: 'donor-relations@ccfcanada.ca',
+  primaryphone:  4162830940,
+  url: 'http://www.kidsportcanada.ca/',
+  image: open_image('org14.jpg'),
+  orgtype: 'charity',
+  user_id: 2,
+  description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
+  })
 
-   org15 = Organization.create!({
-      name: 'Earth Rangers',
-      address: '9520 Pine Valley Drive',
-      city: 'Woodbridge',
-      postal: 'L4L1A6',
-      province: 'ON',
-      email: 'donor-relations@ccfcanada.ca',
-      primaryphone:  9054173447,
-      url: 'http://www.earthrangers.com',
-      orgtype: 'charity',
-      user_id: 2,
-      description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
-      })
+org15 = Organization.create!({
+  name: 'Earth Rangers',
+  address: '9520 Pine Valley Drive',
+  city: 'Woodbridge',
+  postal: 'L4L1A6',
+  province: 'ON',
+  email: 'donor-relations@ccfcanada.ca',
+  primaryphone:  9054173447,
+  url: 'http://www.earthrangers.com',
+  image: open_image('org15.png'),
+  orgtype: 'charity',
+  user_id: 2,
+  description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
+  })
 
-   org16 = Organization.create!({
-     name: 'Toronto International Film Festival (TIFF)',
-     address: ' 350 King Street West',
-     city: 'Toronto',
-     postal: 'M5V3X5',
-     province: 'ON',
-     email: 'donate@tiff.net',
-     primaryphone:  18885998433,
-     secondaryphone: 4165998433,
-     url: 'http://tiff.net',
-     orgtype: 'charity',
-     user_id: 2,
-     description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
-     })
+org16 = Organization.create!({
+  name: 'Toronto International Film Festival (TIFF)',
+  address: ' 350 King Street West',
+  city: 'Toronto',
+  postal: 'M5V3X5',
+  province: 'ON',
+  email: 'donate@tiff.net',
+  primaryphone:  18885998433,
+  secondaryphone: 4165998433,
+  url: 'http://tiff.net',
+  image: open_image('org16.jpg'),
+  orgtype: 'charity',
+  user_id: 2,
+  description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
+  })
 
 
 
