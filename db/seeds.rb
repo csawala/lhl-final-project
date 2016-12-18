@@ -7,6 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "\nFertilizing..."
 
+## Helper functions
+# images when called will be process by minimagick to be called as:
+#   organization.image._____  (thumb = 150x150 // card = 300x300 // full = 500x500)
+def open_image(file_name)
+  File.open(Rails.root.join('db', 'seed_assets', file_name))
+end
+
 ## --- USERS ---
 
 User.destroy_all
@@ -72,6 +79,7 @@ org1 = Organization.create!({
   email: 'feedback@blood.ca',
   primaryphone: 18882366283,
   url: 'https://blood.ca/',
+  image: open_image('org1.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "Canadian Blood Services is a not-for-profit, charitable organization operating at arm's length from government. Its sole mission is to manage the blood supply for Canadians. Created in 1998, it is the successor to the Canadian Red Cross Blood Program and the Canadian Blood Agency (the former funding arm of Canada's blood supply system)."
@@ -87,6 +95,7 @@ org2 = Organization.create!({
   primaryphone: 18006611083,
   secondaryphone: 4168136166,
   url: 'http://www.sickkidsfoundation.com/',
+  image: open_image('org2.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "All of us at SickKids are fighting the same battle: to make every kid a healthy kid. Our vision is simple: Healthier Children. A Better World. We believe fighting for the health and wellbeing of children is one of the most powerful ways to improve society."
@@ -101,6 +110,7 @@ org3 = Organization.create!({
   email: 'donor_questions@can.salvationarmy.org',
   primaryphone: 18007252769,
   url: 'http://www.salvationarmy.ca/',
+  image: open_image('org3.png'),
   orgtype: 'charity',
   user_id: 2,
   description: "The Salvation Army exists to share the love of Jesus Christ, meet human needs and be a transforming influence in the communities of our world."
@@ -117,6 +127,7 @@ org4 = Organization.create!({
   primaryphone: 18007181797,
   secondaryphone: 4169877725,
   url: 'http://www.oacas.org/',
+  image: open_image('org4.png'),
   orgtype: 'charity',
   user_id: 2,
   description: "A leader and collaborator promoting the welfare of children, youth and families through leadership, service excellence and advocacy."
@@ -131,6 +142,7 @@ org5 = Organization.create!({
   email: 'info@dailybread.ca',
   primaryphone: 4162030050,
   url: 'http://www.dailybread.ca/',
+  image: open_image('org5.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "We believe that access to food is a basic human right, not a privilege. No one should go hungry. We believe that no one should face barriers in accessing food."
@@ -145,6 +157,7 @@ org6 = Organization.create!({
   email: 'fundraising@torontohumanesociety.com',
   primaryphone: 4163922273,
   url: 'https://www.torontohumanesociety.com',
+  image: open_image('org6.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "It is the mission of The Toronto Humane Society to promote the humane care and protection of all animals and to prevent cruelty and suffering. Following no kill principles, the Toronto Humane Society aspires to be a best-in-class animal shelter – working in partnership with the community to find creative solutions and improve outcomes for all animals."
@@ -161,6 +174,7 @@ org7 = Organization.create!({
   primaryphone: 18006675137,
   secondaryphone: 4166440988,
   url: 'http://www.habitat.ca/',
+  image: open_image('org7.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "Our vision is a world where everyone has a safe and decent place to live. Our mission is to mobilize volunteers and community partners in building affordable housing and promoting homeownership as a means to breaking the cycle of poverty."
@@ -176,6 +190,7 @@ org8 = Organization.create!({
   primaryphone: 18002635437,
   secondaryphone: 9057541001,
   url: 'https://www.ccfcanada.ca/',
+  image: open_image('org8.jpg'),
   orgtype: 'charity',
   user_id: 2,
   description: "Christian Children’s Fund of Canada creates a future of hope for children, families, and communities by helping them develop the skills and resources to overcome poverty and pursue justice. For more than 50 years, we have followed the example of Christ by serving the poor regardless of their faith, cultural, and ethnic background."
@@ -190,6 +205,7 @@ org9 = Organization.create!({
   province: 'ON',
   primaryphone: 4167784800,
   url: 'http://www.thekitchentable.ca/',
+  image: open_image('org9.jpg'),
   orgtype: 'business',
   user_id: 3
   })
@@ -202,7 +218,8 @@ org10 = Organization.create!({
   province: 'ON',
   email: 'organizing@thecarpentersunion.ca',
   primaryphone: 9056524140,
-  url: 'http://www.thekitchentable.ca/',
+  url: 'http://www.carpenterslocal27.ca/',
+  image: open_image('org10.jpg'),
   orgtype: 'business',
   user_id: 3
   })
@@ -217,6 +234,7 @@ org11 = Organization.create!({
   email: 'hello@lighthouselabs.ca',
   primaryphone: 18885696898,
   url: 'https://lighthouselabs.ca/',
+  image: open_image('org11.png'),
   orgtype: 'business',
   user_id: 3
   })
@@ -230,7 +248,8 @@ org12 = Organization.create!({
   province: 'ON',
   email: 'info@alorestaurant.com',
   primaryphone: 4162602222,
-  url: 'https://lighthouselabs.ca/',
+  url: 'http://alorestaurant.com/',
+  image: open_image('org12.jpg'),
   orgtype: 'business',
   user_id: 3
   })
@@ -244,6 +263,7 @@ org13 = Organization.create!({
   email: 'info@mec.ca',
   primaryphone: 6047073300,
   url: 'https://www.mec.ca/',
+  image: open_image('org13.jpg'),
   orgtype: 'business',
   user_id: 3
   })
