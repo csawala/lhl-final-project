@@ -1,7 +1,8 @@
+<div class="container" id="form-carousel">
+  <div class="carousel carousel-slider center" indicators="false">
 
-  <div class="carousel carousel-slider center" id="form-carousel" indicators="false">
-
-    <div class="carousel-item blue grey-text text-darken-2" href="#one">
+    <!-- SLIDE 1 -->
+    <div class="carousel-item amber grey-text text-darken-2" href="#one">
       <h2>Welcome</h2>
       <p class="grey-text text-darken-2">Do you have something to...</p>
       <a class="btn waves-effect white grey-text" id="offer-button">offer</a>
@@ -9,15 +10,24 @@
       <a class="btn waves-effect white grey-text" id="need-button">need</a>
     </div>
 
-    <div class="carousel-item white grey darken-1-text" href="#two">
-      <p class="grey-text text-darken-2">Do you want to...</p>
-      <a class="btn waves-effect white grey-text" id="give-button">give</a>
-      <p class="grey-text text-darken-2">Do you want to... </p>
-      <a class="btn waves-effect white grey-text" id="participate-button">participate</a>
+    <!-- SLIDE 2 -->
+    <div class="carousel-item teal grey darken-1-text" href="#two">
+      <p class="grey-text text-darken-2">Are you an...</p>
+      <a class="btn waves-effect white grey-text" id="organization-button">organization</a>
+      <p class="grey-text text-darken-2">Are you an...</p>
+      <a class="btn waves-effect white grey-text" id="individual-button">individual</a>
     </div>
 
-    <div class="carousel-item white grey-text text-darken-2" href="#three">
+    <!-- SLIDE 3 -->
+    <div class="carousel-item cyan grey-text text-darken-2" href="#three">
+      <p class="grey-text text-darken-2">Do you want to...</p>
+      <a class="btn waves-effect white grey-text" id="give-button-individual">give</a>
+      <p class="grey-text text-darken-2">Do you want to... </p>
+      <a class="btn waves-effect white grey-text" id="participate-button-individual">participate</a>
+    </div>
 
+    <!-- SLIDE 4 -->
+    <div class="carousel-item amber white-text" href="#fours">
       <h2>Please pick some causes you are interested in.</h2>
 
       <div class="container">
@@ -53,7 +63,7 @@
           </label>
         </div>
 
-         
+
         <p class="grey-text">Poverty</p><div class="switch">
           <!-- Switch -->
           <label>
@@ -66,11 +76,42 @@
         </div>
         <br>
         <a class="btn waves-effect white grey-text" id="need-button">Let's go</a>
-
     </div>
 
-    <div class="carousel-item blue white-text" href="#fours">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
+    <!-- SLIDE 5 -->
+    <div class="carousel-item red accent-1 grey-text text-darken-2" href="#five">
+      <p class="grey-text text-darken-2">Are you interested in...</p>
+      <a class="btn waves-effect white grey-text" id="events-button-individual">events</a>
+      <p class="grey-text text-darken-2">Are you offering... </p>
+      <a class="btn waves-effect white grey-text" id="skill-button-individual">skills</a>
     </div>
+
+
   </div>
+</div>
+
+
+  <script>
+
+  $(document).ready(() => {
+
+    $('.carousel.carousel-slider').carousel({full_width: true});
+
+    $('#offer-button').click(function(q) {
+      $('.carousel').carousel('next')
+    })
+
+    $('#individual-button').click(function(q) {
+      $('.carousel').carousel('next')
+    })
+
+    $('#give-button-individual').click(function(q) {
+      $('.carousel').carousel('next')
+    })
+
+    $('#participate-button-individual').click(function(q) {
+      $('.carousel').carousel('next', 2)
+    })
+
+  })
+  </script>
