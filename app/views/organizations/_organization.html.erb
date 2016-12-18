@@ -12,7 +12,6 @@
       </span>
     </div>
     <div class="card-action">
-      <i class="tiny material-icons">web</i>
       <%= link_to 'website', organization.url %>
       <% if organization.orgtype == 'charity' %>
         <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link' %>

@@ -19,7 +19,7 @@
 div.card:hover {
   box-shadow: 4px 4px 10px gray;
 }
-div.card {
+div.card.medium {
   word-wrap: break-word;
   margin: 5px;
   height: 450px;
@@ -29,17 +29,13 @@ div.card {
   span.card-title.grey-text {
       line-height: 1.2em;
     }
-  a.help-link {
+  a.help-link, a.info-link {
     font-weight: 700;
-    color: darkorange;
   }
   div.card-content {
     height: 100px;
-
   }
-
 }
-
 div.card-image {
   height: 250px;
   display: table-cell;
