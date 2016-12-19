@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
   def show
-    @org = validate_organization(params[:id])
+    validate_organization(current_user.organization.id)
   end
 
   def validate_organization(id)

@@ -5,10 +5,9 @@ class SessionsController < ApplicationController
   def  create
     if user = User.authenticate_with_credentials(params[:email], params[:password])
       session[:user_id] = user.id
-
-      if @user_org = Organization.where(user_id: session[:user_id]).ids.first
-        session[:user_org] = @user_org
-        redirect_to dashboard_path(@user_org)
+      # move this if block to dashboard controller once we make a non-organization dashboard
+      if user.organization.present?
+        redirect_to dashboard_path
       else
         redirect_to root_path
       end
