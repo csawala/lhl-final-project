@@ -3,13 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def  create
-    type = params[:orgtype]
-    user = User.authenticate(params[:email], params[:password])
-    session[:user_id] = user.id
-    # if user.business?
-    #   redirect_to 'registration/business'
-    # elsif user.charity?
-    #   redirect_to 'registration/'
-
+    if user = User.authenticate_with_credentials(params[:email], params[:password])
+      session[:user_id] = user.id
+      redirect_to dashboard_path(params[:email])
+    else
+      redirect_to login_path, notice: 'Invalid login'
+    end
   end
 end

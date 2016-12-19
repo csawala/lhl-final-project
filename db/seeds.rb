@@ -81,7 +81,6 @@ org1 = Organization.create!({
   url: 'https://blood.ca/',
   image: open_image('org1.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Canadian Blood Services is a not-for-profit, charitable organization operating at arm's length from government. Its sole mission is to manage the blood supply for Canadians. Created in 1998, it is the successor to the Canadian Red Cross Blood Program and the Canadian Blood Agency (the former funding arm of Canada's blood supply system)."
   })
 
@@ -112,7 +111,6 @@ org3 = Organization.create!({
   url: 'http://www.salvationarmy.ca/',
   image: open_image('org3.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "The Salvation Army exists to share the love of Jesus Christ, meet human needs and be a transforming influence in the communities of our world."
   })
 
@@ -129,7 +127,6 @@ org4 = Organization.create!({
   url: 'http://www.oacas.org/',
   image: open_image('org4.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "A leader and collaborator promoting the welfare of children, youth and families through leadership, service excellence and advocacy."
   })
 
@@ -144,7 +141,6 @@ org5 = Organization.create!({
   url: 'http://www.dailybread.ca/',
   image: open_image('org5.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "We believe that access to food is a basic human right, not a privilege. No one should go hungry. We believe that no one should face barriers in accessing food."
   })
 
@@ -159,7 +155,6 @@ org6 = Organization.create!({
   url: 'https://www.torontohumanesociety.com',
   image: open_image('org6.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "It is the mission of The Toronto Humane Society to promote the humane care and protection of all animals and to prevent cruelty and suffering. Following no kill principles, the Toronto Humane Society aspires to be a best-in-class animal shelter – working in partnership with the community to find creative solutions and improve outcomes for all animals."
   })
 
@@ -176,7 +171,6 @@ org7 = Organization.create!({
   url: 'http://www.habitat.ca/',
   image: open_image('org7.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Our vision is a world where everyone has a safe and decent place to live. Our mission is to mobilize volunteers and community partners in building affordable housing and promoting homeownership as a means to breaking the cycle of poverty."
   })
 
@@ -192,7 +186,6 @@ org8 = Organization.create!({
   url: 'https://www.ccfcanada.ca/',
   image: open_image('org8.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Christian Children’s Fund of Canada creates a future of hope for children, families, and communities by helping them develop the skills and resources to overcome poverty and pursue justice. For more than 50 years, we have followed the example of Christ by serving the poor regardless of their faith, cultural, and ethnic background."
   })
 
@@ -208,7 +201,6 @@ org14 = Organization.create!({
   url: 'http://www.kidsportcanada.ca/',
   image: open_image('org14.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
   })
 
@@ -223,7 +215,6 @@ org15 = Organization.create!({
   url: 'http://www.earthrangers.com',
   image: open_image('org15.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
   })
 
@@ -239,7 +230,6 @@ org16 = Organization.create!({
   url: 'http://tiff.net',
   image: open_image('org16.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
   })
 
@@ -270,7 +260,6 @@ org10 = Organization.create!({
   url: 'http://www.carpenterslocal27.ca/',
   image: open_image('org10.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
 org11 = Organization.create!({
@@ -285,7 +274,6 @@ org11 = Organization.create!({
   url: 'https://lighthouselabs.ca/',
   image: open_image('org11.png'),
   orgtype: 'business',
-  user_id: 3
   })
 
 org12 = Organization.create!({
@@ -300,7 +288,6 @@ org12 = Organization.create!({
   url: 'http://alorestaurant.com/',
   image: open_image('org12.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
 org13 = Organization.create!({
@@ -314,7 +301,6 @@ org13 = Organization.create!({
   url: 'https://www.mec.ca/',
   image: open_image('org13.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
 
