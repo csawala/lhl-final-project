@@ -1,11 +1,15 @@
 <section class="org-show">
   <!-- Floating edit button -->
   <div class="fixed-action-btn">
-    <a class="btn-floating tooltipped btn-medium waves-effect waves-light light-blue darken-2" data-position="left" data-delay="50" data-tooltip="Edit Organization Info">
-      <i class="material-icons">mode_edit</i>
-    </a>
+    <button class="btn-floating tooltipped btn-medium waves-effect waves-light green" type="submit" data-position="left" data-delay="50" data-tooltip="Save Organization Info" name="save">
+      <i class="material-icons">done</i>
+    </button>
   </div>
 
-  <%= render 'org_display' %>
+  <%= render 'org_edit' %>
 
+  <div class="divider"></div>
+
+  <%= render 'org_categories' %>
+  <!-- Event creation/description would go here? -->
 </section>
