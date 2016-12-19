@@ -1,31 +1,15 @@
 <section class="org-show">
-  <h2 class="org-name"><%= @org.name %></h2>
-  <span class="org-image">
-    <%= image_tag @org.image.full %>
-  </span>
-  <span class="org-description">
-    <%= @org.description %>
-  </span><br>
-  <div class="org-details">
-    <i class="tiny material-icons">email</i>
-    <%= mail_to 'email', @org.email %><br>
-    <i class="tiny material-icons">web</i>
-    <%= link_to 'website', @org.url %><br>
-    <i class="tiny material-icons">phone</i>
-    <%# format phone number %>
-    <%= number_to_phone(@org.primaryphone, area_code: true) %><br><br>
-    <% if @org.secondaryphone %><br>
-      <i class="tiny material-icons">phone</i>
-      <%= number_to_phone(@org.secondaryphone, area_code: true) %><br>
-    <% end %>
-    <%= @org.address %>
-    <% if @org.suite %>
-      , <%= @org.suite %><br>
-    <% else %><br>
-    <% end %>
-    <%= @org.city %>, <%= @org.province %><br>
-    <%= @org.postal %><br>
+  <!-- Floating edit button -->
+  <div class="fixed-action-btn">
+    <button class="btn-floating tooltipped btn-medium waves-effect waves-light green" type="submit" data-position="left" data-delay="50" data-tooltip="Save Organization Info" name="save">
+      <i class="material-icons">done</i>
+    </button>
   </div>
 
+  <%= render 'org_edit' %>
 
+  <div class="divider"></div>
+
+  <%= render 'org_categories' %>
+  <!-- Event creation/description would go here? -->
 </section>
