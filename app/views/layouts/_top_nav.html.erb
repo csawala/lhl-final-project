@@ -6,13 +6,13 @@
       </a>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><%= link_to 'Organizations', organizations_path %></li>
-        <li><%= link_to 'Get started', do_good_index_path %></li>
+        <li><%= link_to 'Organizations', organizations_path, id: 'org-btn' %></li>
+        <li><%= link_to 'Get started', do_good_index_path, id: 'do-good-btn'%></li>
         <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
-        <li><%= link_to 'Organizations', organizations_path %></li>
-        <li><%= link_to 'Get started', do_good_index_path %></li>
+        <li><%= link_to 'Organizations', organizations_path, id: 'org-btn' %></li>
+        <li><%= link_to 'Get started', do_good_index_path, id: 'do-good-btn' %></li>
         <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
       </ul>
     </div>

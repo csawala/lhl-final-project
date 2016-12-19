@@ -29,9 +29,19 @@ div.card-image {
   vertical-align: middle;
   img {
     display: block;
+    margin: 0 auto;
     max-width: 380px;
     max-height: 250px;
     width: auto;
     height: auto;
+  }
+}
+
+div.org-card-large {
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
