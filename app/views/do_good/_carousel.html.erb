@@ -27,55 +27,36 @@
     </div>
 
     <!-- SLIDE 4 -->
-    <div class="carousel-item amber white-text" href="#fours">
-      <h2>Please pick some causes you are interested in.</h2>
+    <div class="carousel-item amber white-text" href="#four">
+        <h2>Please pick some causes you are interested in.</h2>
 
-      <div class="container">
-        <p class="grey-text">Environment</p><div class="switch">
-          <!-- Switch -->
-          <label>
-            No
-            <input type="checkbox">
-            <span class="lever"></span>
-            Yes
-          </label>
-        </div>
+         <form class="col s12" id="causes_form">
+           <div class="row">
 
-        <p class="grey-text">Health</p><div class="switch">
-          <!-- Switch -->
-          <label>
-            No
-            <input type="checkbox">
-            <span class="lever"></span>
-            Yes
-          </label>
-        </div>
-        </div>
+             <div class="col s12 m4 l4"></div>
 
-        <div class="container">
-        <p class="grey-text">Animals</p><div class="switch">
-          <!-- Switch -->
-          <label>
-            No
-            <input type="checkbox">
-            <span class="lever"></span>
-            Yes
-          </label>
-        </div>
+             <div class="input-field col s12 m4 l4">
+                <select multiple id="multiple_select" name="category">
+                   <option value="" disabled="disabled" selected="selected">Select</option>
+                   <option value="environment">environment</option>
+                   <option value="poverty">poverty</option>
+                   <option value="sports">sports</option>
+                   <option value="health">health</option>
+                   <option value="education">education</option>
+                </select>
 
-        <p class="grey-text">Poverty</p><div class="switch">
-          <!-- Switch -->
-          <label>
-            No
-            <input type="checkbox">
-            <span class="lever"></span>
-            Yes
-          </label>
-        </div>
-        </div>
-        <br>
-        <a class="btn waves-effect white grey-text" id="need-button">Let's go</a>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Let's go
+                  <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+            <div class="s12 m4 l4"></div>
+
+         </div>
+       </form>
+
     </div>
+
 
     <!-- SLIDE 5 -->
     <div class="carousel-item red accent-1 grey-text text-darken-2" href="#five">
@@ -96,6 +77,8 @@
 
     $('.carousel.carousel-slider').carousel({full_width: true});
 
+    $('select').material_select();
+
     $('#offer-button').click(function(q) {
       $('.carousel').carousel('next')
     })
@@ -112,5 +95,16 @@
       $('.carousel').carousel('next', 2)
     })
 
+    $('#organization-button').click(function(){
+        window.location.href='/dashboard/1';
+    })
+
+   $('#causes_form').on('submit', function(e) {
+         e.preventDefault();
+         var causes = $('#multiple_select').serialize();
+         window.location = '/organizations?' + causes
+     });
+
   })
+
   </script>
