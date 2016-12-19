@@ -22,7 +22,6 @@
 schema.rb
 
 # Ignore carrier wave uploads for development
-/public/uploads
 
 .DS_Store
 .cache
