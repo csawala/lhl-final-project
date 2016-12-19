@@ -1,0 +1,41 @@
+<h4>Dashboard for:</h4><br>
+<h4><%= @org.name %></h4>
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name"><%=  %></label>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<span class="org-image">
+  <%= image_tag @org.image.full, class: "materialboxed z-depth-1", width: 300 %><br><br>
+</span>
+<div class="org-description">
+  <%= @org.description %>
+</div><br>
+<div class="org-details">
+  <i class="tiny material-icons">email</i>
+  <%= mail_to 'email', @org.email %><br>
+  <i class="tiny material-icons">web</i>
+  <%= link_to 'website', @org.url %><br>
+  <i class="tiny material-icons">phone</i>
+  <%# format phone number %>
+  <%= number_to_phone(@org.primaryphone, area_code: true) %><br><br>
+  <% if @org.secondaryphone %><br>
+    <i class="tiny material-icons">phone</i>
+    <%= number_to_phone(@org.secondaryphone, area_code: true) %><br>
+  <% end %>
+  <%= @org.address %>
+  <% if @org.suite %>
+    , <%= @org.suite %><br>
+  <% else %><br>
+  <% end %>
+  <%= @org.city %>, <%= @org.province %><br>
+  <%= @org.postal %><br>
+</div>

@@ -4,6 +4,12 @@ class DashboardController < ApplicationController
     @org = validate_organization(params[:id])
   end
 
+  def update
+    @org = validate_organization(params[:id])
+  end
+
+
+  private
   def validate_organization(id)
     if Organization.where(id: id).count == 0
       redirect_to organizations_path
