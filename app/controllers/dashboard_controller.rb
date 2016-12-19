@@ -1,7 +1,12 @@
 class DashboardController < ApplicationController
 
   def show
-    validate_organization(current_user.organization.id)
+    # validate_organization(current_user.organization.id)
+    if current_user.organization.present?
+      render 'org_edit'
+    else
+      render 'user_edit'
+    end
   end
 
   def validate_organization(id)

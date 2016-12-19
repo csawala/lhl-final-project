@@ -87,6 +87,7 @@ org1 = Organization.create!({
   url: 'https://blood.ca/',
   image: open_image('org1.jpg'),
   orgtype: 'charity',
+  user_id: 2,
   description: "Canadian Blood Services is a not-for-profit, charitable organization operating at arm's length from government. Its sole mission is to manage the blood supply for Canadians. Created in 1998, it is the successor to the Canadian Red Cross Blood Program and the Canadian Blood Agency (the former funding arm of Canada's blood supply system)."
   })
 
@@ -102,7 +103,6 @@ org2 = Organization.create!({
   url: 'http://www.sickkidsfoundation.com/',
   image: open_image('org2.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "All of us at SickKids are fighting the same battle: to make every kid a healthy kid. Our vision is simple: Healthier Children. A Better World. We believe fighting for the health and wellbeing of children is one of the most powerful ways to improve society."
   })
 
