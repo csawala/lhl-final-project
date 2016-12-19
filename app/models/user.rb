@@ -1,6 +1,8 @@
 class User < ApplicationRecord
 
-  # has_secure_password
+  has_one :organization
+
+  has_secure_password
 
   before_validation :email_to_lower
 

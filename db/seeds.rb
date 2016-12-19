@@ -24,21 +24,27 @@ User.create!({
   first_name: 'Joe',
   last_name: 'Userguy',
   email: 'j@j.com',
-  phone: 6472882828
+  phone: 6472882828,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # test user linked to a charity
 User.create!({
   first_name: 'Tina',
   last_name: 'Charitygal',
   email: 't@blood.ca',
-  phone: 4168225544
+  phone: 4168225544,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # test user linked to a business
 User.create!({
   first_name: 'Jim',
   last_name: 'Businessman',
   email: 'b@b.com',
-  phone: 4167774646
+  phone: 4167774646,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # User.create!({
 #   first_name: ,
@@ -190,7 +196,7 @@ org8 = Organization.create!({
   })
 
 
-org14 = Organization.create!({
+org9 = Organization.create!({
   name: 'KidSport',
   address: '2041-875 Morningside Ave',
   city: 'Toronto',
@@ -204,7 +210,7 @@ org14 = Organization.create!({
   description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
   })
 
-org15 = Organization.create!({
+org10 = Organization.create!({
   name: 'Earth Rangers',
   address: '9520 Pine Valley Drive',
   city: 'Woodbridge',
@@ -218,7 +224,7 @@ org15 = Organization.create!({
   description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
   })
 
-org16 = Organization.create!({
+org11 = Organization.create!({
   name: 'Toronto International Film Festival (TIFF)',
   address: ' 350 King Street West',
   city: 'Toronto',
@@ -236,7 +242,7 @@ org16 = Organization.create!({
 
 
 # ------- BUSINESSES --------
-org9 = Organization.create!({
+org12 = Organization.create!({
   name: 'The Kitchen Table',
   address: '12 Queens Quay West',
   city: 'Toronto',
@@ -249,7 +255,7 @@ org9 = Organization.create!({
   user_id: 3
   })
 
-org10 = Organization.create!({
+org13 = Organization.create!({
   name: 'Carpenters Local 27',
   address: '222 Rowntree Dairy Road',
   city: 'Woodbridge',
@@ -262,7 +268,7 @@ org10 = Organization.create!({
   orgtype: 'business',
   })
 
-org11 = Organization.create!({
+org14 = Organization.create!({
   name: 'Lighthouse Labs',
   address: '46 Spadina Ave',
   suite: '4th Floor',
@@ -276,7 +282,7 @@ org11 = Organization.create!({
   orgtype: 'business',
   })
 
-org12 = Organization.create!({
+org15 = Organization.create!({
   name: 'Alo Restaurant',
   address: '163 Spadina Ave',
   suite: '3rd Floor',
@@ -290,7 +296,7 @@ org12 = Organization.create!({
   orgtype: 'business',
   })
 
-org13 = Organization.create!({
+org16 = Organization.create!({
   name: 'Mountain Equipment Co-Op',
   address: '1077 Great Northern Way',
   city: 'Vancouver',
@@ -376,7 +382,7 @@ cat_org13 = CategoriesOrganization.create!({
 })
 
 cat_org14 = CategoriesOrganization.create!({
-  category_id: 8,
+  category_id: 10,
   organization_id: 7
 })
 
@@ -392,27 +398,27 @@ cat_org16 = CategoriesOrganization.create!({
 
 cat_org17 = CategoriesOrganization.create!({
   category_id: 10,
-  organization_id: 14
+  organization_id: 9
 })
 
 cat_org18 = CategoriesOrganization.create!({
   category_id: 3,
-  organization_id: 14
+  organization_id: 9
 })
 
 cat_org19 = CategoriesOrganization.create!({
   category_id: 6,
-  organization_id: 15
+  organization_id: 10
 })
 
 cat_org20 = CategoriesOrganization.create!({
   category_id: 2,
-  organization_id: 15
+  organization_id: 10
 })
 
 cat_org21 = CategoriesOrganization.create!({
   category_id: 9,
-  organization_id: 16
+  organization_id: 11
 })
 
 ## --- GOODS TYPES ---
