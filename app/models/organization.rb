@@ -12,6 +12,7 @@ class Organization < ApplicationRecord
 
     by_city(params[:city])
       .by_categories(params[:category_names])
+      .by_orgtype(params[:orgtype])
   end
 
   protected
@@ -25,5 +26,9 @@ class Organization < ApplicationRecord
     return all unless category_names.present?
 
     joins(:categories).where(categories: { name: category_names })
+  end
+
+  def self.by_orgtype(orgtype)
+    orgtype.present? ? where(orgtype: orgtype) : all
   end
 end

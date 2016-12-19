@@ -1,6 +1,8 @@
 <div class="row">
   <aside class="org-toggle">
-    <%= link_to "Charities", "/organizations?org_type=charity" %>
+    <%= link_to "All", "/organizations" %>
+    <%= link_to "Charities", "/organizations?orgtype=charity" %>
+    <%= link_to "Businesses", "/organizations?orgtype=business" %>
   </aside>
   <%= render @organizations %>
 
