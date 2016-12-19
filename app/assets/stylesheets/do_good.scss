@@ -2,20 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container #form-carousel {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-
-.carousel-item .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: baseline;
+#form-carousel {
 
 }
