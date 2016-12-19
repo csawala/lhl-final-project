@@ -1,0 +1,93 @@
+
+<div class="container">
+  <p class="grey-text">Environment</p><div class="switch">
+    <!-- Switch -->
+    <label>
+      No
+      <input type="checkbox">
+      <span class="lever"></span>
+      Yes
+    </label>
+  </div>
+
+  <p class="grey-text">Health</p><div class="switch">
+    <!-- Switch -->
+    <label>
+      No
+      <input type="checkbox">
+      <span class="lever"></span>
+      Yes
+    </label>
+  </div>
+  </div>
+
+  <div class="container">
+  <p class="grey-text">Animals</p><div class="switch">
+    <!-- Switch -->
+    <label>
+      No
+      <input type="checkbox">
+      <span class="lever"></span>
+      Yes
+    </label>
+  </div>
+
+
+  <p class="grey-text">Poverty</p><div class="switch">
+    <!-- Switch -->
+    <label>
+      No
+      <input type="checkbox">
+      <span class="lever"></span>
+      Yes
+    </label>
+  </div>
+  </div>
+  <br>
+  <a class="btn waves-effect white grey-text" id="need-button">Let's go</a>
+
+
+<div class="row">
+   <form class="col s12" id="causes_form">
+     <div class="row">
+
+       <div class="input-field col s6">
+          <select multiple id="multiple_select">
+             <option value="" disabled="disabled" selected="selected">Pick some causes</option>
+             <option value="environment">environment</option>
+             <option value="poverty">poverty</option>
+             <option value="sports">sports</option>
+             <option value="health">health</option>
+             <option value="education">education</option>
+          </select>
+
+
+          <button class="btn waves-effect waves-light" type="submit" name="action">Let's go
+            <i class="material-icons right">send</i>
+          </button>
+
+        </div>
+
+
+
+   </div>
+ </form>
+</div>
+
+
+
+<script>
+
+
+$(document).ready(function() {
+
+
+    // $('#causes_form').on('submit', function(e) {
+    //   e.preventDefault()
+    //   var causes = $('#multiple_select').val().join(',');
+    //   $.get('/organizations', causes)
+    // })
+
+});
+
+</script>
