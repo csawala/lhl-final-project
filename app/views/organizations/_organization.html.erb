@@ -1,12 +1,10 @@
 <%# organization / charity card %>
 <div class="col s12 m6 l4">
   <div class="card medium">
-    <div class="card-image waves-effect waves-block waves-light">
-      <%# colourize and add icon according to category %>
-      <div class="category-image <%= organization.orgtype %>">
-        <%= render 'cause_icons' %>
-      </div>
+    <div class="card-image">
+      <%= image_tag(organization.image.card) %>
     </div>
+    <div class="divider"></div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">
         <i class="material-icons right">more_vert</i>
@@ -17,6 +15,8 @@
       <%= link_to 'website', organization.url %>
       <% if organization.orgtype == 'charity' %>
         <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link' %>
+      <% elsif organization.orgtype == 'business' %>
+        <%= link_to 'donor info', organization_path(id: organization.id), class: 'info-link' %>
       <% end %>
     </div>
     <%# expand card to view contact details %>
@@ -25,8 +25,10 @@
       <%= organization.name %>
       <i class="material-icons right">close</i></span>
       <p>
-        <i class="tiny material-icons">email</i>
-        <%= mail_to 'email', organization.email %><br>
+        <% if organization.email %>
+          <span><i class="tiny material-icons">email</i>
+          <%= mail_to 'email', organization.email %><br></span>
+        <% end %>
         <i class="tiny material-icons">phone</i>
         <%# format phone number %>
         <%= number_to_phone(organization.primaryphone, area_code: true) %><br><br>

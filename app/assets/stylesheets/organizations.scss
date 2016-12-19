@@ -17,33 +17,34 @@
 // }
 
 div.card:hover {
-  box-shadow: 2px 2px 10px gray;
+  box-shadow: 4px 4px 10px gray;
 }
-div.card {
+div.card.medium {
   word-wrap: break-word;
   margin: 5px;
-  // min-width: 250px;
-  // max-width: 30%;
+  height: 450px;
   word-wrap: wrap;
   margin: 5px;
   line-height: 1.2em;
   span.card-title.grey-text {
       line-height: 1.2em;
     }
-  a.help-link {
+  a.help-link, a.info-link {
     font-weight: 700;
-    color: darkorange;
   }
-  max-height: 450px;
-
+  div.card-content {
+    height: 100px;
+  }
 }
-
-div.category-image {
-  min-height: 200px;
-}
-div.business {
-  background-color: #6666FF;
-}
-div.charity {
-  background-color: #ee6e73;
+div.card-image {
+  height: 250px;
+  display: table-cell;
+  vertical-align: middle;
+  img {
+    display: block;
+    max-width: 380px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+  }
 }
