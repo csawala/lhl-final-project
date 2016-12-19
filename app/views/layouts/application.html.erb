@@ -12,6 +12,14 @@
   </head>
 
   <body>
+    <% if flash.notice.present? %>
+      <div class="flash-notice">
+        <h4>
+          <%= flash.notice %>
+        </h4>
+      </div>
+    <% end %>
+
     <%= render 'layouts/top_nav' %>
 
     <main class="container">
