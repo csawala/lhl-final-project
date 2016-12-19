@@ -1,9 +1,27 @@
-div.nav-wrapper {
-  background-color: #009ACD;
-  width: 100%
+nav {
+  transition: all 0.5s ease;
+  background-color: white;
+  opacity: .8;
+  width: 100%;
+  img#logo {
+    height: 2.5em;
+    height: 70px;
+  }
+  ul, a {
+    .material-icons, li > a {
+      color: black
+    }
+  }
+  a.btn {
+    background-color: #3165D7
+  }
+  a.btn:hover {
+    background-color: #F9B454;
+    color: black;
+  }
 }
 
-
-.brand-logo {
-  width: 20%;
+div.navbar-fixed:hover, nav:hover {
+  transition: all 0.5s ease;
+  opacity: 1
 }
