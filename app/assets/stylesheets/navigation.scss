@@ -1,4 +1,5 @@
 nav {
+  top: 0;
   transition: all 0.5s ease;
   background-color: white;
   opacity: .8;
@@ -24,4 +25,8 @@ nav {
 div.navbar-fixed:hover, nav:hover {
   transition: all 0.5s ease;
   opacity: 1
+}
+
+div.navbar-fixed {
+  z-index: 1000;
 }

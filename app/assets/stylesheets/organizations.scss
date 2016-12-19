@@ -38,7 +38,6 @@ div.card-image {
     height: auto;
   }
 }
-
 div.org-card-large {
   img {
     display: block;
@@ -47,7 +46,6 @@ div.org-card-large {
     margin-bottom: 20px;
   }
 }
-
 aside.org-toggle {
   transition: all 0.5s ease;
   text-align: center;
@@ -73,4 +71,7 @@ aside.org-toggle:hover {
   a:hover {
     color: black;
   }
+}
+aside.org-toggle {
+  z-index: 100;
 }
