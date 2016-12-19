@@ -16,8 +16,10 @@ div.card.medium {
     transition: all 0.5s ease;
     text-shadow: 1px 0px 2px gray;
   }
-  a.help-link, a.info-link {
-    font-weight: 700;
+  div.card-action {
+    a.help-link, a.info-link {
+      font-weight: 700;
+    }
   }
   div.card-content {
     height: 100px;
@@ -44,4 +46,12 @@ div.org-card-large {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+}
+
+aside.org-toggle {
+  background-color: #5F83FF;
+  height: 200px;
+  width: 70px;
+  position: fixed;
+  right: 0px;
 }

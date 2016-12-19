@@ -12,4 +12,5 @@ activeNavButtons = () => {
 
 $(document).on('turbolinks:load', () => {
   activeNavButtons()
+  $(".button-collapse").sideNav();
 })
