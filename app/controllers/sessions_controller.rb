@@ -3,12 +3,14 @@ class SessionsController < ApplicationController
   end
 
   def  create
-    if user = User.authenticate_with_credentials(params[:email], params[:password])
+    if request.env['omniauth.auth']
+      user = User.create_with_omniauth(request.env['omniauth.auth'])
       session[:user_id] = user.id
-
       redirect_to dashboard_path
     else
-      redirect_to login_path, notice: 'Invalid login'
+      user = User.authenticate_with_credentials(params[:email], params[:password])
+      session[:user_id] = user.id
+      redirect_to dashboard_path
     end
   end
 
