@@ -3,5 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #form-carousel {
+  height: 500px;
+}
 
+.carousel .carousel-item {
+padding-top: 4em;
+height:500px !important;
 }
