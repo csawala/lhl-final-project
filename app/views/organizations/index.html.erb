@@ -1,12 +1,12 @@
-<div class="row">
-  <aside class="org-toggle">
-    <span>
-      <%= link_to "All", "/organizations" %>
-      <%= link_to "Charities", "/organizations?orgtype=charity" %>
-      <%= link_to "Businesses", "/organizations?orgtype=business" %>
-    </span>
-  </aside>
+  <div class="row org-container">
+    <aside class="org-toggle">
+      <span>
+        <%= link_to "All", "/organizations" %>
+        <%= link_to "Charities", "/organizations?orgtype=charity" %>
+        <%= link_to "Businesses", "/organizations?orgtype=business" %>
+      </span>
+    </aside>
 
-  <%= render @organizations %>
+    <%= render @organizations %>
 
-</div>
+  </div>
