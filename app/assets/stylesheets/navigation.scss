@@ -1,12 +1,8 @@
 nav {
   top: 0;
-  transition: all 0.5s ease;
   background-color: transparent;
-  opacity: .8;
-  width: 100%;
   img#logo {
-    height: 2.5em;
-    height: 70px;
+    height: 2.2em;
   }
   ul, a {
     .material-icons, li > a {
@@ -20,13 +16,4 @@ nav {
     background-color: #F9B454;
     color: black;
   }
-}
-
-div.navbar-fixed:hover, nav:hover {
-  transition: all 0.5s ease;
-  opacity: 1
-}
-
-div.navbar-fixed {
-  z-index: 1000;
 }
