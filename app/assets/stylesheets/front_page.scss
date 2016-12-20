@@ -1,8 +1,12 @@
 body main.container {
- width: 100%;
+ width: 100vw;
+ // for parallax full-width
  margin: 0;
 }
-
+// fix text alignment caused by margin 0 above
+div.row {
+  width: 100vw;
+}
 // CSS for Parallax homepage
 .parallax-container {
   height: 600px;
@@ -19,6 +23,7 @@ body main.container {
 }
 
 .carousel .carousel-item {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,4 +48,7 @@ body main.container {
 
 #slide-5-p {
   padding-top: 6em;
+}
+div.carousel.carousel-slider.center {
+  width: 100vw;
 }
