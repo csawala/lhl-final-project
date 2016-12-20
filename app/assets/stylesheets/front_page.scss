@@ -18,3 +18,31 @@ body main.container {
 #homepage_title_text {
   padding: 1em;
 }
+
+
+.carousel .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:625px !important;
+}
+
+#slide-1-title {
+  padding-top: 2.5em;
+}
+
+#slide-2-p {
+  padding-top: 6em;
+}
+
+#slide-3-p {
+  padding-top: 6em;
+}
+
+#slide-4-title {
+  padding-top: 3.5em;
+}
+
+#slide-5-p {
+  padding-top: 6em;
+}
