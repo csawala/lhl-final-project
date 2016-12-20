@@ -25,17 +25,13 @@ div.card.medium {
     height: 100px;
   }
 }
-div.card-image {
+div.valign-wrapper {
   height: 250px;
-  display: table-cell;
-  vertical-align: middle;
   img {
-    display: block;
-    margin: 0 auto;
-    max-width: 380px;
-    max-height: 250px;
-    width: auto;
+    margin: auto;
+    max-height: 100%;
     height: auto;
+    width: auto;
   }
 }
 div.org-card-large {
