@@ -1,16 +1,54 @@
 body main.container {
- width: 100%;
+ width: 100vw;
+ // for parallax full-width
  margin: 0;
 }
-
-
+// fix text alignment caused by margin 0 above
+div.row {
+  width: 100vw;
+}
 // CSS for Parallax homepage
 .parallax-container {
-    height: 600px;
-    width: 100vw;
-  }
+  height: 600px;
+  width: 100vw;
+}
 
 #text_overlay_homepage {
   margin-top: 8em;
   margin-left: 2em;
+}
+
+#homepage_title_text {
+  padding: 1em;
+}
+
+.carousel .carousel-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:600px !important;
+}
+
+#slide-1-title {
+  padding-top: 2.5em;
+}
+
+#slide-2-p {
+  padding-top: 6em;
+}
+
+#slide-3-p {
+  padding-top: 6em;
+}
+
+#slide-4-title {
+  padding-top: 3.5em;
+}
+
+#slide-5-p {
+  padding-top: 6em;
+}
+div.carousel.carousel-slider.center {
+  width: 100vw;
 }

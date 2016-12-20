@@ -7,7 +7,7 @@ activeNavButtons = () => {
   if ($window.includes('/organizations'))
     makeClosestElementActive($('#org-btn'), 'li')
   else if ($window.includes('/do_good'))
-    makeClosestElementActive($('#do-good-btn'), 'li')
+    makeClosestElementActive($('#get-started-btn'), 'li')
   else if ($window.includes('/dashboard'))
     makeClosestElementActive($('#dashboard-btn'), 'li')
 }
