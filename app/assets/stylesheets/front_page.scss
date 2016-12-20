@@ -1,8 +1,9 @@
 body main.container {
- width: 100%;
+ width: 100vw;
+ // for parallax full-width
  margin: 0;
 }
-// fix
+// fix text alignment caused by margin 0 above
 div.row {
   width: 100vw;
 }
@@ -22,7 +23,7 @@ div.row {
 }
 
 .carousel .carousel-item {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
