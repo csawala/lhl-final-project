@@ -1,3 +1,16 @@
 body main.container {
+ width: 100%;
+ margin: 0;
+}
 
+
+// CSS for Parallax homepage
+.parallax-container {
+    height: 600px;
+    width: 100vw;
+  }
+
+#text_overlay_homepage {
+  margin-top: 8em;
+  margin-left: 2em;
 }

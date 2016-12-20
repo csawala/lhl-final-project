@@ -8,6 +8,8 @@ activeNavButtons = () => {
     makeClosestElementActive($('#org-btn'), 'li')
   else if ($window.includes('/do_good'))
     makeClosestElementActive($('#do-good-btn'), 'li')
+  else if ($window.includes('/dashboard'))
+    makeClosestElementActive($('#dashboard-btn'), 'li')
 }
 
 $(document).on('turbolinks:load', () => {

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:index, :show, :create]
 
-  resources :dashboard, only: [:show, :update]
+  # resources :dashboard, only: [:show, :update]
 
   resources :do_good
 
@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   get '/login'    => 'sessions#new'
   post '/login'   => 'sessions#create'
   get '/logout'   => 'sessions#destroy'
+
+  # ---- DASHBOARD ----
+  get '/dashboard' => 'dashboard#show'
 end

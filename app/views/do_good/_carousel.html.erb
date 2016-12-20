@@ -1,5 +1,5 @@
-<div class="container" id="form-carousel">
-  <div class="carousel carousel-slider center" indicators="false">
+<div style="width:100%" class="container" id="form-carousel">
+  <div style="width:100%" class="carousel carousel-slider center" indicators="false">
 
     <!-- SLIDE 1 -->
     <div class="carousel-item amber grey-text text-darken-2" href="#one">
@@ -36,7 +36,7 @@
              <div class="col s12 m4 l4"></div>
 
              <div class="input-field col s12 m4 l4">
-                <select multiple id="multiple_select" name="category">
+                <select multiple id="multiple_select" name="category_names[]">
                    <option value="" disabled="disabled" selected="selected">Select</option>
                    <option value="environment">environment</option>
                    <option value="poverty">poverty</option>
@@ -69,42 +69,3 @@
 
   </div>
 </div>
-
-
-  <script>
-
-  $(document).ready(() => {
-
-    $('.carousel.carousel-slider').carousel({full_width: true});
-
-    $('select').material_select();
-
-    $('#offer-button').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#individual-button').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#give-button-individual').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#participate-button-individual').click(function(q) {
-      $('.carousel').carousel('next', 2)
-    })
-
-    $('#organization-button').click(function(){
-        window.location.href='/dashboard/1';
-    })
-
-   $('#causes_form').on('submit', function(e) {
-         e.preventDefault();
-         var causes = $('#multiple_select').serialize();
-         window.location = '/organizations?' + causes
-     });
-
-  })
-
-  </script>

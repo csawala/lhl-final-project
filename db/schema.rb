@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161218181159) do
+ActiveRecord::Schema.define(version: 20161219172113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,19 +48,6 @@ ActiveRecord::Schema.define(version: 20161218181159) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "needs", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "org_needs", force: :cascade do |t|
-    t.boolean "offers"
-    t.boolean "needs"
-    t.integer "need_id"
-    t.integer "organization_id"
-    t.index ["need_id"], name: "index_org_needs_on_need_id", using: :btree
-    t.index ["organization_id"], name: "index_org_needs_on_organization_id", using: :btree
-  end
-
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -87,12 +74,11 @@ ActiveRecord::Schema.define(version: 20161218181159) do
     t.string   "last_name"
     t.string   "email"
     t.bigint   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "password_digest", default: "t"
   end
 
   add_foreign_key "goods_types", "categories"
-  add_foreign_key "org_needs", "needs"
-  add_foreign_key "org_needs", "organizations"
   add_foreign_key "organizations", "users"
 end

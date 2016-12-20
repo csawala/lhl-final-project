@@ -24,21 +24,27 @@ User.create!({
   first_name: 'Joe',
   last_name: 'Userguy',
   email: 'j@j.com',
-  phone: 6472882828
+  phone: 6472882828,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # test user linked to a charity
 User.create!({
   first_name: 'Tina',
   last_name: 'Charitygal',
   email: 't@blood.ca',
-  phone: 4168225544
+  phone: 4168225544,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # test user linked to a business
 User.create!({
   first_name: 'Jim',
   last_name: 'Businessman',
   email: 'b@b.com',
-  phone: 4167774646
+  phone: 4167774646,
+  password: 'password',
+  password_confirmation: 'password'
   })
 # User.create!({
 #   first_name: ,
@@ -97,7 +103,6 @@ org2 = Organization.create!({
   url: 'http://www.sickkidsfoundation.com/',
   image: open_image('org2.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "All of us at SickKids are fighting the same battle: to make every kid a healthy kid. Our vision is simple: Healthier Children. A Better World. We believe fighting for the health and wellbeing of children is one of the most powerful ways to improve society."
   })
 
@@ -112,7 +117,6 @@ org3 = Organization.create!({
   url: 'http://www.salvationarmy.ca/',
   image: open_image('org3.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "The Salvation Army exists to share the love of Jesus Christ, meet human needs and be a transforming influence in the communities of our world."
   })
 
@@ -129,7 +133,6 @@ org4 = Organization.create!({
   url: 'http://www.oacas.org/',
   image: open_image('org4.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "A leader and collaborator promoting the welfare of children, youth and families through leadership, service excellence and advocacy."
   })
 
@@ -144,7 +147,6 @@ org5 = Organization.create!({
   url: 'http://www.dailybread.ca/',
   image: open_image('org5.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "We believe that access to food is a basic human right, not a privilege. No one should go hungry. We believe that no one should face barriers in accessing food."
   })
 
@@ -159,7 +161,6 @@ org6 = Organization.create!({
   url: 'https://www.torontohumanesociety.com',
   image: open_image('org6.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "It is the mission of The Toronto Humane Society to promote the humane care and protection of all animals and to prevent cruelty and suffering. Following no kill principles, the Toronto Humane Society aspires to be a best-in-class animal shelter – working in partnership with the community to find creative solutions and improve outcomes for all animals."
   })
 
@@ -176,7 +177,6 @@ org7 = Organization.create!({
   url: 'http://www.habitat.ca/',
   image: open_image('org7.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Our vision is a world where everyone has a safe and decent place to live. Our mission is to mobilize volunteers and community partners in building affordable housing and promoting homeownership as a means to breaking the cycle of poverty."
   })
 
@@ -192,12 +192,11 @@ org8 = Organization.create!({
   url: 'https://www.ccfcanada.ca/',
   image: open_image('org8.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Christian Children’s Fund of Canada creates a future of hope for children, families, and communities by helping them develop the skills and resources to overcome poverty and pursue justice. For more than 50 years, we have followed the example of Christ by serving the poor regardless of their faith, cultural, and ethnic background."
   })
 
 
-org14 = Organization.create!({
+org9 = Organization.create!({
   name: 'KidSport',
   address: '2041-875 Morningside Ave',
   city: 'Toronto',
@@ -208,11 +207,10 @@ org14 = Organization.create!({
   url: 'http://www.kidsportcanada.ca/',
   image: open_image('org14.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "KidSport is a grass roots Canadian non-profit organization that provides support to under-resourced children and youth 18 years of age and under across the country by removing financial barriers that prevent them from playing organized sport."
   })
 
-org15 = Organization.create!({
+org10 = Organization.create!({
   name: 'Earth Rangers',
   address: '9520 Pine Valley Drive',
   city: 'Woodbridge',
@@ -223,11 +221,10 @@ org15 = Organization.create!({
   url: 'http://www.earthrangers.com',
   image: open_image('org15.png'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Earth Rangers is an innovative charitable organization with a mission to inspire children with a lasting passion to build a better future."
   })
 
-org16 = Organization.create!({
+org11 = Organization.create!({
   name: 'Toronto International Film Festival (TIFF)',
   address: ' 350 King Street West',
   city: 'Toronto',
@@ -239,14 +236,13 @@ org16 = Organization.create!({
   url: 'http://tiff.net',
   image: open_image('org16.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
   })
 
 
 
 # ------- BUSINESSES --------
-org9 = Organization.create!({
+org12 = Organization.create!({
   name: 'The Kitchen Table',
   address: '12 Queens Quay West',
   city: 'Toronto',
@@ -259,7 +255,7 @@ org9 = Organization.create!({
   user_id: 3
   })
 
-org10 = Organization.create!({
+org13 = Organization.create!({
   name: 'Carpenters Local 27',
   address: '222 Rowntree Dairy Road',
   city: 'Woodbridge',
@@ -270,10 +266,9 @@ org10 = Organization.create!({
   url: 'http://www.carpenterslocal27.ca/',
   image: open_image('org10.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
-org11 = Organization.create!({
+org14 = Organization.create!({
   name: 'Lighthouse Labs',
   address: '46 Spadina Ave',
   suite: '4th Floor',
@@ -285,10 +280,9 @@ org11 = Organization.create!({
   url: 'https://lighthouselabs.ca/',
   image: open_image('org11.png'),
   orgtype: 'business',
-  user_id: 3
   })
 
-org12 = Organization.create!({
+org15 = Organization.create!({
   name: 'Alo Restaurant',
   address: '163 Spadina Ave',
   suite: '3rd Floor',
@@ -300,10 +294,9 @@ org12 = Organization.create!({
   url: 'http://alorestaurant.com/',
   image: open_image('org12.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
-org13 = Organization.create!({
+org16 = Organization.create!({
   name: 'Mountain Equipment Co-Op',
   address: '1077 Great Northern Way',
   city: 'Vancouver',
@@ -314,7 +307,6 @@ org13 = Organization.create!({
   url: 'https://www.mec.ca/',
   image: open_image('org13.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
 
@@ -390,7 +382,7 @@ cat_org13 = CategoriesOrganization.create!({
 })
 
 cat_org14 = CategoriesOrganization.create!({
-  category_id: 8,
+  category_id: 10,
   organization_id: 7
 })
 
@@ -406,27 +398,27 @@ cat_org16 = CategoriesOrganization.create!({
 
 cat_org17 = CategoriesOrganization.create!({
   category_id: 10,
-  organization_id: 14
+  organization_id: 9
 })
 
 cat_org18 = CategoriesOrganization.create!({
   category_id: 3,
-  organization_id: 14
+  organization_id: 9
 })
 
 cat_org19 = CategoriesOrganization.create!({
   category_id: 6,
-  organization_id: 15
+  organization_id: 10
 })
 
 cat_org20 = CategoriesOrganization.create!({
   category_id: 2,
-  organization_id: 15
+  organization_id: 10
 })
 
 cat_org21 = CategoriesOrganization.create!({
   category_id: 9,
-  organization_id: 16
+  organization_id: 11
 })
 
 ## --- GOODS TYPES ---

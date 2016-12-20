@@ -1,8 +1,10 @@
 <div class="row">
   <aside class="org-toggle">
-    <%= link_to "All", "/organizations" %>
-    <%= link_to "Charities", "/organizations?orgtype=charity" %>
-    <%= link_to "Businesses", "/organizations?orgtype=business" %>
+    <span>
+      <%= link_to "All", "/organizations" %>
+      <%= link_to "Charities", "/organizations?orgtype=charity" %>
+      <%= link_to "Businesses", "/organizations?orgtype=business" %>
+    </span>
   </aside>
 
   <%= render @organizations %>
