@@ -2,7 +2,10 @@ body main.container {
  width: 100%;
  margin: 0;
 }
-
+// fix
+div.row {
+  width: 100vw;
+}
 // CSS for Parallax homepage
 .parallax-container {
   height: 600px;
@@ -19,10 +22,11 @@ body main.container {
 }
 
 .carousel .carousel-item {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height:625px !important;
+  height:600px !important;
 }
 
 #slide-1-title {
@@ -43,4 +47,7 @@ body main.container {
 
 #slide-5-p {
   padding-top: 6em;
+}
+div.carousel.carousel-slider.center {
+  width: 100vw;
 }
