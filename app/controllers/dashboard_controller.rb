@@ -4,7 +4,6 @@ class DashboardController < ApplicationController
     # validate_organization(current_user.organization.id)
     if current_user.organization.present?
       @org = current_user.organization
-      render 'org_edit'
     else
       redirect_to root_path
       # FIXME swap for this when render exists!!
