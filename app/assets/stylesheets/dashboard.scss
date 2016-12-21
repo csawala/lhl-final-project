@@ -1,10 +1,16 @@
-main.container .org-edit {
+main.container .org-show {
   padding-top: 2em;
 
-  .org-image {
-    display: block;
-  }
-  .org-details {
+  .org-edit {
+    .org-image {
+      display: block;
+    }
+    .org-details {
 
+    }
+  }
+
+  #toggle-org-form-render {
+    display: none;
   }
 }

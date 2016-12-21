@@ -1,5 +1,23 @@
 <section class="org-show">
+  <div class="row">
+    <h4 class="center-align">Dashboard for: <strong><%= @org.name %></strong></h4>
 
-  <%= render 'org_form' %>
+    <!-- Toggle Render Section for Update Org Details -->
+    <div id="toggle-org-form" class="col s10 offset-s1 m9 offset-m3 l8 offset-l4">
+      <a class="waves-effect waves-light btn">
+        <i class="material-icons right">mode_edit</i>update organization details
+      </a>
+    </div><br>
+    <div id="toggle-org-form-render">
+      <%= render 'org_form' %>
+    </div><br>
 
+    <br>
+    <div class="divider"></div>
+    <br>
+
+    <!-- Org Needs/Offers -->
+    <%= render 'org_needs' %>
+
+  </div>
 </section>
