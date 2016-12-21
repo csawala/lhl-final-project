@@ -12,7 +12,9 @@ activeNavButtons = () => {
     makeClosestElementActive($('#dashboard-btn'), 'li')
 }
 
-$(document).on('turbolinks:load', () => {
+$(document).ready(() => {
+
   activeNavButtons()
   $(".button-collapse").sideNav();
+
 })

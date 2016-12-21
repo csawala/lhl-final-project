@@ -5,28 +5,27 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
 
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %>
   </head>
 
   <body>
+    <%= render 'layouts/top_nav' %>
+
     <% if flash.notice.present? %>
-      <div class="flash-notice">
+      <div class="center-align flash-notice">
         <h4>
           <%= flash.notice %>
         </h4>
       </div>
     <% end %>
 
-    <%= render 'layouts/top_nav' %>
-
     <main class="container" id="main_container">
       <%= yield %>
     </main>
 
     <%= render 'layouts/bottom_nav' %>
-
   </body>
 </html>

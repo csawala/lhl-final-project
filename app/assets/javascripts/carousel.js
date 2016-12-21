@@ -1,7 +1,7 @@
 //
 // for carousel form
 //
-$(document).on('turbolinks:load', () => {
+$(document).ready(() => {
 
 
       $('.carousel.carousel-slider').carousel({full_width: true});
@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', () => {
 
      $('#causes_form').on('submit', function(e) {
            e.preventDefault();
-           var causes = $('#multiple_select').serialize();
+           var causes = $('#multiple_select_carousel').serialize();
            window.location = '/organizations?' + causes
        });
 

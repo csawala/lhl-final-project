@@ -1,0 +1,112 @@
+<section class="org-edit">
+  <%= form_for @org do |f| %>
+    <!-- Floating Save Button -->
+    <div class="fixed-action-btn">
+      <%= button_tag(method: "update", class: "btn-floating tooltipped btn-large waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Organization Info") do %>
+        <i class="material-icons">done</i>
+      <% end %>
+    </div>
+
+    <!-- Form Input Fields: -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+      <!-- Organization Name -->
+      <div class="input-field">
+        <i class="material-icons prefix">account_circle</i>
+        <%= f.text_field :name, class: "validate" %>
+        <%= f.label "Organization Name", class: "active" %>
+      </div>
+
+      <!-- Organization Image -->
+      <!-- Added div padding to allow for better layout -->
+      <div class="row">
+        <div class="col s1 m1 l2"></div>
+        <div class="col s11 m4 l3">
+          <% if @org.image %>
+            <%= image_tag @org.image.full, class: "materialboxed z-depth-1", width: 300 %><br>
+          <% else %>
+            Your Organization Image Here
+          <% end %>
+        </div>
+        <div class="col s0 m2 l2"></div>
+        <div class="col s12 m4 l4">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <%= f.file_field(:image) %>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Replace Image">
+            </div>
+          </div>
+        </div>
+        <div class="col s0 m1 l1"></div>
+      </div>
+
+      <!-- Organization Description -->
+      <div class="input-field col s12 m12 l12">
+        <i class="material-icons prefix">comment</i>
+        <%= f.text_area :description, class: "materialize-textarea" %>
+        <%= f.label "Organization Description" %>
+      </div>
+
+      <!-- Telephone -->
+      <!-- These may also be telephone_field -->
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">phone</i>
+          <%= f.text_field :primaryphone, class: "validate" %>
+          <%= f.label "Primary Phone", class: "active" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">phone</i>
+          <%= f.text_field :secondaryphone, class: "validate" %>
+          <%= f.label "Secondary Phone", class: "active" %>
+        </div>
+      </div>
+
+      <!-- Email & Website -->
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">email</i>
+          <!-- This may also be email_field -->
+          <%= f.text_field :email, class: "validate" %>
+          <%= f.label "Email", class: "active" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">web</i>
+          <!-- This may also be url_field -->
+          <%= f.text_field :url, class: "validate" %>
+          <%= f.label "Website URL", class: "active" %>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">location_on</i>
+          <%= f.text_field :address, class: "validate" %>
+          <%= f.label "Address line 1", class: "active" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">location_on</i>
+          <%= f.text_field :suite, class: "validate" %>
+          <%= f.label "Address Line 2", class: "active" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">location_on</i>
+          <%= f.text_field :city, class: "validate" %>
+          <%= f.label "City", class: "active" %>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">location_on</i>
+          <%= f.text_field :postal, class: "validate" %>
+          <%= f.label "Postal Code", class: "active" %>
+        </div>
+      </div>
+    </div>
+    </div>
+  <% end %>
+</section>

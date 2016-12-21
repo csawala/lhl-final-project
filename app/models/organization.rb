@@ -8,6 +8,8 @@ class Organization < ApplicationRecord
   has_many :goods_types_organizations
   has_many :goods_types, through: :goods_types_organizations
 
+  # validates organization fields necessary
+
   def self.filter_by_params(params)
     return all unless params.present?
 
