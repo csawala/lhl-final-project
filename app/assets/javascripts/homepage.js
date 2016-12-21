@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', () => {
+$(document).ready(() => {
 
   var top_position= jQuery('#get_started_carousel').offset();
 
