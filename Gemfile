@@ -45,7 +45,7 @@ gem 'materialize-sass'
 gem 'flexbox-rails'
 
 # Authentication & security
-gem 'omniauth-facebook'
+# gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'byebug', platform: :mri

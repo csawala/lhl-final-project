@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   get '/login'  => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  post '/auth/facebook/callback', to: 'sessions#create'
-  get '/auth/failure',            to: redirect('/login')
+  # post '/auth/facebook/callback', to: 'sessions#create'
+  # get '/auth/failure',            to: redirect('/login')
 
   # ---- DASHBOARD ----
   get '/dashboard' => 'dashboard#show'
