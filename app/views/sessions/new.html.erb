@@ -17,16 +17,14 @@
       </div>
     </div>
     <div class="control-group">
-      <div class="controls">
+      <div class="controls buttons">
         <%= submit_tag 'Submit', class: "btn btn-success" %><br>
         <%# facebook log in button %>
-        <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
-      </div>
+
     </div>
   <% end %>
 </div>
 
 
 <div id="fb-root"></div>
-
 <%= javascript_include_tag 'facebook', 'data-turbolinks-track': 'reload' %>
