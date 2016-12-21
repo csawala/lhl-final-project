@@ -1,35 +1,26 @@
 <section class="org-edit">
-  <%= form_for @org do |f| %>
-    <!-- Floating Save Button -->
-    <div class="fixed-action-btn">
-      <%= button_tag(method: "update", class: "btn-floating tooltipped btn-large waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Organization Info") do %>
-        <i class="material-icons">done</i>
-      <% end %>
-    </div>
+  <div class="row">
+    <div class="col m1 l1"></div>
+    <%= form_for @org do |f| %>
+      <!-- Form Input Fields: -->
+      <div class="col s12 m10 l10">
+        <!-- Organization Name -->
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.text_field :name, class: "validate" %>
+          <%= f.label "Organization Name", class: "active" %>
+        </div>
 
-    <!-- Form Input Fields: -->
-    <div class="row">
-      <div class="col s12 m12 l12">
-      <!-- Organization Name -->
-      <div class="input-field">
-        <i class="material-icons prefix">account_circle</i>
-        <%= f.text_field :name, class: "validate" %>
-        <%= f.label "Organization Name", class: "active" %>
-      </div>
-
-      <!-- Organization Image -->
-      <!-- Added div padding to allow for better layout -->
-      <div class="row">
-        <div class="col s1 m1 l2"></div>
-        <div class="col s11 m4 l3">
+        <!-- Organization Image -->
+        <!-- Added div padding to allow for better layout -->
+        <div class="col s10 offset-s1 m3 offset-m3 l4 offset-l4">
           <% if @org.image %>
             <%= image_tag @org.image.full, class: "materialboxed z-depth-1", width: 300 %><br>
           <% else %>
             Your Organization Image Here
           <% end %>
         </div>
-        <div class="col s0 m2 l2"></div>
-        <div class="col s12 m4 l4">
+        <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3">
           <div class="file-field input-field">
             <div class="btn">
               <span>File</span>
@@ -40,19 +31,16 @@
             </div>
           </div>
         </div>
-        <div class="col s0 m1 l1"></div>
-      </div>
 
-      <!-- Organization Description -->
-      <div class="input-field col s12 m12 l12">
-        <i class="material-icons prefix">comment</i>
-        <%= f.text_area :description, class: "materialize-textarea" %>
-        <%= f.label "Organization Description" %>
-      </div>
+        <!-- Organization Description -->
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">comment</i>
+          <%= f.text_area :description, class: "materialize-textarea" %>
+          <%= f.label "Organization Description", class: "active" %>
+        </div>
 
-      <!-- Telephone -->
-      <!-- These may also be telephone_field -->
-      <div class="row">
+        <!-- Telephone -->
+        <!-- These may also be telephone_field -->
         <div class="input-field col s12 m6 l6">
           <i class="material-icons prefix">phone</i>
           <%= f.text_field :primaryphone, class: "validate" %>
@@ -63,10 +51,8 @@
           <%= f.text_field :secondaryphone, class: "validate" %>
           <%= f.label "Secondary Phone", class: "active" %>
         </div>
-      </div>
 
-      <!-- Email & Website -->
-      <div class="row">
+        <!-- Email & Website -->
         <div class="input-field col s12 m6 l6">
           <i class="material-icons prefix">email</i>
           <!-- This may also be email_field -->
@@ -79,10 +65,8 @@
           <%= f.text_field :url, class: "validate" %>
           <%= f.label "Website URL", class: "active" %>
         </div>
-      </div>
 
-      <!-- Address -->
-      <div class="row">
+        <!-- Address -->
         <div class="input-field col s12 m6 l6">
           <i class="material-icons prefix">location_on</i>
           <%= f.text_field :address, class: "validate" %>
@@ -93,8 +77,6 @@
           <%= f.text_field :suite, class: "validate" %>
           <%= f.label "Address Line 2", class: "active" %>
         </div>
-      </div>
-      <div class="row">
         <div class="input-field col s12 m6 l6">
           <i class="material-icons prefix">location_on</i>
           <%= f.text_field :city, class: "validate" %>
@@ -106,7 +88,16 @@
           <%= f.label "Postal Code", class: "active" %>
         </div>
       </div>
-    </div>
-    </div>
-  <% end %>
+
+
+      <!-- Save Button -->
+      <div class="col s12 m12 l12 light-green lighten-4">
+        <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
+          <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-large waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Organization Info") do %>
+            <i class="material-icons">done</i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </section>
