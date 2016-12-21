@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
       redirect_to dashboard_path
     else
-      redirect_to login_path, notice: 'Invalid login'
+      redirect_to login_path, notice: 'invalid login'
     end
   end
 
