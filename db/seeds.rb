@@ -65,7 +65,7 @@ cat5  = Category.create!({ name: 'animal rights' })
 cat6  = Category.create!({ name: 'environment' })
 cat7  = Category.create!({ name: 'religion' })
 cat8  = Category.create!({ name: 'community development' })
-cat9  = Category.create!({ name: 'arts, culture, heritage or science' })
+cat9  = Category.create!({ name: 'arts and culture' })
 cat10 = Category.create!({ name: 'sport' })
 cat11 = Category.create!({ name: 'disadvantaged' })
 

@@ -44,6 +44,9 @@ gem 'font-awesome-rails'
 gem 'materialize-sass'
 gem 'flexbox-rails'
 
+# Authentication & security
+# gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
