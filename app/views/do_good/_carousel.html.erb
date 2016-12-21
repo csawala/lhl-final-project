@@ -1,9 +1,9 @@
-<div class="container" id="form-carousel">
+<div style="width:100%" class="container" id="form-carousel">
   <div class="carousel carousel-slider center" indicators="false">
 
     <!-- SLIDE 1 -->
     <div class="carousel-item amber grey-text text-darken-2" href="#one">
-      <h2>Welcome</h2>
+      <h2 id="slide-1-title">Welcome</h2>
       <p class="grey-text text-darken-2">Do you have something to...</p>
       <a class="btn waves-effect white grey-text" id="offer-button">offer</a>
       <p class="grey-text text-darken-2">Are you in... </p>
@@ -12,7 +12,7 @@
 
     <!-- SLIDE 2 -->
     <div class="carousel-item teal grey darken-1-text" href="#two">
-      <p class="grey-text text-darken-2">Are you an...</p>
+      <p id="slide-2-p" class="grey-text text-darken-2">Are you an...</p>
       <a class="btn waves-effect white grey-text" id="organization-button">organization</a>
       <p class="grey-text text-darken-2">Are you an...</p>
       <a class="btn waves-effect white grey-text" id="individual-button">individual</a>
@@ -20,7 +20,7 @@
 
     <!-- SLIDE 3 -->
     <div class="carousel-item cyan grey-text text-darken-2" href="#three">
-      <p class="grey-text text-darken-2">Do you want to...</p>
+      <p id="slide-3-p" class="grey-text text-darken-2">Do you want to...</p>
       <a class="btn waves-effect white grey-text" id="give-button-individual">give</a>
       <p class="grey-text text-darken-2">Do you want to... </p>
       <a class="btn waves-effect white grey-text" id="participate-button-individual">participate</a>
@@ -28,7 +28,7 @@
 
     <!-- SLIDE 4 -->
     <div class="carousel-item amber white-text" href="#four">
-        <h2>Please pick some causes you are interested in.</h2>
+        <h2 id="slide-4-title">Please pick some causes you are interested in.</h2>
 
          <form class="col s12" id="causes_form">
            <div class="row">
@@ -36,7 +36,7 @@
              <div class="col s12 m4 l4"></div>
 
              <div class="input-field col s12 m4 l4">
-                <select multiple id="multiple_select" name="category">
+                <select multiple id="multiple_select" name="category_names[]">
                    <option value="" disabled="disabled" selected="selected">Select</option>
                    <option value="environment">environment</option>
                    <option value="poverty">poverty</option>
@@ -60,7 +60,7 @@
 
     <!-- SLIDE 5 -->
     <div class="carousel-item red accent-1 grey-text text-darken-2" href="#five">
-      <p class="grey-text text-darken-2">Are you interested in...</p>
+      <p id="slide-5-p" class="grey-text text-darken-2">Are you interested in...</p>
       <a class="btn waves-effect white grey-text" id="events-button-individual">events</a>
       <p class="grey-text text-darken-2">Are you offering... </p>
       <a class="btn waves-effect white grey-text" id="skill-button-individual">skills</a>
@@ -69,42 +69,3 @@
 
   </div>
 </div>
-
-
-  <script>
-
-  $(document).ready(() => {
-
-    $('.carousel.carousel-slider').carousel({full_width: true});
-
-    $('select').material_select();
-
-    $('#offer-button').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#individual-button').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#give-button-individual').click(function(q) {
-      $('.carousel').carousel('next')
-    })
-
-    $('#participate-button-individual').click(function(q) {
-      $('.carousel').carousel('next', 2)
-    })
-
-    $('#organization-button').click(function(){
-        window.location.href='/dashboard/1';
-    })
-
-   $('#causes_form').on('submit', function(e) {
-         e.preventDefault();
-         var causes = $('#multiple_select').serialize();
-         window.location = '/organizations?' + causes
-     });
-
-  })
-
-  </script>

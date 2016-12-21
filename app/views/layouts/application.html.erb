@@ -22,12 +22,11 @@
 
     <%= render 'layouts/top_nav' %>
 
-    <main class="container">
+    <main class="container" id="main_container">
       <%= yield %>
     </main>
 
-    <footer class="footer-nav">
-      <%= render 'layouts/bottom_nav' %>
-    </footer>
+    <%= render 'layouts/bottom_nav' %>
+
   </body>
 </html>
