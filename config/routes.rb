@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'application#index'
 
-  resources :organizations, only: [:index, :show, :create]
+  resources :organizations, only: [:index, :show, :create, :update]
 
   # resources :dashboard, only: [:show, :update]
 
