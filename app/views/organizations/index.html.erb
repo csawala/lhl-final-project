@@ -1,16 +1,9 @@
 <div class="top-offset">
   <div class="row org-container">
-    <aside class="org-toggle">
-      <span>
-        <%= link_to "All", "/organizations" %>
-        <%= link_to "Charities", "/organizations?orgtype=charity" %>
-        <%= link_to "Businesses", "/organizations?orgtype=business" %>
-      </span>
-    </aside>
 
-      <div class="container">
+    
         <%= render 'search_bar' %>
-      </div>
+
 
      <div>
     <%= render @organizations %>

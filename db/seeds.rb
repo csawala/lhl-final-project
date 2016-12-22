@@ -46,12 +46,6 @@ User.create!({
   password: 'password',
   password_confirmation: 'password'
   })
-# User.create!({
-#   first_name: ,
-#   last_name: ,
-#   email: ,
-#   phone:
-#   })
 
 ## --- CATEGORIES ---
 Category.destroy_all
@@ -425,46 +419,243 @@ cat_org21 = CategoriesOrganization.create!({
 
 g1 = GoodsType.create!({
   name: "foods"
-  })
+})
 
 g2 = GoodsType.create!({
   name: "hygiene items"
-  })
+})
 
 g3 = GoodsType.create!({
   name: "furniture"
-  })
+})
 
 g4 = GoodsType.create!({
   name: "clothing"
-  })
+})
 
 g5 = GoodsType.create!({
   name: "home supplies"
-  })
+})
 
 g6 = GoodsType.create!({
   name: "business supplies"
-  })
+})
 
 g7 = GoodsType.create!({
   name: "volunteers"
-  })
+})
 
 g8 = GoodsType.create!({
   name: "skilled labour"
-  })
+})
 
 g9 = GoodsType.create!({
   name: "unskilled labour"
-  })
+})
 
 g10 = GoodsType.create!({
   name: "money donations"
-  })
+})
 
 ## --- ORG GOODS ---
-# will contain seeds for goods by organization
+org1.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'We are always looking for adults to donate to our blood bank'
+})
+org2.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Sick Kids puts your donations to work helping children and building important hospital infrastructure'
+})
+org2.goods_types_organizations.create!({
+  goods_type_id: 9,
+  needs: true,
+  description: 'We are looking for canvassers who can help us go door-to-door seeking donations in the community'
+})
+org3.goods_types_organizations.create!({
+  goods_type_id: 4,
+  needs: true,
+  description: 'If you have unused clothing in new or excellent condition, help us get it to those in need'
+})
+org3.goods_types_organizations.create!({
+  goods_type_id: 2,
+  needs: true,
+  description: 'We always need new personal hygiene items like toothbrushes, soap, shaving goods and shampoo for our homeless outreach programs'
+})
+org3.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'We can always use more help in our many programs, please contact for details'
+})
+org3.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Your generous donations will go to work fighting poverty in our community'
+})
+org3.goods_types_organizations.create!({
+  goods_type_id: 3,
+  needs: true,
+  description: 'Looking for household furniture in new or very good condition, we can arrange pickup'
+})
+org4.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'Contribute to your community by connecting to families who need your support'
+})
+org4.goods_types_organizations.create!({
+  goods_type_id: 8,
+  needs: true,
+  description: 'We frequently need family lawyers who can volunteer their time - please contact for more details'
+})
+org5.goods_types_organizations.create!({
+  goods_type_id: 1,
+  needs: true,
+  description: 'Right now we need more fresh produce - will also accept non-perishables or grocery gift cards'
+})
+org5.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Your donations are used to help feed families in need'
+})
+org5.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'Our biggest need for volunteers often comes at the beginning of the year'
+})
+org5.goods_types_organizations.create!({
+  goods_type_id: 1,
+  offers: true,
+  description: 'Right now we have excess of some types of non-perishables, please contact if your food bank or charity is in need of food'
+})
+org6.goods_types_organizations.create!({
+  goods_type_id: 1,
+  needs: true,
+  description: 'Pet food and treat donations are always welcome, please contact to learn what we need right now'
+})
+org6.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'We need help walking dogs, petting cats & rats, and cuddling bunnies. Really!'
+})
+org6.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Your spare cash can help animals stay healthy and find homes'
+})
+org7.goods_types_organizations.create!({
+  goods_type_id: 3,
+  needs: true,
+  description: 'Help furnish homes for those in need - please let us know if you have unused furniture (couches, chairs, tables, lamps, TVs, etc), we can pick up!'
+})
+org7.goods_types_organizations.create!({
+  goods_type_id: 5,
+  needs: true,
+  description: 'Donations of building supplies are welcome, your spare renovation hardware and materials can go to good use'
+})
+org7.goods_types_organizations.create!({
+  goods_type_id: 8,
+  needs: true,
+  description: 'Contractors & contruction workers, please lend your expertise - together we can improve lives and show the community you care'
+})
+org7.goods_types_organizations.create!({
+  goods_type_id: 2,
+  offers: true,
+  description: 'We received a generous donation of personal hygiene goods, but have no means to distribute - please contact for details'
+})
+org8.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Sponsor a child in need today - making a difference is easy'
+})
+org8.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'Care about kids? We need community advocates to raise awareness'
+})
+org9.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Play keeps kids healthy and active, please donate to help grow our future generation\'s love of sports'
+})
+org9.goods_types_organizations.create!({
+  goods_type_id: 4,
+  needs: true,
+  description: 'If you have new kids sports gear or helmets, we can always use more'
+})
+org9.goods_types_organizations.create!({
+  goods_type_id: 8,
+  needs: true,
+  description: 'We need experienced coaches in our Baseball and Basketball programs, please contact for details'
+})
+org9.goods_types_organizations.create!({
+  goods_type_id: 9,
+  needs: true,
+  description: 'Help with our 50/50 ticket program at the Air Canada Centre, get free pizza and watch the 3rd period of the Leafs game!'
+})
+org10.goods_types_organizations.create!({
+  goods_type_id: 10,
+  needs: true,
+  description: 'Your donations fund programs that help kids gain an appreciation for conservation of the environment'
+})
+org11.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'Volunteer for our film festivals, watch great movies on us'
+})
+org11.goods_types_organizations.create!({
+  goods_type_id: 6,
+  needs: true,
+  description: 'Believe it or not, we go through lots of pens, paper, and other office goods - if you have extra, please let us take them off your hands so we can put donor funds to better use'
+})
+org12.goods_types_organizations.create!({
+  goods_type_id: 1,
+  offers: true,
+  description: 'We often have extra fresh baked and produce goods, but would rather not throw it all away'
+})
+org13.goods_types_organizations.create!({
+  goods_type_id: 8,
+  offers: true,
+  description: 'Several experienced chapter members are off contracts, looking to contribute in the community'
+})
+org13.goods_types_organizations.create!({
+  goods_type_id: 1,
+  offers: true,
+  description: 'We are running a food drive, and need to find a home for lots of non-perishables'
+})
+org14.goods_types_organizations.create!({
+  goods_type_id: 4,
+  offers: true,
+  description: 'We have lots of unworn branded T-shirts and sweaters for anyone who needs them, various sizes available'
+})
+org14.goods_types_organizations.create!({
+  goods_type_id: 8,
+  offers: true,
+  description: 'Several of our Web Developers are looking to volunteer their time to help improve the web presence of charities in the community'
+})
+org15.goods_types_organizations.create!({
+  goods_type_id: 8,
+  offers: true,
+  description: 'Our chefs love to cook fine foods, and want to participate in community events for those in need'
+})
+org16.goods_types_organizations.create!({
+  goods_type_id: 4,
+  offers: true,
+  description: 'We have piles of blemished but new clothing, backpacks and helmets for all sizes, adults and kids'
+})
+org16.goods_types_organizations.create!({
+  goods_type_id: 1,
+  offers: true,
+  description: 'Boxes of energy bars have recently been discontinued but are not expired, cannot sell but would rather not throw away'
+})
+org16.goods_types_organizations.create!({
+  goods_type_id: 7,
+  needs: true,
+  description: 'Looking for runners who would volunteer to lead community social/fun runs throughout the week, please contact for details'
+})
+# .goods_types.create!({
+#   needs: true
+#   })
 # org#.goods_types.create!({
 
 #   })
