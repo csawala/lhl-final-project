@@ -464,7 +464,13 @@ g10 = GoodsType.create!({
   })
 
 ## --- ORG GOODS ---
-# will contain seeds for goods by organization
+# org1.goods_types.create!({
+#   needs: true
+#   })
+
+# .goods_types.create!({
+#   needs: true
+#   })
 # org#.goods_types.create!({
 
 #   })
