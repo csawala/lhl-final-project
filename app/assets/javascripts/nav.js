@@ -1,10 +1,10 @@
 'use strict'
 
-makeClosestElementActive = (elem, target) => {
+const makeClosestElementActive = (elem, target) => {
   return elem.closest(target).addClass('active')
 }
 // leverage Materlialize to highligh active pages in Nav
-activeNavButtons = () => {
+const activeNavButtons = () => {
   let $navLinks = $('ul.right a')
   const url     = window.location.pathname
 

@@ -1,0 +1,21 @@
+<% @offers.each do |card| %>
+
+  <div class="col s12 l6">
+    <div class="card offers">
+      <div class="card-content white-text">
+        <span class="card-title">
+          <%= card.organization.name %>
+        </span>
+        <p class="needs-offers-type">
+          <i class="tiny material-icons circle red">swap_horiz</i>
+          has <%= card.goods_type.name %>
+        </p>
+        <p><%= card.description %></p>
+      </div>
+      <div class="card-action valign-wrapper">
+        <%= link_to('details', organization_path(card.organization_id)) %>
+      </div>
+    </div>
+  </div>
+
+<% end %>

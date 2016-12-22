@@ -1,3 +1,14 @@
-// Place all the styles related to the needs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.card.needs {
+  .needs-offers-type {
+    float: right;
+    margin-top: 10px;
+  }
+  .card-content {
+    background-color: #6BA472;
+    height: 140px;
+  }
+  div.card-action {
+    background-color: #4B8656;
+    height: 30px;
+  }
+}

@@ -1,3 +1,14 @@
-// Place all the styles related to the offers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.card.offers {
+  .needs-offers-type {
+    float: right;
+    margin-top: 10px;
+  }
+  .card-content {
+    background-color: #3EA4F0;
+    height: 140px;
+  }
+  div.card-action {
+    background-color: #0D71E1;
+    height: 30px;
+  }
+}
