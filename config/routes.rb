@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # resources :dashboard, only: [:show, :update]
 
-  resources :do_good
+  # resources :do_good
 
   # ----  NEW USER ROUTES  ----
   get '/register' => 'users#new'
