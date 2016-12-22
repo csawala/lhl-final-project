@@ -74,12 +74,10 @@
     </div>
   </div>
 
-<div id="get_started_carousel">
-<br>
-<br>
-<br>
-<%= render 'do_good/carousel' %>
-</div>
+
+
+<%= render 'carousel' %>
+
 
 <script>
 
@@ -88,11 +86,12 @@ $(document).ready(function() {
   $('.parallax').parallax();
 
   // scrolls get started button to carousel at bottom
-  var top_position= $('#get_started_carousel').offset();
 
   $('#homepage_get_started').click(function() {
-    $('html, body').animate({scrollTop:top_position}, 'slow');
-  	return false;
+    $('html, body').animate({
+       scrollTop: $("#need-button").offset().top
+   }, 500);
+
 	});
 
 });
