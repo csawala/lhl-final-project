@@ -20,4 +20,8 @@ Rails.application.routes.draw do
 
   # ---- DASHBOARD ----
   get '/dashboard' => 'dashboard#show'
+
+  # ---- NEEDS / OFFERS ----
+  get '/needs'  => 'needs#index'
+  get '/offers' => 'offers#index'
 end
