@@ -48,33 +48,18 @@ div.org-card-large {
     margin-bottom: 20px;
   }
 }
-aside.org-toggle {
-  transition: all 0.5s ease;
-  text-align: center;
-  background-color: #3165D7;
-  box-shadow: 0px 2px 2px lightgrey;
-  position: fixed;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  top: 65px;
-  border-radius: 2px;
-  padding: 8px;
-  text-transform: uppercase;
-  a {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-  }
+
+div.search-bar-org-page {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 4em;
 }
-aside.org-toggle:hover {
-  transition: all 0.5s ease;
-  box-shadow: 0px 2px 2px lightgrey;
-  background-color: #F8A12E;
-  a:hover {
-    color: black;
-  }
+
+.btn.waves-effect.waves-light.waves-input-wrapper.cause-search {
+  margin: 0.5em;
 }
-aside.org-toggle {
-  z-index: 100;
+.when-search-button-is-clicked {
+  background-color: blue;
 }

@@ -1,13 +1,13 @@
 
-  <div style="width:100" class="parallax-container">
-    <div style="width:100" class="parallax"><img style="width:100" src="/assets/FoodBagsPhoto_small.jpg"></div>
+  <div class="parallax-container">
+    <div class="parallax"><img style="width:100" src="/assets/FoodBagsPhoto_small.jpg"></div>
       <div class="row center">
         <div class="col s12 l6" id="text_overlay_homepage">
           <br>
           <h2 class="white-text">I'm afraid I just blue myself</h2>
           <p class="white-text" id="homepage_title_text">Did you enjoy your meal, Mom? You drank it fast enough. Across from where? I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense. As you may or may not know, Lindsay and I have hit a bit of a rough patch.</p>
           <br>
-          <button class="btn waves-effect waves-light" id="homepage_get_started" type="submit" name="action">Get started</button>
+          <button class="btn waves-effect waves-light" id="homepage_get_started" name="action">Get started</button>
         </div>
       </div>
   </div>
@@ -82,7 +82,19 @@
 </div>
 
 <script>
-  $(document).ready(function(){
-      $('.parallax').parallax();
-    });
+
+$(document).ready(function() {
+
+  $('.parallax').parallax();
+
+  // scrolls get started button to carousel at bottom
+  var top_position= $('#get_started_carousel').offset();
+
+  $('#homepage_get_started').click(function() {
+    $('html, body').animate({scrollTop:top_position}, 'slow');
+  	return false;
+	});
+
+});
+
 </script>

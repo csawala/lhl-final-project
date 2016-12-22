@@ -1,37 +1,50 @@
 
-  <div class="input-field col s12 center-align">
-  <div class="col s7">
-    <h4 class="right">Show me charities by</h4>
-  </div>
-  <div class="col s5">
-    <select multiple id="orgs_by_causes" class="causes_selector" name="category_names[]">
-        <option value="" disabled selected>causes</option>
-        <option value="animals">animal rights</option>
-        <option value="arts and culture">arts and culture</option>
-        <option value="community development">community development</option>
-        <option value="disadvantaged">disadvantaged</option>
-        <option value="education">education</option>
-        <option value="environment">environment</option>
-        <option value="health">health</option>
-        <option value="human rights">human rights</option>
-        <option value="poverty">poverty</option>
-        <option value="religion">religion</option>
-        <option value="sport">sport</option>
-    </select>
-  </div>
-  </div>
+ <form>
 
-  <script>
+<div class="search-bar-org-page">
 
-  $( document ).ready(function() {
+  <input id="test" class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="animal rights">
 
-    $('input.select-dropdown.active').bind('DOMSubtreeModified', function() {
-      console.log("class change")
-      var causes = $('.causes_selector').serialize();
-      window.location = '/organizations?' + causes
-    })
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="arts and culture">
 
-  })
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="community development">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="disadvantaged">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="education">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="environment">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="health">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="human rights">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="poverty">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="religion">
+
+  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="sport">
+
+</div>
+
+</form>
 
 
-  </script>
+
+
+<script>
+
+$(document).ready(() => {
+
+  function showValues() {
+    var string = $("form").serialize();
+ }
+
+  $("input[type='submit']").on("click", showValues);
+
+});
+
+
+
+
+</script>
