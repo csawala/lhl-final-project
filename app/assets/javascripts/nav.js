@@ -1,15 +1,20 @@
-makeClosestElementActive = (elem, target) => {
+'use strict'
+
+const makeClosestElementActive = (elem, target) => {
   return elem.closest(target).addClass('active')
 }
 // leverage Materlialize to highligh active pages in Nav
-activeNavButtons = () => {
-  const $window = window.location.pathname
-  if ($window.includes('/organizations'))
-    makeClosestElementActive($('#org-btn'), 'li')
-  else if ($window.includes('/do_good'))
-    makeClosestElementActive($('#get-started-btn'), 'li')
-  else if ($window.includes('/dashboard'))
-    makeClosestElementActive($('#dashboard-btn'), 'li')
+const activeNavButtons = () => {
+  let $navLinks = $('ul.right a')
+  const url     = window.location.pathname
+
+  $navLinks.each((_, button) => {
+    let buttonText = new RegExp(button.innerHTML, 'i')
+
+    if (url.match(buttonText)) {
+      makeClosestElementActive($(button), 'li')
+    }
+  })
 }
 
 $(document).ready(() => {

@@ -1,0 +1,31 @@
+<form>
+  <div class="search-bar-org-page">
+
+    <input id="test" class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="foods">
+
+    <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="hygiene items">
+
+    <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="furniture">
+
+    <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="home supplies">
+
+    <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="business supplies">
+
+    <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="money donations">
+
+  </div>
+</form>
+
+<script>
+
+  $(document).ready(() => {
+
+    function showValues() {
+      var string = $("form").serialize();
+    }
+
+    $("input[type='submit']").on("click", showValues);
+
+  });
+
+</script>
