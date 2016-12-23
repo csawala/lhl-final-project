@@ -28,6 +28,7 @@ class OrganizationsController < ApplicationController
   end
 
   private
+
   def org_params
     params.require(:organization).permit(
     :name,
@@ -45,5 +46,4 @@ class OrganizationsController < ApplicationController
     :image
     )
   end
-
 end

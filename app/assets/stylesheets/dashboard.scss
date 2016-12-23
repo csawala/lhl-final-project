@@ -10,7 +10,9 @@ main.container .org-show {
     }
   }
 
-  #toggle-org-form-render {
+  #toggle-org-form-render,
+  #toggle-new-offer,
+  #toggle-new-need  {
     display: none;
   }
 }

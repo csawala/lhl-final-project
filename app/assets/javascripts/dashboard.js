@@ -3,15 +3,28 @@
 'use strict'
 
 
-const setupOrgEditToggle = function(){
-  $( "#toggle-org-form" ).click(function() {
-    $( "#toggle-org-form-render" ).slideToggle( "slow", function() {
-      // Organization Edit Form Animation Complete
-    })
+const orgEditToggle = () => {
+  $( "#toggle-org-form" ).click(() => {
+    $( "#toggle-org-form-render" ).slideToggle("slow")
+  })
+}
+
+const newNeedToggle = () => {
+  $( "#toggle-new-need-button" ).click(() => {
+    $( "#toggle-new-need" ).slideToggle("slow")
+  })
+}
+
+const newOfferToggle = () => {
+  $( "#toggle-new-offer-button" ).click(() => {
+    $( "#toggle-new-offer" ).slideToggle("slow")
   })
 }
 
 
+
 $(document).ready(() => {
-  setupOrgEditToggle()
+  orgEditToggle()
+  newNeedToggle()
+  newOfferToggle()
 })

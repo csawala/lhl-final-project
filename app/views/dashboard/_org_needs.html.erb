@@ -1,25 +1,61 @@
 <div class="row">
-  <div class="col s1 m1 l1"></div>
-  <div class="col s8 m8 l7">
-    <!-- Needs/Offers Cards -->
-    <h5>NEEDS AND OFFERS</h5>
-    <div class="card horizontal">
-      <div class="card-image">
-        <div class="blue"></div>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>This would be a need.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
+  <!-- Create New Needs/Offers Cards Options -->
+  <div class="col s5 offset-s1 m4 offset-m3 l4 offset-l3">
+    <a class="waves-effect waves-light btn" id="toggle-new-need-button">New Need</a>
   </div>
 
-  <div class="col s3 m3 l4">
-    <!-- Create New Needs/Offers Cards Options -->
-    CREATE STUFF
+  <div class="col s5 m4 l4">
+    <a class="waves-effect waves-light btn" id="toggle-new-offer-button">New Offer</a>
+  </div>
+
+  <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
+    <div id="toggle-new-need">NEW NEED CREATION</div>
+    <div id="toggle-new-offer">NEW OFFER CREATION</div>
+  </div>
+
+  <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
+    <!-- Needs/Offers Cards -->
+    <ul class="collection with-header">
+      <!-- Render Existing Needs -->
+      <% if @needs %>
+        <li class="collection-header"><h5>Needs</h5></li>
+            <%= byebug %>
+        <% @needs.each do |n| %>
+          <li class="collection-item avatar">
+            <div class="col s10 m11 l11">
+              <i class="material-icons circle orange">swap_horiz</i>
+              <p><%= n.description %></p>
+            </div>
+            <div class="col s1 m1 l1">
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                <label for="filled-in-box"></label>
+              </p>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <!-- Render Existing Offers -->
+      <% if @offers.size > 0  %>
+        <li class="collection-header"><h5>Offers</h5></li>
+        <% @offers.each do |o| %>
+          <li class="collection-item avatar">
+            <i class="material-icons circle cyan">swap_horiz</i>
+            <p><%= o.description %></p>
+            <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+            <p>
+              <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+              <label for="filled-in-box">Filled in</label>
+            </p>
+          </li>
+        <% end %>
+      <% end %>
+      <!-- No Needs/Offers -->
+      <% if !@needs.present? && !@offers.present? %>
+        <li class="collection-header">
+          <h5>You currently have no Needs or Offers present</h5>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
