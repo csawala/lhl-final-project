@@ -13,6 +13,7 @@
   <%= render 'org_contact' %>
 
   <div class="divider"></div>
+
   <% if @org.categories.count > 0 %>
     <%# pluralize if more than one cause %>
     <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
@@ -22,13 +23,21 @@
       <% end %>
     </ul>
   <% end %>
-<!--   <div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-  </div> -->
+
   <div class="divider"></div>
 
-  <p>This is where we'll put the needs/offers stuff</p>
+  <% if @needs.size > 0 %>
+    <div class="col s6">
+      <h5>needs:</h5>
+      <%= render 'org_needs' %>
+    </div>
+  <% end %>
+
+  <% if @offers.size > 0 %>
+    <div class="col s6">
+      <h5>offers:</h5>
+      <%= render 'org_offers' %>
+    </div>
+  <% end %>
+
 </div>
