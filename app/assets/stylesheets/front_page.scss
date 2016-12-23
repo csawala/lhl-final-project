@@ -52,3 +52,19 @@ div.row {
 div.carousel.carousel-slider.center {
   width: 100vw;
 }
+
+.btn.waves-effect.waves-light.homepage.steps {
+  margin: 0.5em;
+}
+
+div.col.s4.homepage-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.circle.responsive-img.homepage-team-images {
+  height: 60%;
+  width: 60%;
+}
