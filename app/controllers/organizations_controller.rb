@@ -1,5 +1,4 @@
 class OrganizationsController < ApplicationController
-  # do we need an authorize here?
 
   def index
     @organizations = Organization.filter_by_params(params).order(name: :asc)
@@ -24,10 +23,22 @@ class OrganizationsController < ApplicationController
   end
 
   def show
-    @org = Organization.find(params[:id])
+    @org    = Organization.find(params[:id])
+    if @needs = @org.goods_types_organizations
+                    .where(needs: true, active: true)
+      @needs
+    else return
+    end
+
+    if @offers = @org.goods_types_organizations
+                     .where(offers: true, active: true)
+      @offers
+    else return
+    end
   end
 
   private
+
   def org_params
     params.require(:organization).permit(
     :name,
