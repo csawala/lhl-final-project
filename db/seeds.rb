@@ -15,9 +15,11 @@ def open_image(file_name)
 end
 
 ## --- USERS ---
-
+puts "\npurging Users..."
 User.destroy_all
-puts "\nRe-creating Users"
+puts "-> done!"
+puts "Re-creating Users"
+
 
 # test 'normal' user, no business/charity association
 User.create!({
@@ -32,7 +34,7 @@ User.create!({
 User.create!({
   first_name: 'Tina',
   last_name: 'Charitygal',
-  email: 't@blood.ca',
+  email: 'tina@blood.ca',
   phone: 4168225544,
   password: 'password',
   password_confirmation: 'password'
@@ -41,32 +43,35 @@ User.create!({
 User.create!({
   first_name: 'Jim',
   last_name: 'Businessman',
-  email: 'b@b.com',
+  email: 'jim@mec.ca',
   phone: 4167774646,
   password: 'password',
   password_confirmation: 'password'
   })
 
 ## --- CATEGORIES ---
+puts "\npurging Categories..."
 Category.destroy_all
+puts "-> done!"
 puts "Re-creating Categories"
 
-cat1  = Category.create!({ name: 'health' })
-cat2  = Category.create!({ name: 'education' })
-cat3  = Category.create!({ name: 'poverty' })
-cat4  = Category.create!({ name: 'human rights' })
-cat5  = Category.create!({ name: 'animal rights' })
-cat6  = Category.create!({ name: 'environment' })
-cat7  = Category.create!({ name: 'religion' })
-cat8  = Category.create!({ name: 'community development' })
-cat9  = Category.create!({ name: 'arts and culture' })
-cat10 = Category.create!({ name: 'sport' })
-cat11 = Category.create!({ name: 'disadvantaged' })
+Category.create!({ name: 'health' })
+Category.create!({ name: 'education' })
+Category.create!({ name: 'poverty' })
+Category.create!({ name: 'human rights' })
+Category.create!({ name: 'animal rights' })
+Category.create!({ name: 'environment' })
+Category.create!({ name: 'religion' })
+Category.create!({ name: 'community development' })
+Category.create!({ name: 'arts and culture' })
+Category.create!({ name: 'sport' })
+Category.create!({ name: 'disadvantaged' })
 
 
 ## --- ORGANIZATIONS ---
-
+puts "\npurging Organizations..."
 Organization.destroy_all
+puts "-> done!"
 puts "Re-creating Organizations"
 
 # ------ CHARITIES --------
@@ -81,7 +86,6 @@ org1 = Organization.create!({
   url: 'https://blood.ca/',
   image: open_image('org1.jpg'),
   orgtype: 'charity',
-  user_id: 2,
   description: "Canadian Blood Services is a not-for-profit, charitable organization operating at arm's length from government. Its sole mission is to manage the blood supply for Canadians. Created in 1998, it is the successor to the Canadian Red Cross Blood Program and the Canadian Blood Agency (the former funding arm of Canada's blood supply system)."
   })
 
@@ -141,6 +145,7 @@ org5 = Organization.create!({
   url: 'http://www.dailybread.ca/',
   image: open_image('org5.jpg'),
   orgtype: 'charity',
+  user_id: 2,
   description: "We believe that access to food is a basic human right, not a privilege. No one should go hungry. We believe that no one should face barriers in accessing food."
   })
 
@@ -233,8 +238,6 @@ org11 = Organization.create!({
   description: "The Toronto International Film Festival (TIFF) is a charitable, not for profit, cultural organization whose mission is to transform the way people see the world. Its vision is to lead the world in creative and cultural discovery through the moving image."
   })
 
-
-
 # ------- BUSINESSES --------
 org12 = Organization.create!({
   name: 'The Kitchen Table',
@@ -246,7 +249,6 @@ org12 = Organization.create!({
   url: 'http://www.thekitchentable.ca/',
   image: open_image('org9.jpg'),
   orgtype: 'business',
-  user_id: 3
   })
 
 org13 = Organization.create!({
@@ -301,14 +303,17 @@ org16 = Organization.create!({
   url: 'https://www.mec.ca/',
   image: open_image('org13.jpg'),
   orgtype: 'business',
+  user_id: 3
   })
 
 
 
 ## --- ORG CATEGORIES ---
-# CategoriesOrganization.destroy_all
-# puts "Re-creating Organization category data"
 # Category = 'causes' in our context
+puts "\npurging organization categories"
+CategoriesOrganization.destroy_all
+puts "-> done!"
+puts "Re-creating Organizations' categories"
 
 cat_org1 = CategoriesOrganization.create!({
   category_id: 1,
@@ -416,9 +421,13 @@ cat_org21 = CategoriesOrganization.create!({
 })
 
 ## --- GOODS TYPES ---
+puts "\npurging GoodsTypes..."
+GoodsType.destroy_all
+puts "-> done!"
+puts "Re-creating GoodsTypes"
 
 g1 = GoodsType.create!({
-  name: "foods"
+  name: "food"
 })
 
 g2 = GoodsType.create!({
@@ -454,10 +463,15 @@ g9 = GoodsType.create!({
 })
 
 g10 = GoodsType.create!({
-  name: "money donations"
+  name: "cash donations"
 })
 
 ## --- ORG GOODS ---
+puts "\npurging organizations' goods data"
+GoodsTypesOrganization.destroy_all
+puts "-> done!"
+puts "Re-creating organizations' goods data"
+
 org1.goods_types_organizations.create!({
   goods_type_id: 7,
   needs: true,
