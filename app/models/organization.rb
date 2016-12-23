@@ -28,7 +28,7 @@ class Organization < ApplicationRecord
   def self.by_categories(category_names)
     return all unless category_names.present?
 
-    joins(:categories).where(categories: { name: category_names })
+    joins(:categories).where(categories: { name: category_names }).uniq
   end
 
   def self.by_orgtype(orgtype)
