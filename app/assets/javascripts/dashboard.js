@@ -11,12 +11,14 @@ const orgEditToggle = () => {
 
 const newNeedToggle = () => {
   $( "#toggle-new-need-button" ).click(() => {
+    $( "#toggle-new-offer" ).hide();
     $( "#toggle-new-need" ).slideToggle("slow")
   })
 }
 
 const newOfferToggle = () => {
   $( "#toggle-new-offer-button" ).click(() => {
+    $( "#toggle-new-need" ).hide();
     $( "#toggle-new-offer" ).slideToggle("slow")
   })
 }

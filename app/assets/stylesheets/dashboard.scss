@@ -5,14 +5,29 @@ main.container .org-show {
     .org-image {
       display: block;
     }
-    .org-details {
-
-    }
   }
 
   #toggle-org-form-render,
   #toggle-new-offer,
   #toggle-new-need  {
     display: none;
+  }
+
+  .org-good-type-title {
+    font-size: 180%;
+  }
+
+  li.collection-item.needs-header,{
+    background-color: #6BA472;
+  }
+
+  li.collection-item.offers-header,{
+    background-color: #3EA4F0;
+  }
+
+  span.secondary-content,
+  .offers-header,
+  .needs-header {
+    color: white;
   }
 }
