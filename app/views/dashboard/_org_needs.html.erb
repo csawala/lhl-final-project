@@ -13,7 +13,7 @@
     <div id="toggle-new-offer">NEW OFFER CREATION</div>
   </div>
 
-  <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
+  <div class="col s11 offset-s1 m11 offset-m1 l10 offset-l1">
     <!-- Needs/Offers Cards -->
     <ul class="collection with-header">
       <!-- Render Existing Needs -->
@@ -32,7 +32,7 @@
               <p><%= n.description %></p>
             </div>
             <div class="col s1 m1 l1">
-              <p>
+              <p class="right-align">
                 <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
                 <label for="filled-in-box"></label>
               </p>
@@ -42,7 +42,7 @@
       <% end %>
       <!-- Render Existing Offers -->
       <% if @offers.size > 0  %>
-        <li class="collection-item needs-header">
+        <li class="collection-item offers-header">
           <div>
             <span class="org-good-type-title">Offers</span>
             <span class="secondary-content">Active</span>
@@ -54,7 +54,7 @@
             <p>Offering: <%= o.goods_type.name %></p>
             <p><%= o.description %></p>
             <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-            <p>
+            <p class="right-align">
               <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
               <label for="filled-in-box">Filled in</label>
             </p>
