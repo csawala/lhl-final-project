@@ -33,8 +33,10 @@
             </div>
             <div class="col s1 m1 l1">
               <p class="right-align">
-                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                <label for="filled-in-box"></label>
+                <%= check_box_tag "filled-in-box", n.active, class: "filled-in" %>
+                <%= label_tag "filled-in-box", style: "display: none" %>
+                <!-- <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" /> -->
+                <!-- <label for="filled-in-box"></label> -->
               </p>
             </div>
           </li>
