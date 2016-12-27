@@ -1,25 +1,14 @@
 <form>
   <div class="search-bar-org-page">
+    <% @goods_types.each do |g| %>
 
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="foods">
+      <input
+        class="btn waves-effect waves-light red lighten-1 cause-search"
+        type="submit"
+        name="goods_types[]"
+        value="<%= g.name %>"
+      >
 
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="hygiene items">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="furniture">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="home supplies">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="business supplies">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="money donations">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="clothing">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="volunteers">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="skilled labour">
-
-    <input class="btn waves-effect waves-light red lighten-1 cause-search" type="submit" name="category_names[]" value="unskilled labour">
-
+    <% end %>
   </div>
 </form>
