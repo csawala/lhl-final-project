@@ -11,9 +11,7 @@ const highlightFilterButton = () => {
   let $sortButtons = $('input.waves-button-input')
 
   $sortButtons.each((_, button) => {
-    // console.log(button)
     let filterText = button.value.split(' ').join('+')
-    console.log(filterText)
     if (searchURL.includes(`=${filterText}`)) {
       swapColourClass($(button), 'i')
     }
@@ -21,6 +19,10 @@ const highlightFilterButton = () => {
 }
 
 window.onload = () => {
+  // fix inaction when clicking outside of button text for filters
+  $('i.cause-search').on('click', function(e) {
+    $(e.target).children('input').click()
+  })
 
   highlightFilterButton()
 
