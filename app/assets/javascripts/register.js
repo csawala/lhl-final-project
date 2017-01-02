@@ -1,7 +1,9 @@
 'use strict'
 
-
 $(document).ready(() => {
+
+  const $orgform = $('#organization-form')
+  $orgform.hide()
 
   const $checkboxes = $('input:checkbox')
 
@@ -9,7 +11,8 @@ $(document).ready(() => {
     $checkboxes.prop('checked', false).attr('checked', false)
     $(this).prop('checked', true).attr('checked', true)
 
-    console.log(this)
+    if (this === $('#person')[0]) $orgform.hide()
+    else $orgform.show()
   })
 
 })

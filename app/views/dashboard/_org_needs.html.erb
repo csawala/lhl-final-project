@@ -1,0 +1,102 @@
+<div class="row">
+  <!-- Create New Needs/Offers Cards Options -->
+  <div class="col s5 offset-s1 m4 offset-m3 l4 offset-l3">
+    <a class="waves-effect waves-light btn" id="toggle-new-need-button">New Need</a>
+  </div>
+
+  <div class="col s5 m4 l4">
+    <a class="waves-effect waves-light btn" id="toggle-new-offer-button">New Offer</a>
+  </div>
+
+  <!--
+    t.boolean  "offers"
+    t.boolean  "needs"
+    t.boolean  "urgent"
+    t.string   "description"
+    t.boolean  "active"
+  -->
+  <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
+    <div id="toggle-new-need">
+      <%= form_for :need do |n| %>
+        <!-- Description -->
+        <div class="input-field col s11 m11 l11">
+          <i class="material-icons prefix">comment</i>
+          <%= n.text_field :description, class: "materialize-textarea" %>
+          <%= n.label "Description" %>
+        </div>
+
+
+
+        <!-- Submit Button -->
+        <div class="col s12 m12 l12 light-green lighten-4">
+          <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
+            <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-small waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Card") do %>
+              <i class="material-icons">done</i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="toggle-new-offer">NEW OFFER CREATION
+    </div>
+  </div>
+
+  <div class="col s11 offset-s1 m11 offset-m1 l10 offset-l1">
+    <!-- Needs/Offers Cards -->
+    <ul class="collection with-header">
+      <!-- Render Existing Needs -->
+      <% if @needs.size > 0 %>
+        <li class="collection-item needs-header">
+          <div>
+            <span class="org-good-type-title">Needs</span>
+            <span class="secondary-content">Active</span>
+          </div>
+        </li>
+        <% @needs.each do |need| %>
+          <li class="collection-item avatar">
+            <div class="col s10 m11 l11">
+              <i class="material-icons circle orange">swap_horiz</i>
+              <p>Needing: <strong><em><%= need.goods_type.name %></em></strong></p>
+              <p><%= need.description %></p>
+            </div>
+            <div class="col s1 m1 l1">
+              <p class="right-align">
+
+                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                <label for="filled-in-box"></label>
+              </p>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <!-- Render Existing Offers -->
+      <% if @offers.size > 0  %>
+        <li class="collection-item offers-header">
+          <div>
+            <span class="org-good-type-title">Offers</span>
+            <span class="secondary-content">Active</span>
+          </div>
+        </li>
+        <% @offers.each do |offer| %>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red lighten-1">swap_horiz</i>
+            <p>Offering: <%= offer.goods_type.name %></p>
+            <p><%= offer.description %></p>
+            <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+            <p class="right-align">
+              <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+              <label for="filled-in-box">Filled in</label>
+            </p>
+          </li>
+        <% end %>
+      <% end %>
+      <!-- No Needs/Offers -->
+      <% if !@needs.present? && !@offers.present? %>
+        <li class="collection-header">
+          <h5>You currently have no Needs or Offers present</h5>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -41,6 +41,20 @@
       <input type="checkbox" id="business" />
       <label class="checkbox" for="business">Business</label>
     </p>
+    <div id="organization-form">
+      <div class="control-group">
+        <label class="control-label" for="org-name">Organization name</label>
+        <div class="controls">
+          <%= text_field_tag :organization_name %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="org-url">homepage</label>
+        <div class="controls">
+          <%= text_field_tag :organization_url, nil, placeholder: "http://www.yourwebsite.com" %>
+        </div>
+      </div>
+    </div>
     <div class="control-group">
       <div class="controls buttons">
         <%= submit_tag 'Submit', class: "btn btn-success" %><br>

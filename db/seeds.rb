@@ -34,7 +34,7 @@ User.create!({
 User.create!({
   first_name: 'Tina',
   last_name: 'Charitygal',
-  email: 'tina@blood.ca',
+  email: 'tina@dailybread.ca',
   phone: 4168225544,
   password: 'password',
   password_confirmation: 'password'

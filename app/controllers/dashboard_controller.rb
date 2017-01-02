@@ -5,6 +5,8 @@ class DashboardController < ApplicationController
       redirect_to login_path
     elsif current_user.organization.present?
       @org = current_user.organization
+      @needs = @org.goods_types_organizations.where(needs: true)
+      @offers = @org.goods_types_organizations.where(offers: true)
     else
       redirect_to root_path
     end
