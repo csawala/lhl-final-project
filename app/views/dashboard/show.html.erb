@@ -3,17 +3,58 @@
     <h4 class="center-align">Dashboard for: <strong><%= @org.name %></strong></h4>
 
     <!-- Toggle Render Section for Update Org Details -->
-    <div class="col s10 offset-s1 m9 offset-m3 l8 offset-l4">
-      <a id="toggle-org-form" class="waves-effect waves-light btn">
-        <i class="material-icons right">mode_edit</i>update organization details
+    <div class="center-align">
+      <a id="toggle-org-form-button"
+         class="waves-effect waves-light btn">
+        <i class="material-icons right">mode_edit</i>
+        update organization details
+      </a>
+
+      <a class="waves-effect waves-light btn"
+         id="toggle-new-need-button">
+        new need
+      </a>
+
+      <a class="waves-effect waves-light btn"
+         id="toggle-new-offer-button">
+        new offer
       </a>
     </div><br>
+    <!-- Create New Needs/Offers Cards Options -->
+    <div>
+    </div>
 
-    <div id="toggle-org-form-render">
+    <div>
+    </div>
+
+    <div id="toggle-org-form">
       <%= render 'org_form' %>
-    </div><br>
+    </div>
+    <!-- New need/offer toggle -->
+    <div class="col s10 offset-s1">
+      <div id="toggle-new-need">
+        <%= form_for :need, url: dashboard_needs_path do |n| %>
+          <!-- Description -->
+          <div class="input-field col s11">
+            <i class="material-icons prefix">comment</i>
+            <%= n.text_field :description, class: "materialize-textarea active" %>
+            <%= n.label "Description", class: 'need-offer-create' %>
+          </div>
+          <!-- Submit Button -->
+          <div class="col s12 m12 l12 light-green lighten-4">
+            <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
+              <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-small waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Card") do %>
+                <i class="material-icons">done</i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
 
-    <br>
+      <div id="toggle-new-offer">NEW OFFER CREATION
+      </div>
+    </div>
+
     <div class="divider"></div>
     <br>
 
