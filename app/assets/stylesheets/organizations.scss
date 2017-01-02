@@ -1,3 +1,6 @@
+.highlight {
+  border: 3px solid green
+}
 div.row.org-container {
   width: 85vw;
   margin-left: 7.5vw;
@@ -14,12 +17,12 @@ div.card.medium {
   margin: 5px;
   line-height: 1.2em;
   span.card-title.grey-text {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     line-height: 1.2em;
   }
   span.card-title:hover {
-    transition: all 0.5s ease;
-    text-shadow: 1px 0px 2px grey;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 1px grey;
   }
   div.card-action {
     a.help-link, a.info-link {
