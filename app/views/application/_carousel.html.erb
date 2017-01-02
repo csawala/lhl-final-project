@@ -104,6 +104,7 @@ $(document).ready(() => {
      $('#causes_form').on('submit', function(e) {
         e.preventDefault();
         var causes = $('#multiple_select_carousel').serialize();
+        console.log(causes)
         window.location = '/organizations?' + causes
        });
 
