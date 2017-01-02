@@ -8,12 +8,36 @@
     <a class="waves-effect waves-light btn" id="toggle-new-offer-button">New Offer</a>
   </div>
 
+  <!--
+    t.boolean  "offers"
+    t.boolean  "needs"
+    t.boolean  "urgent"
+    t.string   "description"
+    t.boolean  "active"
+  -->
   <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
-    <div id="toggle-new-need">NEW NEED CREATION
+    <div id="toggle-new-need">
       <%= form_for :need do |n| %>
-        <%=  %>
+        <!-- Description -->
+        <div class="input-field col s11 m11 l11">
+          <i class="material-icons prefix">comment</i>
+          <%= n.text_field :description, class: "materialize-textarea" %>
+          <%= n.label "Description" %>
+        </div>
+
+
+
+        <!-- Submit Button -->
+        <div class="col s12 m12 l12 light-green lighten-4">
+          <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
+            <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-small waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Card") do %>
+              <i class="material-icons">done</i>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     </div>
+
     <div id="toggle-new-offer">NEW OFFER CREATION
     </div>
   </div>
