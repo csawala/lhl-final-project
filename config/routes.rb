@@ -24,5 +24,10 @@ Rails.application.routes.draw do
 
   # ---- NEEDS / OFFERS ----
   get '/needs'  => 'needs#index'
+  patch '/needs'  => 'needs#update'
+  post '/needs'  => 'needs#create'
+
   get '/offers' => 'offers#index'
+  patch '/offers' => 'offers#update'
+  post '/offers' => 'offers#create'
 end

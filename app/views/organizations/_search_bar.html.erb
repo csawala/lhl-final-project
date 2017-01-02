@@ -1,50 +1,20 @@
+<form>
+  <div class="search-bar-org-page">
+    <input
+      class="btn waves-effect waves-light blue lighten-1"
+      type="submit"
+      value="all"
+      id="show-all"
+    >
 
- <form>
+    <% @causes.each do |c| %>
 
-<div class="search-bar-org-page">
-
-  <input id="test" class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="animal rights">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="arts and culture">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="community development">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="disadvantaged">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="education">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="environment">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="health">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="human rights">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="poverty">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="religion">
-
-  <input class="btn waves-effect waves-light blue cause-search" type="submit" name="category_names[]" value="sport">
-
-</div>
-
+      <input
+        class="btn waves-effect waves-light blue lighten-1 cause-search"
+        type="submit"
+        name="category_names[]"
+        value="<%= c.name %>"
+      >
+    <% end %>
+  </div>
 </form>
-
-
-
-
-<script>
-
-$(document).ready(() => {
-
-  function showValues() {
-    var string = $("form").serialize();
- }
-
-  $("input[type='submit']").on("click", showValues);
-
-});
-
-
-
-
-</script>

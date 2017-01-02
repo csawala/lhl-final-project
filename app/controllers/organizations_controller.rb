@@ -2,6 +2,12 @@ class OrganizationsController < ApplicationController
 
   def index
     @organizations = Organization.filter_by_params(params).order(name: :asc)
+
+    @causes = Category.select(:name).all.order(name: :asc)
+
+    if current_user && current_user.organization
+      @user_org = current_user.organization.id
+    end
   end
 
   def create
@@ -24,6 +30,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @org    = Organization.find(params[:id])
+
     if @needs = @org.goods_types_organizations
                     .where(needs: true, active: true)
       @needs
