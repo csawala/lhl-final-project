@@ -1,5 +1,5 @@
 <div class="row org-container org-card-large col s12">
-  <%= image_tag(@org.image.full) %>
+  <%= image_tag(@org.image.card) %>
 
   <% if @org.description %>
     <div class="divider"></div>
@@ -20,11 +20,10 @@
     <ul>
       <% @org.categories.each do |c|%>
         <li><%= c.name %></li>
+
       <% end %>
     </ul>
   <% end %>
-
-  <div class="divider"></div>
 
   <% if @needs.size > 0 %>
     <div class="col s6">
