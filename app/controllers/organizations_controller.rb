@@ -63,5 +63,4 @@ class OrganizationsController < ApplicationController
     :image
     )
   end
-
 end
