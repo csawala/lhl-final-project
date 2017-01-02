@@ -12,10 +12,22 @@ class DashboardController < ApplicationController
     else
       redirect_to root_path
     end
+    @need  = @org.goods_types_organizations.new(needs:true)
+    @offer = @org.goods_types_organizations.new(offers:true)
   end
 
   def update
     @org = validate_organization(params[:id])
+  end
+
+  def newneed
+    @need = GoodsTypesOrganization.new(needs:true)
+    need_data = params[:goods_types_organization]
+
+    @need[:description] = need_data[:description]
+    @need[:organization_id] = current_user.organization.id
+
+    @need.save!
   end
 
   def updatecard(card_id)
