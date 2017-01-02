@@ -6,8 +6,8 @@ class DashboardController < ApplicationController
 
     elsif current_user.organization.present?
       @org = current_user.organization
-      @needs = @org.goods_types_organizations.where(needs: true)
-      @offers = @org.goods_types_organizations.where(offers: true)
+      @needs = @org.goods_types_organizations.where(needs: true).order(:active)
+      @offers = @org.goods_types_organizations.where(offers: true).order(:active)
 
     else
       redirect_to root_path

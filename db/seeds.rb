@@ -542,6 +542,18 @@ org5.goods_types_organizations.create!({
   offers: true,
   description: 'Right now we have excess of some types of non-perishables, please contact if your food bank or charity is in need of food'
 })
+org5.goods_types_organizations.create!({
+  goods_type_id: 2,
+  needs: true,
+  active: false,
+  description: 'TESTING FOR INACTIVE NEED'
+})
+org5.goods_types_organizations.create!({
+  goods_type_id: 6,
+  offers: true,
+  active: false,
+  description: 'TESTING FOR INACTIVE OFFER'
+})
 org6.goods_types_organizations.create!({
   goods_type_id: 1,
   needs: true,
