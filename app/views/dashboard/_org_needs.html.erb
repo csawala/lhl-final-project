@@ -9,34 +9,38 @@
   </div>
 
   <div class="col s11 offset-s1 m11 offset-m1 l11 offset-l1">
-    <div id="toggle-new-need">NEW NEED CREATION</div>
-    <div id="toggle-new-offer">NEW OFFER CREATION</div>
+    <div id="toggle-new-need">NEW NEED CREATION
+      <%= form_for :need do |n| %>
+        <%=  %>
+      <% end %>
+    </div>
+    <div id="toggle-new-offer">NEW OFFER CREATION
+    </div>
   </div>
 
   <div class="col s11 offset-s1 m11 offset-m1 l10 offset-l1">
     <!-- Needs/Offers Cards -->
     <ul class="collection with-header">
       <!-- Render Existing Needs -->
-      <% if @needs %>
+      <% if @needs.size > 0 %>
         <li class="collection-item needs-header">
           <div>
             <span class="org-good-type-title">Needs</span>
             <span class="secondary-content">Active</span>
           </div>
         </li>
-        <% @needs.each do |n| %>
+        <% @needs.each do |need| %>
           <li class="collection-item avatar">
             <div class="col s10 m11 l11">
               <i class="material-icons circle orange">swap_horiz</i>
-              <p>Needing: <strong><em><%= n.goods_type.name %></em></strong></p>
-              <p><%= n.description %></p>
+              <p>Needing: <strong><em><%= need.goods_type.name %></em></strong></p>
+              <p><%= need.description %></p>
             </div>
             <div class="col s1 m1 l1">
               <p class="right-align">
-                <%= check_box_tag "filled-in-box", n.active, class: "filled-in" %>
-                <%= label_tag "filled-in-box", style: "display: none" %>
-                <!-- <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" /> -->
-                <!-- <label for="filled-in-box"></label> -->
+
+                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                <label for="filled-in-box"></label>
               </p>
             </div>
           </li>
@@ -50,11 +54,11 @@
             <span class="secondary-content">Active</span>
           </div>
         </li>
-        <% @offers.each do |o| %>
+        <% @offers.each do |offer| %>
           <li class="collection-item avatar">
             <i class="material-icons circle red lighten-1">swap_horiz</i>
-            <p>Offering: <%= o.goods_type.name %></p>
-            <p><%= o.description %></p>
+            <p>Offering: <%= offer.goods_type.name %></p>
+            <p><%= offer.description %></p>
             <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
             <p class="right-align">
               <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
