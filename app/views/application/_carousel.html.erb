@@ -36,14 +36,20 @@
              <div class="col s12 m4 l4"></div>
 
              <div class="input-field col s12 m4 l4">
-                <select multiple name="category_names[]" id="multiple_select_carousel">
+                <select multiple name="category_names[]" id="multiple_select_causes_carousel">
                    <option value="" disabled="disabled" selected="selected">Select</option>
                    <option value="environment">environment</option>
                    <option value="poverty">poverty</option>
-                   <option value="sports">sports</option>
+                   <option value="sport">sports</option>
                    <option value="health">health</option>
                    <option value="education">education</option>
-
+                   <option value="human rights">human rights</option>
+                   <option value="animal rights">animal welfare</option>
+                   <option value="religion">religion</option>
+                   <option value="community development">community development</option>
+                   <option value="arts and culture">arts and culture</option>
+                   <option value="religion">religion</option>
+                   <option value="disadvantaged">the disadvantaged</option>
                 </select>
 
                 <button class="btn waves-effect waves-light" type="submit" name="action">Let's go
@@ -61,12 +67,50 @@
 
     <!-- SLIDE 5 -->
     <div class="carousel-item red accent-1 grey-text text-darken-2" href="#five">
-      <p id="slide-5-p" class="grey-text text-darken-2">Are you interested in...</p>
-      <a class="btn waves-effect white grey-text" id="events-button-individual">events</a>
-      <p class="grey-text text-darken-2">Are you offering... </p>
-      <a class="btn waves-effect white grey-text" id="skill-button-individual">skills</a>
+      <h2 id="slide-5-title">Please pick some ways to participate.</h2>
+
+           <form class="col s12" id="participation_form">
+             <div class="row">
+
+               <div class="col s12 m4 l4"></div>
+
+               <div class="input-field col s12 m4 l4">
+                  <select multiple name="goods_types[]" id="multiple_select_participation_carousel">
+                     <option value="" disabled="disabled" selected="selected">Select</option>
+                     <option value="events">help at events</option>
+                     <option value="unskilled labour">offer unskilled labour</option>
+                     <option value="skilled labour">offer skilled labour</option>
+                     <option value="volunteers">volunteer</option>
+                  </select>
+
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Let's go
+                    <i class="material-icons right">send</i>
+                  </button>
+              </div>
+
+              <div class="s12 m4 l4"></div>
+
+           </div>
+         </form>
+
+      </div>
+
+
+    <!-- SLIDE 6 (after clicking #organizations-button)-->
+    <div class="carousel-item red accent-1 grey-text text-darken-2" href="#six">
+      <p id="slide-6-p" class="grey-text text-darken-2">I want to see all needs.</p>
+      <a class="btn waves-effect white grey-text" id="show-me-button-organizations">Show me</a>
+      <p class="grey-text text-darken-2">I want to publish an offer.</p>
+      <a class="btn waves-effect white grey-text" id="register-button-organizations">Register</a>
     </div>
 
+    <!-- SLIDE 7 (after clicking #need-button)-->
+    <div class="carousel-item red accent-1 grey-text text-darken-2" href="#six">
+      <p id="slide-6-p" class="grey-text text-darken-2">I want to see all offers.</p>
+      <a class="btn waves-effect white grey-text" id="show-me-button-charities">Show me</a>
+      <p class="grey-text text-darken-2">I want to publish a need.</p>
+      <a class="btn waves-effect white grey-text" id="register-button-charities">Register</a>
+    </div>
 
   </div>
 </div>
@@ -93,19 +137,54 @@ $(document).ready(() => {
         $('.carousel').carousel('next')
       })
 
+      // on click participate-button-individual directed to slide 5
       $('#participate-button-individual').click(function(q) {
         $('.carousel').carousel('next', 2)
       })
 
-      $('#organization-button').click(function(){
+      // on click organization-button directed to slide 6
+      $('#organization-button').click(function(q) {
+        $('.carousel').carousel('next', 4)
+      })
+
+      // on click register-button-organizations redirected to register page
+      $('#register-button-organizations').click(function(){
         window.location.href='/register'
       })
 
-     $('#causes_form').on('submit', function(e) {
+      // on click show-me-button-organizations redirected to needs pasge
+      $('#show-me-button-organizations').click(function(){
+        window.location.href='/needs'
+      })
+
+      // on click register-button-charities redirected to register page
+      $('#register-button-charities').click(function(){
+        window.location.href='/register'
+      })
+
+      // on click show-me-button-charities redirected to offers pasge
+      $('#show-me-button-charities').click(function(){
+        window.location.href='/offers'
+      })
+
+      // on click need-button directed to slide 7
+      $('#need-button').click(function(q) {
+        $('.carousel').carousel('next', 6)
+      })
+
+      // turns query from slide 4 into string -> filters orgs by causes selected
+      $('#causes_form').on('submit', function(e) {
         e.preventDefault();
-        var causes = $('#multiple_select_carousel').serialize();
+        var causes = $('#multiple_select_causes_carousel').serialize();
         window.location = '/organizations?' + causes
-       });
+      });
+
+      // turns query from slide 5 into string -> filters needs by ways to participate selected
+      $('#participation_form').on('submit', function(e) {
+        e.preventDefault();
+        var waysToParticipate = $('#multiple_select_participation_carousel').serialize();
+        window.location = '/needs?' + waysToParticipate
+      });
 
 })
 
