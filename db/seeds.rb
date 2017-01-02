@@ -633,6 +633,11 @@ org13.goods_types_organizations.create!({
   description: 'Several experienced chapter members are off contracts, looking to contribute in the community'
 })
 org13.goods_types_organizations.create!({
+  goods_type_id: 3,
+  offers: true,
+  description: 'Several pieces of quality furniture made lovingly by the good folks of Carpenters Local - also open to new projects if there is a specific need, please contact'
+})
+org13.goods_types_organizations.create!({
   goods_type_id: 1,
   offers: true,
   description: 'We are running a food drive, and need to find a home for lots of non-perishables'
@@ -647,10 +652,25 @@ org14.goods_types_organizations.create!({
   offers: true,
   description: 'Several of our Web Developers are looking to volunteer their time to help improve the web presence of charities in the community'
 })
+org14.goods_types_organizations.create!({
+  goods_type_id: 5,
+  offers: true,
+  description: 'We have a bunch of spare unused kitchen supplies which we would love to see go to those in need'
+})
+org14.goods_types_organizations.create!({
+  goods_type_id: 9,
+  offers: true,
+  description: 'Some of our students need to progress their work ethic - please let us know if you need labourers in any area'
+})
 org15.goods_types_organizations.create!({
   goods_type_id: 8,
   offers: true,
   description: 'Our chefs love to cook fine foods, and want to participate in community events for those in need'
+})
+org15.goods_types_organizations.create!({
+  goods_type_id: 6,
+  offers: true,
+  description: 'In case any charities can use them, we have a surplus of some basic office supplies which we can no longer store'
 })
 org16.goods_types_organizations.create!({
   goods_type_id: 4,
@@ -667,12 +687,15 @@ org16.goods_types_organizations.create!({
   needs: true,
   description: 'Looking for runners who would volunteer to lead community social/fun runs throughout the week, please contact for details'
 })
-# .goods_types.create!({
-#   needs: true
-#   })
-# org#.goods_types.create!({
-
-#   })
-
+org16.goods_types_organizations.create!({
+  goods_type_id: 7,
+  offers: true,
+  description: 'MEC staffers are regularly looking for new volunteer opportunities in the community - let us know where we can help!'
+})
+org16.goods_types_organizations.create!({
+  goods_type_id: 10,
+  offers: true,
+  description: 'New fundraisers are coming for 2017 - please let us know if your charity wants to partner in raising cash for your cause'
+})
 
 puts "\nAll done!"

@@ -1,13 +1,12 @@
 class DashboardController < ApplicationController
 
   def show
-    # validate_organization(current_user.organization.id)
-    if current_user.organization.present?
+    if !current_user
+      redirect_to login_path
+    elsif current_user.organization.present?
       @org = current_user.organization
     else
       redirect_to root_path
-      # FIXME swap for this when render exists!!
-      # render 'user_edit'
     end
   end
 
