@@ -1,0 +1,41 @@
+<div class="row auth-form">
+  <h3>Register</h3>
+  <%= form_tag '/users' do %>
+    <fieldset>
+    <div class="control-group">
+      <label class="control-label" for="first-name">First name</label>
+      <div class="controls">
+        <%= text_field_tag :first_name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="last-name">Last name</label>
+      <div class="controls">
+        <%= text_field_tag :last_name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email">Email</label>
+      <div class="controls">
+        <%= text_field_tag :email %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <%= password_field_tag :password %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="password-confirmation">Password confirmation</label>
+      <div class="controls">
+        <%= password_field_tag :password_confirmation %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls buttons">
+        <%= submit_tag 'Submit', class: "btn btn-success" %><br>
+      </div>
+    </div>
+  <% end %>
+</div>

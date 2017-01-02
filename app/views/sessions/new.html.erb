@@ -1,17 +1,15 @@
 <div class="row auth-form">
+  <h3>Sign in</h3>
   <%= form_tag '/login' do %>
     <fieldset>
-    <div id="legend">
-      <legend class="signin">Sign In</legend>
-    </div>
     <div class="control-group">
-      <label class="control-label" for="user_first_name">Email:</label>
+      <label class="control-label">Email:</label>
       <div class="controls">
         <%= text_field_tag :email %>
       </div>
     </div>
     <div class="control-group">
-      <label class="control-label" for="user_first_name">Password:</label>
+      <label class="control-label">Password:</label>
       <div class="controls">
         <%= password_field_tag :password %>
       </div>
@@ -23,8 +21,7 @@
         <!-- <div id="fb-root"></div>
         <div id="fb-button" class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" style="width:100px; height: 100px;"></div>
         </div> -->
+      </div>
     </div>
   <% end %>
 </div>
-
-
