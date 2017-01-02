@@ -32,6 +32,15 @@
         <%= password_field_tag :password_confirmation %>
       </div>
     </div>
+    <p><strong>... registering as a:</strong></p>
+    <p>
+      <input type="checkbox" id="person" checked />
+      <label class="checkbox" for="person">Person</label>
+      <input type="checkbox" id="charity" />
+      <label class="checkbox" for="charity">Charity</label>
+      <input type="checkbox" id="business" />
+      <label class="checkbox" for="business">Business</label>
+    </p>
     <div class="control-group">
       <div class="controls buttons">
         <%= submit_tag 'Submit', class: "btn btn-success" %><br>

@@ -36,7 +36,7 @@
              <div class="col s12 m4 l4"></div>
 
              <div class="input-field col s12 m4 l4">
-                <select multiple name="category_names[]">
+                <select multiple name="category_names[]" id="multiple_select_carousel">
                    <option value="" disabled="disabled" selected="selected">Select</option>
                    <option value="environment">environment</option>
                    <option value="poverty">poverty</option>
@@ -104,7 +104,6 @@ $(document).ready(() => {
      $('#causes_form').on('submit', function(e) {
         e.preventDefault();
         var causes = $('#multiple_select_carousel').serialize();
-        console.log(causes)
         window.location = '/organizations?' + causes
        });
 
