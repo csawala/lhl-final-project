@@ -28,6 +28,9 @@ div.card.medium {
     a.help-link, a.info-link {
       font-weight: 700;
     }
+    a.help-link {
+      color: blue
+    }
   }
   div.card-content {
     height: 100px;
