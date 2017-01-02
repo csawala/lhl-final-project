@@ -14,13 +14,13 @@ class NeedsController < ApplicationController
 
   def need_params
     params.require(:organization).permit(
-    :offers,
-    :needs,
-    :urgent,
-    :description,
-    :active,
-    :organization_id,
-    :goods_type_id
+      :offers,
+      :needs,
+      :urgent,
+      :description,
+      :active,
+      :organization_id,
+      :goods_type_id
     )
   end
 end

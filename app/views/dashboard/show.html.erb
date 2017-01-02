@@ -33,7 +33,7 @@
     <!-- New need/offer toggle -->
     <div class="col s10 offset-s1">
       <div id="toggle-new-need">
-        <%= form_for :need do |n| %>
+        <%= form_for :need, url: dashboard_needs_path do |n| %>
           <!-- Description -->
           <div class="input-field col s11">
             <i class="material-icons prefix">comment</i>
