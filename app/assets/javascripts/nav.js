@@ -3,7 +3,7 @@
 const makeClosestElementActive = (elem, target) => {
   return elem.closest(target).addClass('active')
 }
-// leverage Materlialize to highligh active pages in Nav
+// leverage Materlialize to highlight active pages in Nav
 const activeNavButtons = () => {
   let $navLinks = $('ul.right a')
   const url     = window.location.pathname
