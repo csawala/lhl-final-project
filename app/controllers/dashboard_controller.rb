@@ -3,10 +3,12 @@ class DashboardController < ApplicationController
   def show
     if !current_user
       redirect_to login_path
+
     elsif current_user.organization.present?
       @org = current_user.organization
       @needs = @org.goods_types_organizations.where(needs: true)
       @offers = @org.goods_types_organizations.where(offers: true)
+
     else
       redirect_to root_path
     end
@@ -14,6 +16,12 @@ class DashboardController < ApplicationController
 
   def update
     @org = validate_organization(params[:id])
+  end
+
+  def updatecard(card_id)
+    # something like (works in rails console!):
+    # @card = @org.goods_types_organizations.find(card_id)
+    # @card.active ? @card.active = false : @card.active = true
   end
 
   protected

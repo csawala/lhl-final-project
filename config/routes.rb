@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   # ---- DASHBOARD ----
   get '/dashboard' => 'dashboard#show'
+  post '/dashboard/updatecard' => 'dashboard#updatecard'
 
   # ---- NEEDS / OFFERS ----
   get '/needs'  => 'needs#index'
