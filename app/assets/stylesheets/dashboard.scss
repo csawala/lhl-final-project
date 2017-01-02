@@ -7,7 +7,7 @@ main.container .org-show {
     }
   }
 
-  #toggle-org-form-render,
+  #toggle-org-form,
   #toggle-new-offer,
   #toggle-new-need  {
     display: none;
@@ -30,4 +30,18 @@ main.container .org-show {
   .needs-header {
     color: white;
   }
+  span.secondary-content {
+    padding-right: 1.1em
+  }
+}
+
+a#toggle-new-need-button {
+  background-color: orange;
+}
+
+a#toggle-new-offer-button {
+  background-color: crimson;
+}
+a#toggle-org-form-button {
+  background-color: #3165D7;
 }

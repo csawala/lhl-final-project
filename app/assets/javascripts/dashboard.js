@@ -1,32 +1,33 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 'use strict'
 
-
 const orgEditToggle = () => {
-  $( "#toggle-org-form" ).click(() => {
-    $( "#toggle-org-form-render" ).slideToggle("slow")
+  $( "#toggle-org-form-button" ).click(() => {
+    $('.visible').removeClass('visible').hide()
+
+    $( "#toggle-org-form" ).slideToggle("medium").addClass('visible')
   })
 }
 
 const newNeedToggle = () => {
   $( "#toggle-new-need-button" ).click(() => {
-    $( "#toggle-new-offer" ).hide();
-    $( "#toggle-new-need" ).slideToggle("slow")
+    $('.visible').removeClass('visible').hide()
+
+    $( "#toggle-new-need" ).slideToggle("medium").addClass('visible')
   })
 }
 
 const newOfferToggle = () => {
   $( "#toggle-new-offer-button" ).click(() => {
-    $( "#toggle-new-need" ).hide();
-    $( "#toggle-new-offer" ).slideToggle("slow")
+    $('.visible').removeClass('visible').hide()
+
+    $( "#toggle-new-offer" ).slideToggle("medium").addClass('visible')
   })
 }
 
-
-
 $(document).ready(() => {
+
   orgEditToggle()
   newNeedToggle()
   newOfferToggle()
+
 })
