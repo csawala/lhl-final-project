@@ -1,26 +1,41 @@
 'use strict'
 
+const hideOtherToggleForms = (exception) => {
+  $('.toggle-hide').each((_, form) => {
+    if (form !== exception) {
+      form.style.display = 'none'
+    }
+  })
+}
+
+
 const orgEditToggle = () => {
   $( "#toggle-org-form-button" ).click(() => {
-    // $('.visible').removeClass('visible').hide()
+    let $target = $('#toggle-org-form')
 
-    $( "#toggle-org-form" ).slideToggle("medium").addClass('visible')
+    hideOtherToggleForms($orgForm[0])
+
+    $target.slideToggle("medium")
   })
 }
 
 const newNeedToggle = () => {
   $( "#toggle-new-need-button" ).click(() => {
-    // $('.visible').removeClass('visible').hide()
+    let $target = $('#toggle-new-need')
 
-    $( "#toggle-new-need" ).slideToggle("medium").addClass('visible')
+    hideOtherToggleForms($target[0])
+
+    $target.slideToggle("medium")
   })
 }
 
 const newOfferToggle = () => {
-  $( "#toggle-new-offer-button" ).click(function() {
-    // $('.visible').removeClass('visible').hide()
+  $( "#toggle-new-offer-button" ).click(() => {
+    let $target = $('#toggle-new-offer')
 
-    $( "#toggle-new-offer" ).slideToggle("medium").addClass('visible')
+    hideOtherToggleForms($target[0])
+
+    $target.slideToggle("medium")
   })
 }
 
