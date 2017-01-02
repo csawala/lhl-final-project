@@ -11,7 +11,7 @@ const activeNavButtons = () => {
   $navLinks.each((_, button) => {
     let buttonText = new RegExp(button.innerHTML, 'i')
 
-    if (url.match(buttonText)) {
+    if (url !== '/login' && url.match(buttonText)) {
       makeClosestElementActive($(button), 'li')
     }
   })

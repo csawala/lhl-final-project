@@ -15,6 +15,9 @@ const highlightFilterButton = () => {
     if (searchURL.includes(`=${filterText}`)) {
       swapColourClass($(button), 'i')
     }
+    else if (!searchURL) {
+      swapColourClass($('#show-all'), 'i')
+    }
   })
 }
 

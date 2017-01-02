@@ -36,14 +36,14 @@
              <div class="col s12 m4 l4"></div>
 
              <div class="input-field col s12 m4 l4">
-                <select multiple name="category_names[]">
+                <select multiple name="category_names[]" id="multiple_select_carousel">
                    <option value="" disabled="disabled" selected="selected">Select</option>
                    <option value="environment">environment</option>
                    <option value="poverty">poverty</option>
                    <option value="sports">sports</option>
                    <option value="health">health</option>
                    <option value="education">education</option>
-            
+
                 </select>
 
                 <button class="btn waves-effect waves-light" type="submit" name="action">Let's go
@@ -98,13 +98,13 @@ $(document).ready(() => {
       })
 
       $('#organization-button').click(function(){
-          window.location.href='/dashboard/1';
+        window.location.href='/register'
       })
 
      $('#causes_form').on('submit', function(e) {
-           e.preventDefault();
-           var causes = $('#multiple_select_carousel').serialize();
-           window.location = '/organizations?' + causes
+        e.preventDefault();
+        var causes = $('#multiple_select_carousel').serialize();
+        window.location = '/organizations?' + causes
        });
 
 })

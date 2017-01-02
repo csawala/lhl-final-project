@@ -1,6 +1,6 @@
 <%# organization / charity card %>
 <div class="col s12 m6 l4">
-  <div class="card medium hoverable">
+  <div class="card medium hoverable <%= @user_org == organization.id ? 'highlight' : '' %>">
     <div class="valign-wrapper">
       <%= image_tag(organization.image.card) %>
     </div>
@@ -12,11 +12,15 @@
       </span>
     </div>
     <div class="card-action">
+      <% if @user_org && organization.id == @user_org %>
+        <%= link_to 'dashboard', dashboard_path, class: 'info-link' %>
+      <% else %>
       <%= link_to 'website', organization.url %>
-      <% if organization.orgtype == 'charity' %>
-        <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link' %>
-      <% elsif organization.orgtype == 'business' %>
-        <%= link_to 'donor info', organization_path(id: organization.id), class: 'info-link' %>
+        <% if organization.orgtype == 'charity' %>
+          <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link deep-orange-text accent-3' %>
+        <% else %>
+          <%= link_to 'donor info', organization_path(id: organization.id), class: 'info-link blue-text' %>
+        <% end %>
       <% end %>
     </div>
     <%# expand card to view contact details %>
