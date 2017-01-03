@@ -13,7 +13,7 @@ class GoodsTypesOrganization < ApplicationRecord
     self.needs  ||= false
     self.offers ||= false
     self.urgent ||= false
-    self.active ||= true
+    # byebug
   end
 
   def self.filter_by_params(params)

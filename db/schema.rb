@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222031455) do
+ActiveRecord::Schema.define(version: 20170103183409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,12 +38,12 @@ ActiveRecord::Schema.define(version: 20161222031455) do
     t.boolean  "offers"
     t.boolean  "needs"
     t.boolean  "urgent"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "description"
-    t.boolean  "active"
     t.integer  "organization_id"
     t.integer  "goods_type_id"
+    t.boolean  "active",          default: true
     t.index ["goods_type_id"], name: "index_goods_types_organizations_on_goods_type_id", using: :btree
     t.index ["organization_id"], name: "index_goods_types_organizations_on_organization_id", using: :btree
   end

@@ -38,7 +38,7 @@
       </div>
 
       <div class="toggle-hide" id="toggle-new-offer">
-        <%= form_for @need, url: dashboard_offers_path do |new| %>
+        <%= form_for @offer, url: dashboard_offers_path do |new| %>
 
           <h4 class="center-align">what are you offering?</h4>
           <%= render partial: 'new_need_offer', locals: {n: new} %>

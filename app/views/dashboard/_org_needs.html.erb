@@ -20,16 +20,22 @@
             <span class="secondary-content">Active</span>
           </div>
         </li>
-        <% @needs.each do |need| %>
-          <li class="collection-item avatar">
+        <% @needs.each do |card| %>
+          <li class="collection-item avatar card">
             <div class="col s10 m11 l11">
               <i class="material-icons circle orange">swap_horiz</i>
-              <p><strong><em><%= need.goods_type.name %></em></strong></p>
-              <p><%= need.description %></p>
+              <p><strong><em><%= card.goods_type.name %></em></strong></p>
+              <p><%= card.description %> </p>
+              <i class="material-icons edit-btn">mode_edit</i>
+
             </div>
             <div class="col s1 m1 l1">
               <p class="right-align">
-                <input type="checkbox" class="filled-in" id="filled-in-box" <%= need.active ? 'checked' : '' %> />
+                <input type="checkbox"
+                       class="filled-in"
+                       id="filled-in-box"
+                       <%= card.active ? 'checked' : '' %>
+                />
                 <label for="filled-in-box"></label>
               </p>
             </div>

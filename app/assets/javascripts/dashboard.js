@@ -39,9 +39,21 @@ const newOfferToggle = () => {
   })
 }
 
+const cardEditButton = () => {
+  $('li.card').on('mouseover', function() {
+    $(this).find('i.edit-btn').show()
+    $(this).on('mouseleave', function() {
+      // console.log($(this))
+      $(this).find('i.edit-btn').hide()
+    })
+  })
+}
+
 $(document).ready(() => {
 
-  $('select').material_select();
+  $('i.edit-btn').hide()
+  cardEditButton()
+  $('select').material_select()
   orgEditToggle()
   newNeedToggle()
   newOfferToggle()
