@@ -1,8 +1,11 @@
 class GoodsTypesOrganization < ApplicationRecord
+
   belongs_to :goods_type
   belongs_to :organization
 
   before_save :default_values
+
+  validates :description, presence: true
 
   protected
 
@@ -15,7 +18,7 @@ class GoodsTypesOrganization < ApplicationRecord
 
   def self.filter_by_params(params)
     return all unless params.present?
-    # byebug
+
     by_goods_types(params[:goods_types])
   end
 

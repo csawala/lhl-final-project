@@ -1,32 +1,49 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 'use strict'
+
+const hideOtherToggleForms = (exception) => {
+  $('.toggle-hide').each((_, form) => {
+    if (form !== exception) {
+      form.style.display = 'none'
+    }
+  })
+}
 
 
 const orgEditToggle = () => {
-  $( "#toggle-org-form" ).click(() => {
-    $( "#toggle-org-form-render" ).slideToggle("slow")
+  $( "#toggle-org-form-button" ).click(() => {
+    let $target = $('#toggle-org-form')
+
+    hideOtherToggleForms($target[0])
+
+    $target.slideToggle("medium")
   })
 }
 
 const newNeedToggle = () => {
   $( "#toggle-new-need-button" ).click(() => {
-    $( "#toggle-new-offer" ).hide();
-    $( "#toggle-new-need" ).slideToggle("slow")
+    let $target = $('#toggle-new-need')
+
+    hideOtherToggleForms($target[0])
+
+    $target.slideToggle("fast")
   })
 }
 
 const newOfferToggle = () => {
   $( "#toggle-new-offer-button" ).click(() => {
-    $( "#toggle-new-need" ).hide();
-    $( "#toggle-new-offer" ).slideToggle("slow")
+    let $target = $('#toggle-new-offer')
+
+    hideOtherToggleForms($target[0])
+
+    $target.slideToggle("fast")
   })
 }
 
-
-
 $(document).ready(() => {
+
+  $('select').material_select();
   orgEditToggle()
   newNeedToggle()
   newOfferToggle()
+
 })

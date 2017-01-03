@@ -1,20 +1,51 @@
 <section class="org-show">
-  <div class="row">
+  <div class="dashboard-container">
     <h4 class="center-align">Dashboard for: <strong><%= @org.name %></strong></h4>
 
     <!-- Toggle Render Section for Update Org Details -->
-    <div id="toggle-org-form" class="col s10 offset-s1 m9 offset-m3 l7 offset-l5">
-      <a class="waves-effect waves-light btn">
-        <i class="material-icons right">mode_edit</i>update organization details
+    <div class="center-align">
+      <a id="toggle-org-form-button"
+         class="waves-effect waves-light btn">
+        <i class="material-icons right">mode_edit</i>
+        update organization details
+      </a>
+
+      <a class="waves-effect waves-light btn"
+         id="toggle-new-need-button">
+        new need
+      </a>
+
+      <a class="waves-effect waves-light btn"
+         id="toggle-new-offer-button">
+        new offer
       </a>
     </div><br>
 
-    <div id="toggle-org-form-render">
-      <%= render 'org_form' %>
-    </div><br>
+    <!-- Organization edit toggle -->
+    <div class="toggle-hide" id="toggle-org-form">
+      <%= render partial: 'org_form' %>
+    </div>
 
-    <br>
-    <div class="divider"></div>
+    <!-- New need/offer toggles -->
+    <div class="row">
+      <div class="toggle-hide" id="toggle-new-need">
+        <%= form_for @need, url: dashboard_needs_path do |new| %>
+
+          <h4 class="center-align">what are you in need of?</h4>
+          <%= render partial: 'new_need_offer', locals: {n: new} %>
+
+        <% end %>
+      </div>
+
+      <div class="toggle-hide" id="toggle-new-offer">
+        <%= form_for @need, url: dashboard_offers_path do |new| %>
+
+          <h4 class="center-align">what are you offering?</h4>
+          <%= render partial: 'new_need_offer', locals: {n: new} %>
+
+        <% end %>
+      </div>
+    </div>
     <br>
 
     <!-- Org Needs/Offers -->
