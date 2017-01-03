@@ -2,18 +2,18 @@
   <div class="carousel carousel-slider center" indicators="false">
 
     <!-- SLIDE 1 -->
-    <div class="carousel-item amber grey-text text-darken-2" href="#one">
-      <h2 id="slide-1-title">Welcome</h2>
+    <div class="carousel-item amber white-text" href="#one">
+      <h2 id="slide-1-title">Let's get started!</h2>
 
-        <div class="align-carousel-items-horizontally">
+        <div class="align-carousel-items-horizontally" id="slide1-div">
 
           <div class="align-carousel-items-vertically">
-            <p class="grey-text text-darken-2">Do you have something to...</p>
+            <p>Do you have something to...</p>
             <a class="btn waves-effect white grey-text" id="offer-button">offer</a>
           </div>
 
           <div class="align-carousel-items-vertically">
-            <p class="grey-text text-darken-2">Is there something you... </p>
+            <p>Is there something you... </p>
             <a class="btn waves-effect white grey-text" id="need-button">need</a>
 
           </div>
@@ -21,16 +21,16 @@
     </div>
 
     <!-- SLIDE 2 -->
-    <div class="carousel-item teal grey darken-1-text" href="#two">
+    <div class="carousel-item teal white-text" href="#two">
       <div class="align-carousel-items-horizontally" id="slide2-div">
 
         <div class="align-carousel-items-vertically">
-          <p class="white-text">Are you an...</p>
+          <p>Are you an...</p>
           <a class="btn waves-effect white grey-text" id="organization-button">organization</a>
         </div>
 
         <div class="align-carousel-items-vertically">
-          <p class="white-text">Are you an...</p>
+          <p>Are you an...</p>
           <a class="btn waves-effect white grey-text" id="individual-button">individual</a>
         </div>
 
@@ -38,16 +38,16 @@
     </div>
 
     <!-- SLIDE 3 -->
-    <div class="carousel-item cyan grey-text text-darken-2" href="#three">
+    <div class="carousel-item cyan white-text" href="#three">
       <div class="align-carousel-items-horizontally" id="slide3-div">
 
         <div class="align-carousel-items-vertically">
-          <p class="grey-text text-darken-2">Do you want to...</p>
+          <p>Do you want to...</p>
           <a class="btn waves-effect white grey-text" id="give-button-individual">give</a>
         </div>
 
         <div class="align-carousel-items-vertically">
-          <p class="grey-text text-darken-2">Do you want to... </p>
+          <p>Do you want to... </p>
           <a class="btn waves-effect white grey-text" id="participate-button-individual">participate</a>
         </div>
 
@@ -94,7 +94,7 @@
 
 
     <!-- SLIDE 5 -->
-    <div class="carousel-item purple lighten-5 grey-text text-darken-2" href="#five">
+    <div class="carousel-item deep-purple darken-1 white-text" href="#five">
       <h2 id="slide-5-title">Please pick some ways to participate.</h2>
 
            <form class="col s12" id="participation_form">
@@ -105,7 +105,6 @@
                <div class="input-field col s12 m4 l4">
                   <select multiple name="goods_types[]" id="multiple_select_participation_carousel">
                      <option value="" disabled="disabled" selected="selected">Select</option>
-                     <option value="events">help at events</option>
                      <option value="unskilled labour">offer unskilled labour</option>
                      <option value="skilled labour">offer skilled labour</option>
                      <option value="volunteers">volunteer</option>
@@ -125,95 +124,38 @@
 
 
     <!-- SLIDE 6 (after clicking #organizations-button)-->
-    <div class="carousel-item light-blue accent-1 grey-text text-darken-2" href="#six">
-      <p id="slide-6-p" class="grey-text text-darken-2">I want to see all needs.</p>
-      <a class="btn waves-effect white grey-text" id="show-me-button-organizations">Show me</a>
-      <p class="grey-text text-darken-2">I want to publish an offer.</p>
-      <a class="btn waves-effect white grey-text" id="register-button-organizations">Register</a>
+    <div class="carousel-item blue darken-2 white-text" href="#six">
+      <div class="align-carousel-items-horizontally" id="slide6-div">
+
+        <div class="align-carousel-items-vertically">
+          <p>I want to see all needs.</p>
+          <a class="btn waves-effect white grey-text" id="show-me-button-organizations">Show me</a>
+        </div>
+
+        <div class="align-carousel-items-vertically">
+          <p>I want to publish an offer.</p>
+          <a class="btn waves-effect white grey-text" id="register-button-organizations">Register</a>
+        </div>
+
+      </div>
     </div>
 
     <!-- SLIDE 7 (after clicking #need-button)-->
-    <div class="carousel-item red accent-1 grey-text text-darken-2" href="#six">
-      <p id="slide-6-p" class="grey-text text-darken-2">I want to see all offers.</p>
-      <a class="btn waves-effect white grey-text" id="show-me-button-charities">Show me</a>
-      <p class="grey-text text-darken-2">I want to publish a need.</p>
-      <a class="btn waves-effect white grey-text" id="register-button-charities">Register</a>
+    <div class="carousel-item amber darken-3 white-text" href="#six">
+      <div class="align-carousel-items-horizontally" id="slide7-div">
+
+        <div class="align-carousel-items-vertically">
+          <p>I want to see all offers.</p>
+          <a class="btn waves-effect white grey-text" id="show-me-button-charities">Show me</a>
+        </div>
+
+        <div class="align-carousel-items-vertically">
+          <p>I want to publish a need.</p>
+          <a class="btn waves-effect white grey-text" id="register-button-charities">Register</a>
+        </div>
+
+      </div>
     </div>
 
   </div>
 </div>
-
-
-<script>
-
-$(document).ready(() => {
-
-
-      $('.carousel.carousel-slider').carousel({full_width: true});
-
-      $('select').material_select();
-
-      $('#offer-button').click(function(q) {
-        $('.carousel').carousel('next')
-      })
-
-      $('#individual-button').click(function(q) {
-        $('.carousel').carousel('next')
-      })
-
-      $('#give-button-individual').click(function(q) {
-        $('.carousel').carousel('next')
-      })
-
-      // on click participate-button-individual directed to slide 5
-      $('#participate-button-individual').click(function(q) {
-        $('.carousel').carousel('next', 2)
-      })
-
-      // on click organization-button directed to slide 6
-      $('#organization-button').click(function(q) {
-        $('.carousel').carousel('next', 4)
-      })
-
-      // on click register-button-organizations redirected to register page
-      $('#register-button-organizations').click(function(){
-        window.location.href='/register'
-      })
-
-      // on click show-me-button-organizations redirected to needs pasge
-      $('#show-me-button-organizations').click(function(){
-        window.location.href='/needs'
-      })
-
-      // on click register-button-charities redirected to register page
-      $('#register-button-charities').click(function(){
-        window.location.href='/register'
-      })
-
-      // on click show-me-button-charities redirected to offers pasge
-      $('#show-me-button-charities').click(function(){
-        window.location.href='/offers'
-      })
-
-      // on click need-button directed to slide 7
-      $('#need-button').click(function(q) {
-        $('.carousel').carousel('next', 6)
-      })
-
-      // turns query from slide 4 into string -> filters orgs by causes selected
-      $('#causes_form').on('submit', function(e) {
-        e.preventDefault();
-        var causes = $('#multiple_select_causes_carousel').serialize();
-        window.location = '/organizations?' + causes
-      });
-
-      // turns query from slide 5 into string -> filters needs by ways to participate selected
-      $('#participation_form').on('submit', function(e) {
-        e.preventDefault();
-        var waysToParticipate = $('#multiple_select_participation_carousel').serialize();
-        window.location = '/needs?' + waysToParticipate
-      });
-
-})
-
-</script>

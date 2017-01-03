@@ -35,8 +35,6 @@ div.row {
   flex-direction: row;
   align-content: center;
   justify-content: center;
-
-
 }
 
 .align-carousel-items-vertically {
@@ -48,7 +46,6 @@ div.row {
   margin-top: 2em;
 }
 
-
 #slide2-div {
   margin-top: 8em;
 }
@@ -57,11 +54,18 @@ div.row {
   margin-top: 8em;
 }
 
+#slide6-div {
+  margin-top: 8em;
+}
+
+#slide7-div {
+  padding-top: 3.5em;
+}
+
 #slide-1-title {
   align: center;
   padding-top: 2.5em;
 }
-
 
 #slide-4-title {
   padding-top: 3.5em;
@@ -71,13 +75,6 @@ div.row {
   padding-top: 3.5em;
 }
 
-#slide-6-p {
-  padding-top: 6em;
-}
-
-#slide-7-p {
-  padding-top: 6em;
-}
 
 div.carousel.carousel-slider.center {
   width: 100vw;
