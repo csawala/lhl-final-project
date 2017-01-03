@@ -1,7 +1,7 @@
 <% @needs.each do |card| %>
 
   <div class="col s12 l6">
-    <div class="card needs">
+    <div class="card needs hoverable <%= @org && card.organization.id == @org ? 'highlight-need' : '' %>">
       <div class="card-content white-text">
         <span class="card-title">
           <%= card.organization.name %>
@@ -13,7 +13,12 @@
         <p><%= card.description %></p>
       </div>
       <div class="card-action valign-wrapper">
-        <%= link_to('contact', organization_path(card.organization_id)) %>
+        <% if @org && card.organization.id == @org %>
+          <%= link_to('edit in your dashboard', dashboard_path) %>
+        <% else %>
+          <%= link_to('contact', organization_path(card.organization_id)) %>
+        <% end %>
+
       </div>
     </div>
   </div>

@@ -4,5 +4,9 @@ class OffersController < ApplicationController
                                     .filter_by_params(params)
 
     @goods_types = GoodsType.select(:name).all.order(name: :asc)
+
+    if current_user && current_user.organization
+      @org = current_user.organization.id
+    end
   end
 end

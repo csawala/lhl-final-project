@@ -11,9 +11,7 @@ class NeedsController < ApplicationController
     @goods_types = GoodsType.select(:name).all.order(name: :asc)
 
     if current_user && current_user.organization
-      @org_needs = current_user.organization
-                               .goods_types_organizations
-                               .where(active: true, needs: true)
+      @org = current_user.organization.id
     end
   end
 

@@ -5,19 +5,19 @@ class DashboardController < ApplicationController
       redirect_to login_path
 
     elsif current_user.organization.present?
-      @org = current_user.organization
-      @needs = @org.goods_types_organizations.where(needs: true).order(:active)
+      @org    = current_user.organization
+      @needs  = @org.goods_types_organizations.where(needs: true).order(:active)
       @offers = @org.goods_types_organizations.where(offers: true).order(:active)
 
+      @need  = @org.goods_types_organizations.new
+      @offer = @need
+
+      @goods_types = GoodsType.all.pluck(:name, :id)
+      @goods_types.unshift(['Select a type', 0])
     else
       redirect_to root_path
     end
 
-    @need  = @org.goods_types_organizations.new
-    @offer = @need
-
-    @goods_types = GoodsType.all.pluck(:name, :id)
-    @goods_types.unshift(['Select a type', 0])
   end
 
   def update
