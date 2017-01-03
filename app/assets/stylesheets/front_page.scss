@@ -30,17 +30,38 @@ div.row {
   height:600px !important;
 }
 
+.align-carousel-items-horizontally {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+
+
+}
+
+.align-carousel-items-vertically {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 2em;
+}
+
+
+#slide2-div {
+  margin-top: 8em;
+}
+
+#slide3-div {
+  margin-top: 8em;
+}
+
 #slide-1-title {
+  align: center;
   padding-top: 2.5em;
 }
 
-#slide-2-p {
-  padding-top: 6em;
-}
-
-#slide-3-p {
-  padding-top: 6em;
-}
 
 #slide-4-title {
   padding-top: 3.5em;
@@ -49,7 +70,6 @@ div.row {
 #slide-5-title {
   padding-top: 3.5em;
 }
-
 
 #slide-6-p {
   padding-top: 6em;
