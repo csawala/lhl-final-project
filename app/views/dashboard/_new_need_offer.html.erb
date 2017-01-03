@@ -1,13 +1,20 @@
 <!-- Description -->
 <div class="need-offer-form input-field">
-  <%= n.text_field :description, class: 'materialize-textarea active', autofocus: 'autofocus' %>
-  <%= n.label "Description", class: 'need-offer-create' %>
   <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
+  <%= n.text_field :description,
+    class:       "materialize-textarea active",
+    autofocus:   "autofocus",
+    placeholder: "Please add a clear description"
+  %>
 
   <!-- Submit Button -->
   <div class="col s12 light-green lighten-4">
     <div class="col s1 offset-s11">
-      <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-small waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Card") do %>
+      <%= button_tag(method: "submit",
+                     class: "btn-floating tooltipped btn-small waves-effect waves-light green",
+                     "data-position": "left",
+                     "data-delay":    "50",
+                     "data-tooltip":  "Save Card") do %>
         <i class="material-icons">done</i>
       <% end %>
     </div>
