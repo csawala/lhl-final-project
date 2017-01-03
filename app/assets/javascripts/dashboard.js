@@ -13,7 +13,7 @@ const orgEditToggle = () => {
   $( "#toggle-org-form-button" ).click(() => {
     let $target = $('#toggle-org-form')
 
-    hideOtherToggleForms($orgForm[0])
+    hideOtherToggleForms($target[0])
 
     $target.slideToggle("medium")
   })
@@ -41,6 +41,7 @@ const newOfferToggle = () => {
 
 $(document).ready(() => {
 
+  $('select').material_select();
   orgEditToggle()
   newNeedToggle()
   newOfferToggle()

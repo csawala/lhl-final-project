@@ -14,6 +14,8 @@ class DashboardController < ApplicationController
     end
     @need  = @org.goods_types_organizations.new(needs:true)
     @offer = @org.goods_types_organizations.new(offers:true)
+    @goods_types = GoodsType.all.pluck(:name, :id)
+    @goods_types.unshift(['Select a type', 0])
   end
 
   def update
@@ -22,12 +24,14 @@ class DashboardController < ApplicationController
 
   def newneed
     @need = GoodsTypesOrganization.new(needs:true)
-    need_data = params[:goods_types_organization]
 
-    @need[:description] = need_data[:description]
-    @need[:organization_id] = current_user.organization.id
+    create_need_order(@need, params, current_user)
+  end
 
-    @need.save!
+  def newoffer
+    @offer = GoodsTypesOrganization.new(offers:true)
+
+    create_need_order(@offer, params, current_user)
   end
 
   def updatecard(card_id)
@@ -37,6 +41,16 @@ class DashboardController < ApplicationController
   end
 
   protected
+
+  def create_need_order(type, params, user)
+    type[:organization_id] = current_user.organization.id
+    type[:goods_type_id]   = params[:goods_type]
+    type[:description]     = params[:goods_types_organization][:description]
+
+    type.save!
+
+    redirect_to dashboard_path
+  end
 
   def validate_organization(id)
     if Organization.where(id: id).count == 0

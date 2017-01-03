@@ -31,14 +31,16 @@
       <%= render 'org_form' %>
     </div>
     <!-- New need/offer toggle -->
+
     <div class="col s10 offset-s1">
       <div class="toggle-hide" id="toggle-new-need">
         <%= form_for @need, url: dashboard_needs_path do |n| %>
           <!-- Description -->
           <div class="input-field col s11">
             <i class="material-icons prefix">comment</i>
-            <%= n.text_field :description, class: "materialize-textarea active" %>
+            <%= n.text_field :description, class: 'materialize-textarea active' %>
             <%= n.label "Description", class: 'need-offer-create' %>
+            <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
           </div>
           <!-- Submit Button -->
           <div class="col s12 m12 l12 light-green lighten-4">
