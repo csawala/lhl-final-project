@@ -25,7 +25,7 @@ const newNeedToggle = () => {
 
     hideOtherToggleForms($target[0])
 
-    $target.slideToggle("medium")
+    $target.slideToggle("fast")
   })
 }
 
@@ -35,7 +35,7 @@ const newOfferToggle = () => {
 
     hideOtherToggleForms($target[0])
 
-    $target.slideToggle("medium")
+    $target.slideToggle("fast")
   })
 }
 

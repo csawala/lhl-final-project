@@ -12,8 +12,10 @@ class DashboardController < ApplicationController
     else
       redirect_to root_path
     end
-    @need  = @org.goods_types_organizations.new(needs:true)
-    @offer = @org.goods_types_organizations.new(offers:true)
+
+    @need  = @org.goods_types_organizations.new
+    @offer = @need
+
     @goods_types = GoodsType.all.pluck(:name, :id)
     @goods_types.unshift(['Select a type', 0])
   end
@@ -25,13 +27,13 @@ class DashboardController < ApplicationController
   def newneed
     @need = GoodsTypesOrganization.new(needs:true)
 
-    create_need_order(@need, params, current_user)
+    create_need_offer(@need, params, current_user)
   end
 
   def newoffer
     @offer = GoodsTypesOrganization.new(offers:true)
 
-    create_need_order(@offer, params, current_user)
+    create_need_offer(@offer, params, current_user)
   end
 
   def updatecard(card_id)
@@ -42,12 +44,15 @@ class DashboardController < ApplicationController
 
   protected
 
-  def create_need_order(type, params, user)
-    type[:organization_id] = current_user.organization.id
-    type[:goods_type_id]   = params[:goods_type]
-    type[:description]     = params[:goods_types_organization][:description]
+  def create_need_offer(new_card, params, user)
+    new_card[:organization_id] = current_user.organization.id
+    new_card[:goods_type_id]   = params[:goods_type]
+    new_card[:description]     = params[:goods_types_organization][:description]
 
-    type.save!
+    if !new_card.save
+      return redirect_to dashboard_path,
+      notice: "Something went wrong... please make sure to enter a description and type for each need or offer"
+    end
 
     redirect_to dashboard_path
   end

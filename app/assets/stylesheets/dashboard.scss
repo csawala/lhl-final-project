@@ -1,6 +1,14 @@
-main.container .org-show {
+main.container
+section.org-show {
+
+  width: 100vw;
   padding-top: 2em;
 
+  div.need-offer-form,
+  div.org-form {
+    width: 70vw;
+    margin-left: 15vw;
+  }
   .org-edit {
     .org-image {
       display: block;

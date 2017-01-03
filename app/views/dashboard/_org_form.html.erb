@@ -1,9 +1,11 @@
-<section class="org-edit">
+
   <div class="row">
-    <div class="col m1 l1"></div>
+    <h4 class="center-align">Edit organization details</h4>
+
     <%= form_for @org do |f| %>
+
       <!-- Form Input Fields: -->
-      <div class="col s10 offset-s1 m10 l10">
+      <div class="org-form">
         <!-- Organization Name -->
         <div class="input-field">
           <i class="material-icons prefix">account_circle</i>
@@ -91,7 +93,7 @@
 
 
       <!-- Save Button -->
-      <div class="col s12 m12 l12 light-green lighten-4">
+      <div class="col s10 offset-s1 light-green lighten-4">
         <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
           <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-large waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Organization Info") do %>
             <i class="material-icons">done</i>
@@ -100,4 +102,3 @@
       </div>
     <% end %>
   </div>
-</section>

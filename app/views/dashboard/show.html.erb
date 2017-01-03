@@ -1,5 +1,5 @@
 <section class="org-show">
-  <div class="row">
+  <div class="dashboard-container">
     <h4 class="center-align">Dashboard for: <strong><%= @org.name %></strong></h4>
 
     <!-- Toggle Render Section for Update Org Details -->
@@ -20,44 +20,32 @@
         new offer
       </a>
     </div><br>
-    <!-- Create New Needs/Offers Cards Options -->
-    <div>
-    </div>
 
-    <div>
-    </div>
-
+    <!-- Organization edit toggle -->
     <div class="toggle-hide" id="toggle-org-form">
-      <%= render 'org_form' %>
+      <%= render partial: 'org_form' %>
     </div>
-    <!-- New need/offer toggle -->
 
-    <div class="col s10 offset-s1">
+    <!-- New need/offer toggles -->
+    <div class="row">
       <div class="toggle-hide" id="toggle-new-need">
-        <%= form_for @need, url: dashboard_needs_path do |n| %>
-          <!-- Description -->
-          <div class="input-field col s11">
-            <i class="material-icons prefix">comment</i>
-            <%= n.text_field :description, class: 'materialize-textarea active' %>
-            <%= n.label "Description", class: 'need-offer-create' %>
-            <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
-          </div>
-          <!-- Submit Button -->
-          <div class="col s12 m12 l12 light-green lighten-4">
-            <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
-              <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-small waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Card") do %>
-                <i class="material-icons">done</i>
-              <% end %>
-            </div>
-          </div>
+        <%= form_for @need, url: dashboard_needs_path do |new| %>
+
+          <h4 class="center-align">what do you need?</h4>
+          <%= render partial: 'new_need_offer', locals: {n: new} %>
+
         <% end %>
       </div>
 
-      <div class="toggle-hide" id="toggle-new-offer">NEW OFFER CREATION
+      <div class="toggle-hide" id="toggle-new-offer">
+        <%= form_for @need, url: dashboard_offers_path do |new| %>
+
+          <h4 class="center-align">what are you offering?</h4>
+          <%= render partial: 'new_need_offer', locals: {n: new} %>
+
+        <% end %>
       </div>
     </div>
-
-    <div class="divider"></div>
     <br>
 
     <!-- Org Needs/Offers -->
