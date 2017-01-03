@@ -46,8 +46,18 @@
         <% end %>
       </div>
     </div>
-    <br>
+    <!-- card edit toggle -->
+    <div class="row">
+      <div class="toggle-hide" id="toggle-edit-card">
+        <%= form_for @need, url: dashboard_updatecard_path do |e| %>
 
+          <h4 class="center-align">edit a card</h4>
+          <%= render partial: 'new_need_offer', locals: {n: e} %>
+
+        <% end %>
+      </div>
+    </div>
+    <br>
     <!-- Org Needs/Offers -->
     <%= render 'org_needs' %>
 

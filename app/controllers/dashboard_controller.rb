@@ -11,7 +11,6 @@ class DashboardController < ApplicationController
 
       @need  = @org.goods_types_organizations.new
       @offer = @need
-
       @goods_types = GoodsType.all.pluck(:name, :id)
       @goods_types.unshift(['Select a type', 0])
     else
@@ -36,10 +35,10 @@ class DashboardController < ApplicationController
     create_need_offer(@offer, params, current_user)
   end
 
-  def updatecard(card_id)
+  def updatecard
     # something like (works in rails console!):
-    # @card = @org.goods_types_organizations.find(card_id)
-    # @card.active ? @card.active = false : @card.active = true
+    @card = @org.goods_types_organizations.find(params[:card_id])
+    @card.active ? @card.active = false : @card.active = true
   end
 
   protected
