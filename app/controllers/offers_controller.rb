@@ -1,4 +1,17 @@
 class OffersController < ApplicationController
+
+  def new
+    @offer = GoodsTypesOrganization.create_with_params(params)
+    @offer.offers = true
+
+    if !@offer.save
+      return redirect_to dashboard_path,
+               notice: 'Make sure to enter a description and type for each need or offer'
+    end
+
+    redirect_to dashboard_path
+  end
+
   def index
     @offers = GoodsTypesOrganization.where(offers: true, active: true)
                                     .filter_by_params(params)

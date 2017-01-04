@@ -26,6 +26,7 @@ class DashboardController < ApplicationController
 
   def newneed
     @need = GoodsTypesOrganization.new(needs:true)
+    byebug
 
     create_need_offer(@need, params, current_user)
   end
