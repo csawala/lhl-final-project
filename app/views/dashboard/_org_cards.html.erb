@@ -1,6 +1,6 @@
-<li class="collection-item avatar card">
+<li class="collection-item avatar card" id=<%= card.id %>>
   <div class="col s10 m11 l11">
-    <i class="material-icons circle orange">swap_horiz</i>
+    <i class="material-icons circle <%= card.needs ? 'orange' : 'red lighten-1' %>">swap_horiz</i>
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
     <p><%= card.description %> </p>
     <i class="material-icons edit-btn">mode_edit</i>
@@ -9,11 +9,11 @@
   <div class="col s1 m1 l1">
     <p class="right-align">
       <input type="checkbox"
-             class="filled-in"
-             id="filled-in-box"
-             <%= card.active ? 'checked' : '' %>
+             class="checkbox filled-in"
+             id="checkbox<%= card.id %>"
+             <%= card.active ? checked="checked" : '' %>
       />
-      <label for="filled-in-box"></label>
+      <label for="checkbox<%= card.id %>"></label>
     </p>
   </div>
 </li>

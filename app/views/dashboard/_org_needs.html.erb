@@ -9,6 +9,7 @@
     t.boolean  "active"
   -->
 
+
   <div class="col s10 offset-s1">
     <!-- Needs/Offers Cards -->
     <ul class="collection with-header">
@@ -33,18 +34,10 @@
           </div>
         </li>
         <% @offers.each do |offer| %>
-          <li class="collection-item avatar">
-            <i class="material-icons circle red lighten-1">swap_horiz</i>
-            <p><%= offer.goods_type.name %></p>
-            <p><%= offer.description %></p>
-            <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-            <p class="right-align">
-              <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-              <label for="filled-in-box"></label>
-            </p>
-          </li>
+          <%= render partial: "org_cards", locals: {card: offer} %>
         <% end %>
       <% end %>
+
       <!-- No Needs/Offers -->
       <% if !@needs.present? && !@offers.present? %>
         <li class="collection-header">
