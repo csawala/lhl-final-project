@@ -28,4 +28,3 @@ schema.rb
 .cache
 
 # ENV params
-.env
