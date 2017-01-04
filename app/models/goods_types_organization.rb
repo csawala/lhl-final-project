@@ -13,7 +13,15 @@ class GoodsTypesOrganization < ApplicationRecord
     self.needs  ||= false
     self.offers ||= false
     self.urgent ||= false
-    # byebug
+  end
+
+  def self.create_with_params(params)
+    @new_gto = self.new
+    @new_gto.organization_id = params[:org_id]
+    @new_gto.goods_type_id   = params[:goods_type].to_i
+    @new_gto.description     = params[:description]
+
+    @new_gto
   end
 
   def self.filter_by_params(params)
