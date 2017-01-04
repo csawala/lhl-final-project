@@ -1,20 +1,18 @@
 <li class="collection-item avatar card" id=<%= card.id %>>
   <div class="col s10 m11 l11">
     <i class="material-icons circle <%= card.needs ? 'orange' : 'red lighten-1' %>">swap_horiz</i>
+    <i class="material-icons circle <%= card.needs ? 'orange darken-3' : 'red darken-2' %> edit-btn">mode_edit</i>
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
     <p><%= card.description %> </p>
-    <i class="material-icons edit-btn">mode_edit</i>
 
   </div>
-      <%= check_box_tag("checkbox#{card.id}") %>
-      <label for="checkbox#{card.id}"></label>
-
   <div class="col s1 m1 l1">
     <p class="right-align">
       <input type="checkbox"
-             class="checkbox filled-in"
+             class="checkbox"
              id="checkbox<%= card.id %>"
              <%= card.active ? checked="checked" : '' %>
+             disabled="disabled"
       />
       <label for="checkbox<%= card.id %>"></label>
     </p>
