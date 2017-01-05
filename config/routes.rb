@@ -23,13 +23,12 @@ Rails.application.routes.draw do
   # patch '/dashboard/updatecard' => 'dashboard#updatecard'
   post '/dashboard/needs' => 'dashboard#newneed'
   post '/dashboard/offers' => 'dashboard#newoffer'
+  patch '/dashboard/cards' => 'dashboard#updatecard'
 
   # ---- NEEDS / OFFERS ----
   get '/needs'   => 'needs#index'
   post '/needs'  => 'needs#new'
-  patch '/needs' => 'needs#update'
 
   get '/offers' => 'offers#index'
   patch '/offers' => 'offers#update'
-  post '/offers' => 'offers#create'
 end

@@ -49,6 +49,13 @@ const cardEditButton = () => {
   })
 }
 
+const cardEditToggle = () => {
+  $('div i.edit-btn').on("click", function() {
+    const cardId = $(this).closest('li').attr('id')
+    console.log(cardId)
+  })
+}
+
 $(document).ready(() => {
 
   $('i.edit-btn').hide()
@@ -57,5 +64,6 @@ $(document).ready(() => {
   orgEditToggle()
   newNeedToggle()
   newOfferToggle()
+  cardEditToggle()
 
 })

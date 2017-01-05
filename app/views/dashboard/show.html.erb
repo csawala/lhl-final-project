@@ -6,7 +6,6 @@
     <div class="center-align">
       <a id="toggle-org-form-button"
          class="waves-effect waves-light btn">
-        <i class="material-icons right">mode_edit</i>
         update organization details
       </a>
 
@@ -26,25 +25,25 @@
       <%= render partial: 'org_form' %>
     </div>
 
-    <!-- New need/offer toggles -->
+    <!-- New/Update need/offer toggles -->
     <div class="row">
       <div class="toggle-hide" id="toggle-new-need">
         <%= form_tag(needs_path) do %>
           <%= hidden_field_tag(:type, 'need')%>
-          <h4 class="center-align">what are you in need of?</h4>
+          <h4 class="center-align">What Are You In Need Of?</h4>
           <%= render partial: 'new_need_offer' %>
-
         <% end %>
       </div>
 
       <div class="toggle-hide" id="toggle-new-offer">
         <%= form_for @offer, url: dashboard_offers_path do |new| %>
-          <%= %>
-          <h4 class="center-align">what are you offering?</h4>
+          <%= hidden_field_tag(:type, 'offer') %>
+          <h4 class="center-align">What Are You Offering?</h4>
           <%= render partial: 'new_need_offer', locals: {n: new} %>
-
         <% end %>
       </div>
+
+
     </div>
     <br>
 
