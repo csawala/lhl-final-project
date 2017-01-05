@@ -24,6 +24,13 @@ const toggleEditor = (target) => {
   target.slideToggle("medium")
 }
 
+const cardEditToggle = () => {
+  $('div i.edit-btn').on("click", function() {
+    const cardId = $(this).closest('li').attr('id')
+    console.log(cardId)
+  })
+}
+
 $(document).ready(() => {
 
   $('i.edit-btn').hide()
@@ -42,5 +49,7 @@ $(document).ready(() => {
   $( "#toggle-org-form-button" ).on('click', () => {
     toggleEditor($('#toggle-org-form'))
   })
+
+  cardEditToggle()
 
 })
