@@ -18,7 +18,7 @@ class GoodsTypesOrganization < ApplicationRecord
 
   def self.updatecard(card_id, params)
     # something like (works in rails console!):
-    @card = @org.goods_types_organizations.find(card_id)
+    @org.goods_types_organizations.find(card_id)
     # @card.active ? @card.active = false : @card.active = true
   end
 

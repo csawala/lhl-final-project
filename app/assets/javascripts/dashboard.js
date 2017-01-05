@@ -27,7 +27,7 @@ const showCardEditor = () => {
   $('i.edit-btn').on("click", function(e) {
     $('div.toggle-hide').hide()
 
-    const cardId = $(this).closest('li').attr('id')
+    const $cardId = $(this).closest('li').attr('id')
     const $parentLink = $(this).parent().attr('href')
     // scroll to just-below the nav
     window.scrollTo(0,70)
