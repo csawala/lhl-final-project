@@ -7,6 +7,27 @@ body main.container {
 div.row {
   width: 100vw;
 }
+// carousel
+#form-carousel {
+  height: 500px;
+}
+
+.carousel .carousel-item {
+padding-top: 4em;
+height:500px !important;
+}
+
+#radio_buttons_goodstype_select {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+#label_for_offers {
+  padding-right: 1em;
+}
+
 // CSS for Parallax homepage
 .parallax-container {
   height: 600px;

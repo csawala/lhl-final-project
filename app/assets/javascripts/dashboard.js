@@ -21,7 +21,7 @@ const cardEditButton = () => {
 const toggleEditor = (target) => {
   hideOtherToggleForms(target[0])
 
-  target.slideToggle("fast")
+  target.slideToggle("medium")
 }
 
 $(document).ready(() => {
