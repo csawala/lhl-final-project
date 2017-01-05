@@ -8,7 +8,7 @@ const hideOtherToggleForms = (exception) => {
   })
 }
 
-const cardEditButton = () => {
+const toggleCardEditButtonVisibility = () => {
   $('li.card').on('mouseover', function() {
     $(this).find('i.edit-btn').show()
 
@@ -20,14 +20,20 @@ const cardEditButton = () => {
 
 const toggleEditor = (target) => {
   hideOtherToggleForms(target[0])
-
   target.slideToggle("medium")
 }
 
-const cardEditToggle = () => {
-  $('div i.edit-btn').on("click", function() {
+const showCardEditor = () => {
+  $('i.edit-btn').on("click", function(e) {
+    $('div.toggle-hide').hide()
+
     const cardId = $(this).closest('li').attr('id')
-    console.log(cardId)
+    const $parentLink = $(this).parent().attr('href')
+    // scroll to just-below the nav
+    window.scrollTo(0,70)
+    toggleEditor($($parentLink))
+
+    e.preventDefault()
   })
 }
 
@@ -39,8 +45,11 @@ $(document).ready(() => {
   // hide card edit buttons, handled with cardEditButton
   $('i.edit-btn').hide()
 
-  cardEditButton()
-  cardEditToggle()
+  // hide all need/offer and editor forms
+  $('div.toggle-hide').hide()
+
+  toggleCardEditButtonVisibility()
+  showCardEditor()
 
 
   $( "#toggle-new-need-button" ).on('click', () => {

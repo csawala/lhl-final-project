@@ -27,6 +27,7 @@
 
     <!-- New/Update need/offer toggles -->
     <div class="row">
+
       <div class="toggle-hide" id="toggle-new-need">
         <%= form_tag(needs_path) do %>
           <%= hidden_field_tag(:type, 'need')%>
@@ -43,12 +44,28 @@
         <% end %>
       </div>
 
+      <div class="toggle-hide" id="toggle-edit-need">
+        <%= form_tag(needs_path, method: 'patch') do %>
+          <%= hidden_field_tag(:type, 'need')%>
+          <h4 class="center-align">Edit a Need</h4>
+          <%= render partial: 'edit_card' %>
+        <% end %>
+      </div>
+
+
+      <div class="toggle-hide" id="toggle-edit-offer">
+        <%= form_tag(offers_path, method: 'patch') do %>
+          <%= hidden_field_tag(:type, 'offer') %>
+          <h4 class="center-align">Edit an Offer</h4>
+          <%= render partial: 'edit_card' %>
+        <% end %>
+      </div>
 
     </div>
     <br>
 
     <!-- Org Needs/Offers -->
-    <%= render 'org_needs' %>
+    <%= render 'org_needs_offers' %>
 
   </div>
 </section>

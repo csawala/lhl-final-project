@@ -1,5 +1,20 @@
 class NeedsController < ApplicationController
 
+  def index
+    @needs = GoodsTypesOrganization.where(needs: true, active: true)
+                                   .filter_by_params(params)
+
+    @goods_types = GoodsType.select(:name).all.order(name: :asc)
+
+    if current_user && current_user.organization
+      @org = current_user.organization.id
+    end
+  end
+
+  def update
+    # update card stuff here
+  end
+
   def new
     @need = GoodsTypesOrganization.create_with_params(params)
     @need.needs = true
@@ -12,14 +27,4 @@ class NeedsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def index
-    @needs = GoodsTypesOrganization.where(needs: true, active: true)
-                                   .filter_by_params(params)
-
-    @goods_types = GoodsType.select(:name).all.order(name: :asc)
-
-    if current_user && current_user.organization
-      @org = current_user.organization.id
-    end
-  end
 end

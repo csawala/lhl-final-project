@@ -9,19 +9,26 @@ class GoodsTypesOrganization < ApplicationRecord
 
   protected
 
+
   def default_values
     self.needs  ||= false
     self.offers ||= false
     self.urgent ||= false
   end
 
-  def self.create_with_params(params)
-    @new_gto = self.new
-    @new_gto.organization_id = params[:org_id]
-    @new_gto.goods_type_id   = params[:goods_type].to_i
-    @new_gto.description     = params[:description]
+  def self.updatecard(card_id, params)
+    # something like (works in rails console!):
+    @card = @org.goods_types_organizations.find(card_id)
+    # @card.active ? @card.active = false : @card.active = true
+  end
 
-    @new_gto
+  def self.create_with_params(params)
+    @new_card = self.new
+    @new_card.organization_id = params[:org_id]
+    @new_card.goods_type_id   = params[:goods_type].to_i
+    @new_card.description     = params[:description]
+
+    @new_card
   end
 
   def self.filter_by_params(params)

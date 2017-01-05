@@ -1,7 +1,21 @@
 <li class="collection-item avatar card" id=<%= card.id %>>
   <div class="col s10 m11 l11">
-    <i class="material-icons circle <%= card.needs ? 'orange' : 'red lighten-1' %>">swap_horiz</i>
-    <i class="material-icons circle <%= card.needs ? 'orange darken-3' : 'red darken-2' %> edit-btn">mode_edit</i>
+    <% if card.needs %>
+      <%# NEEDS cards %>
+      <i class="material-icons circle orange">swap_horiz</i>
+
+      <a href="#toggle-edit-need">
+        <i class="material-icons circle orange darken-3 edit-btn">mode_edit</i>
+      </a>
+    <% else %>
+    <%# OFFERS cards %>
+      <i class="material-icons circle red lighten-1">swap_horiz</i>
+
+      <a href="#toggle-edit-offer">
+        <i class="material-icons circle red darken-2 edit-btn">mode_edit</i>
+      </a>
+    <% end %>
+
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
     <p><%= card.description %> </p>
 

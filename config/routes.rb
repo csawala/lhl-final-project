@@ -18,10 +18,11 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#show'
 
   # ---- NEEDS / OFFERS ----
-  get '/needs'   => 'needs#index'
-  post '/needs'  => 'needs#new'
+  get '/needs'    => 'needs#index'
+  post '/needs'   => 'needs#new'
+  patch '/needs'  => 'needs#update'
 
-  get '/offers' => 'offers#index'
-  post '/offers' => 'offers#new'
-  # patch '/offers' => 'offers#update'
+  get '/offers'   => 'offers#index'
+  post '/offers'  => 'offers#new'
+  patch '/offers' => 'offers#update'
 end
