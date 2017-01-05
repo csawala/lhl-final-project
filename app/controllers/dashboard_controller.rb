@@ -9,9 +9,6 @@ class DashboardController < ApplicationController
       @needs  = @org.goods_types_organizations.where(needs: true).order(active: :desc)
       @offers = @org.goods_types_organizations.where(offers: true).order(active: :desc)
 
-      @need  = @org.goods_types_organizations.new
-      @offer = @need
-
       @goods_types = GoodsType.all.pluck(:name, :id)
       @goods_types.unshift(['Select a type', 0])
     else
@@ -24,19 +21,6 @@ class DashboardController < ApplicationController
     @org = validate_organization(params[:id])
   end
 
-  def newneed
-    @need = GoodsTypesOrganization.new(needs:true)
-    byebug
-
-    create_need_offer(@need, params, current_user)
-  end
-
-  def newoffer
-    @offer = GoodsTypesOrganization.new(offers:true)
-
-    create_need_offer(@offer, params, current_user)
-  end
-
   def updatecard(card_id)
     # something like (works in rails console!):
     # @card = @org.goods_types_organizations.find(card_id)
@@ -45,18 +29,18 @@ class DashboardController < ApplicationController
 
   protected
 
-  def create_need_offer(new_card, params, user)
-    new_card[:organization_id] = current_user.organization.id
-    new_card[:goods_type_id]   = params[:goods_type]
-    new_card[:description]     = params[:goods_types_organization][:description]
+  # def create_need_offer(new_card, params, user)
+  #   new_card[:organization_id] = current_user.organization.id
+  #   new_card[:goods_type_id]   = params[:goods_type]
+  #   new_card[:description]     = params[:goods_types_organization][:description]
 
-    if !new_card.save
-      return redirect_to dashboard_path,
-      notice: "Something went wrong... please make sure to enter a description and type for each need or offer"
-    end
+  #   if !new_card.save
+  #     return redirect_to dashboard_path,
+  #     notice: "Something went wrong... please make sure to enter a description and type for each need or offer"
+  #   end
 
-    redirect_to dashboard_path
-  end
+  #   redirect_to dashboard_path
+  # end
 
   def validate_organization(id)
     if Organization.where(id: id).count == 0

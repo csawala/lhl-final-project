@@ -33,10 +33,15 @@ const cardEditToggle = () => {
 
 $(document).ready(() => {
 
-  $('i.edit-btn').hide()
-  cardEditButton()
-
+  // init materialize select boxes in new need/offer forms
   $('select').material_select()
+
+  // hide card edit buttons, handled with cardEditButton
+  $('i.edit-btn').hide()
+
+  cardEditButton()
+  cardEditToggle()
+
 
   $( "#toggle-new-need-button" ).on('click', () => {
     toggleEditor($('#toggle-new-need'))
@@ -50,6 +55,5 @@ $(document).ready(() => {
     toggleEditor($('#toggle-org-form'))
   })
 
-  cardEditToggle()
 
 })
