@@ -8,13 +8,15 @@
   </div>
   <div class="col s1 m1 l1">
     <p class="right-align">
-      <input type="checkbox"
-             class="checkbox"
-             id="checkbox<%= card.id %>"
-             <%= card.active ? checked="checked" : '' %>
-             disabled="disabled"
-      />
-      <label for="checkbox<%= card.id %>"></label>
+      <% if card.active? %>
+        <input type="checkbox"
+               class="checkbox"
+               id="checkbox<%= card.id %>"
+               <%= card.active ? checked="checked" : '' %>
+               disabled="disabled"
+        />
+          <label for="checkbox<%= card.id %>"></label>
+      <% end %>
     </p>
   </div>
 </li>
