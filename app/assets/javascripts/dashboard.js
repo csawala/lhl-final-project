@@ -8,54 +8,52 @@ const hideOtherToggleForms = (exception) => {
   })
 }
 
-
-const orgEditToggle = () => {
-  $( "#toggle-org-form-button" ).click(() => {
-    let $target = $('#toggle-org-form')
-
-    hideOtherToggleForms($target[0])
-
-    $target.slideToggle("medium")
-  })
-}
-
-const newNeedToggle = () => {
-  $( "#toggle-new-need-button" ).click(() => {
-    let $target = $('#toggle-new-need')
-
-    hideOtherToggleForms($target[0])
-
-    $target.slideToggle("fast")
-  })
-}
-
-const newOfferToggle = () => {
-  $( "#toggle-new-offer-button" ).click(() => {
-    let $target = $('#toggle-new-offer')
-
-    hideOtherToggleForms($target[0])
-
-    $target.slideToggle("fast")
-  })
-}
-
-const cardEditButton = () => {
+const toggleCardEditButtonVisibility = () => {
   $('li.card').on('mouseover', function() {
     $(this).find('i.edit-btn').show()
+
     $(this).on('mouseleave', function() {
-      // console.log($(this))
       $(this).find('i.edit-btn').hide()
     })
   })
 }
 
+const toggleEditor = (target) => {
+  hideOtherToggleForms(target[0])
+  target.slideToggle("medium")
+}
+
+const showCardEditor = () => {
+  const editPath = window.location.pathname.match(/\/dashboard.+\d/)
+
+  if (editPath) toggleEditor($('#toggle-edit-card'))
+}
+
 $(document).ready(() => {
 
-  $('i.edit-btn').hide()
-  cardEditButton()
+  // init materialize select boxes in new need/offer forms
   $('select').material_select()
-  orgEditToggle()
-  newNeedToggle()
-  newOfferToggle()
+
+  // hide card edit buttons, handled with cardEditButton
+  $('i.edit-btn').hide()
+
+  // hide all need/offer and editor forms
+  $('div.toggle-hide').hide()
+
+  toggleCardEditButtonVisibility()
+  showCardEditor()
+
+  $( "#toggle-new-need-button" ).on('click', () => {
+    toggleEditor($('#toggle-new-need'))
+  })
+
+  $( "#toggle-new-offer-button" ).on('click', () => {
+    toggleEditor($('#toggle-new-offer'))
+  })
+
+  $( "#toggle-org-form-button" ).on('click', () => {
+    toggleEditor($('#toggle-org-form'))
+  })
+
 
 })

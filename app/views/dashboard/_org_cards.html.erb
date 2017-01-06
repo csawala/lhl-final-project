@@ -1,22 +1,39 @@
 <li class="collection-item avatar card" id=<%= card.id %>>
   <div class="col s10 m11 l11">
-    <i class="material-icons circle <%= card.needs ? 'orange' : 'red lighten-1' %>">swap_horiz</i>
+    <% if card.needs %>
+      <%# NEEDS cards %>
+      <i class="material-icons circle orange">swap_horiz</i>
+      <%= link_to "/card/#{card.id}" do %>
+        <i class="material-icons circle orange darken-3 edit-btn">mode_edit</i>
+      <% end %>
+    <% else %>
+    <%# OFFERS cards %>
+      <i class="material-icons circle red lighten-1">swap_horiz</i>
+      <%= link_to "/card/#{card.id}" do %>
+        <i class="material-icons circle red darken-2 edit-btn">mode_edit</i>
+      <% end %>
+    <% end %>
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
-    <p><%= card.description %> </p>
-    <i class="material-icons edit-btn">mode_edit</i>
-
+    <p><%= card.description %></p>
+    <% if card.matches.length > 0 %>
+      <a href="<%= card.match_url %>" class="">
+        <% if card.matches.length == 1 %>
+          1 potential match
+        <% else %>
+         <%= card.matches.length %> potential matches
+        <% end %>
+      </a>
+    <% else %>
+      <p class="pink-text text-darken-3">No matches yet</p>
+    <% end %>
   </div>
-      <%= check_box_tag("checkbox#{card.id}") %>
-      <label for="checkbox#{card.id}"></label>
-
   <div class="col s1 m1 l1">
     <p class="right-align">
-      <input type="checkbox"
-             class="checkbox filled-in"
-             id="checkbox<%= card.id %>"
-             <%= card.active ? checked="checked" : '' %>
-      />
-      <label for="checkbox<%= card.id %>"></label>
+      <% if card.active? %>
+
+        <i class="material-icons">done</i>
+
+      <% end %>
     </p>
   </div>
 </li>

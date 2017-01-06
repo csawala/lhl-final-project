@@ -14,46 +14,53 @@ section.org-show {
       display: block;
     }
   }
-
-  #toggle-org-form,
-  #toggle-new-offer,
-  #toggle-new-need  {
-    display: none;
-  }
-
   .org-good-type-title {
     font-size: 180%;
   }
-
   li.collection-item.needs-header,{
     background-color: #6BA472;
   }
-
   li.collection-item.offers-header,{
     background-color: #3EA4F0;
   }
-
+  li.card {
+    height: 105px;
+    a {
+      font-weight: 700;
+    }
+  }
   span.secondary-content,
   .offers-header,
   .needs-header {
     color: white;
   }
   span.secondary-content {
-    padding-right: 1.1em
+    padding-right: .5em
   }
 }
 
 i.edit-btn:hover {
-  color: orange;
   cursor: pointer;
+}
+
+a#toggle-org-form-button {
+  background-color: #3165D7;
+}
+a#toggle-org-form-button:hover {
+  background-color: white;
+  color: #3165D7;
 }
 a#toggle-new-need-button {
   background-color: orange;
 }
-
+a#toggle-new-need-button:hover {
+  color: orange;
+  background-color: white;
+}
 a#toggle-new-offer-button {
   background-color: crimson;
 }
-a#toggle-org-form-button {
-  background-color: #3165D7;
+a#toggle-new-offer-button:hover {
+  color: crimson;
+  background-color: white;
 }

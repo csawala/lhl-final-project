@@ -1,8 +1,12 @@
 <!-- Description -->
 <div class="need-offer-form input-field">
 
-  <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
   <%= hidden_field_tag(:org_id, @org.id)%>
+
+  <p><strong><em>Type:</em></strong></p>
+  <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
+
+  <p><strong><em>Description:</em></strong></p>
   <%= text_field_tag(:description, value = nil, options =
     {class:       "materialize-textarea active",
     autofocus:   "autofocus",

@@ -3,10 +3,6 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:index, :show, :create, :update]
 
-  # resources :dashboard, only: [:show, :update]
-
-  # resources :do_good
-
   # ----  NEW USER ROUTES  ----
   get '/register' => 'users#new'
   post '/users'   => 'users#create'
@@ -20,16 +16,17 @@ Rails.application.routes.draw do
 
   # ---- DASHBOARD ----
   get '/dashboard' => 'dashboard#show'
-  # patch '/dashboard/updatecard' => 'dashboard#updatecard'
-  post '/dashboard/needs' => 'dashboard#newneed'
-  post '/dashboard/offers' => 'dashboard#newoffer'
 
   # ---- NEEDS / OFFERS ----
-  get '/needs'   => 'needs#index'
-  post '/needs'  => 'needs#new'
-  patch '/needs' => 'needs#update'
+  get '/card/:id'     => 'goods_types_organization#get'
+  patch '/card/:id'   => 'goods_types_organization#update'
 
-  get '/offers' => 'offers#index'
-  patch '/offers' => 'offers#update'
-  post '/offers' => 'offers#create'
+  get '/needs'        => 'needs#index'
+  post '/needs'       => 'needs#new'
+  # get '/needs/:id'    => 'needs#get'
+  # patch '/needs/:id'  => 'needs#update'
+
+  get '/offers'       => 'offers#index'
+  post '/offers'      => 'offers#new'
+  # patch '/offers/:id' => 'offers#update'
 end
