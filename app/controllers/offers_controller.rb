@@ -1,18 +1,13 @@
-class OffersController < ApplicationController
+class OffersController < GoodsTypesOrganizationController
 
   def index
+    @goods_types = GoodsType.select(:name).all.order(name: :asc)
     @offers = GoodsTypesOrganization.where(offers: true, active: true)
                                     .filter_by_params(params)
-
-    @goods_types = GoodsType.select(:name).all.order(name: :asc)
 
     if current_user && current_user.organization
       @org = current_user.organization.id
     end
-  end
-
-  def update
-    # update card stuff here
   end
 
   def new

@@ -1,4 +1,4 @@
-class NeedsController < ApplicationController
+class NeedsController < GoodsTypesOrganizationController
 
   def index
     @goods_types = GoodsType.select(:name).all.order(name: :asc)
@@ -8,10 +8,6 @@ class NeedsController < ApplicationController
     if current_user && current_user.organization
       @org = current_user.organization.id
     end
-  end
-
-  def update
-    # update card stuff here
   end
 
   def new

@@ -18,11 +18,15 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#show'
 
   # ---- NEEDS / OFFERS ----
+  get '/card/:id'     => 'goods_types_organization#get'
+  patch '/card/:id'   => 'goods_types_organization#update'
+
   get '/needs'        => 'needs#index'
   post '/needs'       => 'needs#new'
-  patch '/needs/:id'  => 'needs#update'
+  # get '/needs/:id'    => 'needs#get'
+  # patch '/needs/:id'  => 'needs#update'
 
   get '/offers'       => 'offers#index'
   post '/offers'      => 'offers#new'
-  patch '/offers/:id' => 'offers#update'
+  # patch '/offers/:id' => 'offers#update'
 end

@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
 
   def show
+
     if !current_user
       redirect_to login_path
 
@@ -17,7 +18,6 @@ class DashboardController < ApplicationController
     else
       redirect_to root_path
     end
-
   end
 
   def update

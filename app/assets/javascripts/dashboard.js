@@ -29,6 +29,10 @@ const showCardEditor = () => {
 
     const $cardId = $(this).closest('li').attr('id')
     const $parentLink = $(this).parent().attr('href')
+    console.log(`/card/${$cardId}`)
+    $.get(`/card/${$cardId}`, function(r) {
+      console.log(r)
+    })
     // scroll to just-below the nav
     window.scrollTo(0,70)
     toggleEditor($($parentLink))
