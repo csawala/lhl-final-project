@@ -20,9 +20,9 @@
     <p><%= card.description %></p>
     <a href="<%= card.match_url %>">
       <% if card.matches.length > 1 %>
-      <%= card.matches.length %> potential matches for this <%= card.needs ? 'need' : 'offer' %>
+      <%= card.matches.length %> potential matches
       <% else %>
-      1 potential match for this <%= card.needs ? 'need' : 'offer' %>
+      1 potential match
       <% end %>
     </a>
 

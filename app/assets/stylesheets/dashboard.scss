@@ -28,6 +28,9 @@ section.org-show {
   }
   li.card {
     height: 105px;
+    a {
+      font-weight: 700;
+    }
   }
   span.secondary-content,
   .offers-header,

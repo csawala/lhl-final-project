@@ -21,6 +21,10 @@ const highlightFilterButton = () => {
   })
 }
 
+const hideOwnedCardsInQuery = () => {
+
+}
+
 window.onload = () => {
   // fix inaction when clicking outside of button text for filters
   $('i.cause-search').on('click', (e) => {
@@ -28,5 +32,6 @@ window.onload = () => {
   })
 
   highlightFilterButton()
+  hideOwnedCardsInQuery()
 
 }

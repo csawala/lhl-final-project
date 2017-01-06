@@ -16,10 +16,10 @@ class GoodsTypesOrganization < ApplicationRecord
   end
 
   def match_url
-    type = needs ? 'needs' : 'offers'
+    type = needs ? 'offers' : 'needs'
     goods_name = goods_type.name.split(' ').join('+')
 
-    "/#{type}/?goods_types%5B%5D=#{goods_name}"
+    "/#{type}/?goods_types%5B%5D=#{goods_name}&exclude=#{organization_id}"
   end
 
   protected
@@ -48,12 +48,16 @@ class GoodsTypesOrganization < ApplicationRecord
   def self.filter_by_params(params)
     return all unless params.present?
 
-    by_goods_types(params[:goods_types])
+    by_goods_types(params[:goods_types], params[:exclude])
   end
 
-  def self.by_goods_types(types)
+  def self.by_goods_types(types, org_id)
     return all unless types.present?
 
-    joins(:goods_type).where(goods_types: { name: types }).uniq
+    if !org_id
+      joins(:goods_type).where(goods_types: { name: types }).uniq
+    else
+      joins(:goods_type).where(goods_types: { name: types }).where.not(organization_id: org_id).uniq
+    end
   end
 end
