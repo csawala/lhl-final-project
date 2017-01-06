@@ -7,8 +7,22 @@ class GoodsTypesOrganization < ApplicationRecord
 
   validates :description, presence: true
 
-  protected
+  def matches
+    GoodsTypesOrganization
+      .where(goods_type_id: goods_type_id)
+      .where.not(organization_id: organization_id,
+                           needs: needs)
+      # needs and offers will never both be true, therefore looking for !needs
+  end
 
+  def match_url
+    type = needs ? 'needs' : 'offers'
+    goods_name = goods_type.name.split(' ').join('+')
+
+    "/#{type}/?goods_types%5B%5D=#{goods_name}"
+  end
+
+  protected
 
   def default_values
     self.needs  ||= false

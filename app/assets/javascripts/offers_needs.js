@@ -23,7 +23,7 @@ const highlightFilterButton = () => {
 
 window.onload = () => {
   // fix inaction when clicking outside of button text for filters
-  $('i.cause-search').on('click', function(e) {
+  $('i.cause-search').on('click', (e) => {
     $(e.target).children('input').click()
   })
 

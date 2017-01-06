@@ -17,7 +17,14 @@
     <% end %>
 
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
-    <p><%= card.description %> </p>
+    <p><%= card.description %></p>
+    <a href="<%= card.match_url %>">
+      <% if card.matches.length > 1 %>
+      <%= card.matches.length %> potential matches for this <%= card.needs ? 'need' : 'offer' %>
+      <% else %>
+      1 potential match for this <%= card.needs ? 'need' : 'offer' %>
+      <% end %>
+    </a>
 
   </div>
   <div class="col s1 m1 l1">
@@ -35,3 +42,4 @@
   </div>
 </li>
 
+a
