@@ -1,10 +1,16 @@
 <!-- Description -->
 <div class="need-offer-form input-field">
+
+  <%= hidden_field_tag(:org_id, @org.id)%>
+
+  <p><strong><em>Type:</em></strong></p>
   <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
-  <%= n.text_field :description,
-    class:       "materialize-textarea active",
+
+  <p><strong><em>Description:</em></strong></p>
+  <%= text_field_tag(:description, value = nil, options =
+    {class:       "materialize-textarea active",
     autofocus:   "autofocus",
-    placeholder: "Please add a clear description"
+    placeholder: "Please add a clear description"})
   %>
 
   <!-- Submit Button -->
@@ -19,4 +25,5 @@
       <% end %>
     </div>
   </div>
+
 </div>

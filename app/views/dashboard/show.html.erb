@@ -6,7 +6,6 @@
     <div class="center-align">
       <a id="toggle-org-form-button"
          class="waves-effect waves-light btn">
-        <i class="material-icons right">mode_edit</i>
         update organization details
       </a>
 
@@ -26,40 +25,41 @@
       <%= render partial: 'org_form' %>
     </div>
 
-    <!-- New need/offer toggles -->
+    <!-- New/Update need/offer toggles -->
     <div class="row">
+
       <div class="toggle-hide" id="toggle-new-need">
-        <%= form_for @need, url: dashboard_needs_path do |new| %>
-
-          <h4 class="center-align">what are you in need of?</h4>
-          <%= render partial: 'new_need_offer', locals: {n: new} %>
-
+        <%= form_tag(needs_path) do %>
+          <%= hidden_field_tag(:type, 'need')%>
+          <h4 class="center-align">What Are You In Need Of?</h4>
+          <%= render partial: 'new_need_offer' %>
         <% end %>
       </div>
 
       <div class="toggle-hide" id="toggle-new-offer">
-        <%= form_for @offer, url: dashboard_offers_path do |new| %>
-
-          <h4 class="center-align">what are you offering?</h4>
-          <%= render partial: 'new_need_offer', locals: {n: new} %>
-
+        <%= form_tag(offers_path) do %>
+          <%= hidden_field_tag(:type, 'offer') %>
+          <h4 class="center-align">What Are You Offering?</h4>
+          <%= render partial: 'new_need_offer' %>
         <% end %>
       </div>
-    </div>
-    <!-- card edit toggle -->
-    <div class="row">
-      <div class="toggle-hide" id="toggle-edit-card">
-        <%= form_for @need, url: dashboard_updatecard_path do |e| %>
 
-          <h4 class="center-align">edit a card</h4>
-          <%= render partial: 'new_need_offer', locals: {n: e} %>
+      <!-- card edit toggle -->
+      <% if @edit_card %>
+        <div class="toggle-hide" id="toggle-edit-card">
+          <%= form_tag("/card/#{@edit_card.id}", method: 'patch') do %>
+            <%= hidden_field_tag(:type, 'need')%>
+            <h4 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h4>
+            <%= render partial: 'edit_card' %>
+          <% end %>
+        </div>
+      <% end %>
 
-        <% end %>
-      </div>
     </div>
+
     <br>
     <!-- Org Needs/Offers -->
-    <%= render 'org_needs' %>
+    <%= render 'org_needs_offers' %>
 
   </div>
 </section>
