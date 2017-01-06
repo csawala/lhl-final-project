@@ -3,17 +3,15 @@
     <% if card.needs %>
       <%# NEEDS cards %>
       <i class="material-icons circle orange">swap_horiz</i>
-
-      <a href="#toggle-edit-need">
+      <%= link_to "#toggle-edit-need" do %>
         <i class="material-icons circle orange darken-3 edit-btn">mode_edit</i>
-      </a>
+      <% end %>
     <% else %>
     <%# OFFERS cards %>
       <i class="material-icons circle red lighten-1">swap_horiz</i>
-
-      <a href="#toggle-edit-offer">
+      <%= link_to "#toggle-edit-offer" do %>
         <i class="material-icons circle red darken-2 edit-btn">mode_edit</i>
-      </a>
+      <% end %>
     <% end %>
 
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
