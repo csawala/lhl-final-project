@@ -24,21 +24,9 @@ const toggleEditor = (target) => {
 }
 
 const showCardEditor = () => {
-  $('i.edit-btn').on("click", function(e) {
-    $('div.toggle-hide').hide()
+  const editPath = window.location.pathname.match(/\/dashboard.+\d/)
 
-    const $cardId = $(this).closest('li').attr('id')
-    const $parentLink = $(this).parent().attr('href')
-    console.log(`/card/${$cardId}`)
-    $.get(`/card/${$cardId}`, function(r) {
-      console.log(r)
-    })
-    // scroll to just-below the nav
-    window.scrollTo(0,70)
-    toggleEditor($($parentLink))
-
-    e.preventDefault()
-  })
+  if (editPath) toggleEditor($('#toggle-edit-card'))
 }
 
 $(document).ready(() => {
@@ -54,7 +42,6 @@ $(document).ready(() => {
 
   toggleCardEditButtonVisibility()
   showCardEditor()
-
 
   $( "#toggle-new-need-button" ).on('click', () => {
     toggleEditor($('#toggle-new-need'))

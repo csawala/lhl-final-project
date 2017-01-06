@@ -1,8 +1,9 @@
 class GoodsTypesOrganizationController < ApplicationController
 
   def get
-    @card = GoodsTypesOrganization.find(params[:id])
-    redirect_to dashboard_path(@card)
+    @edit_card = GoodsTypesOrganization.find(params[:id])
+
+    redirect_to dashboard_path(@edit_card)
   end
 
   def update

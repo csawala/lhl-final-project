@@ -44,22 +44,24 @@
         <% end %>
       </div>
 
-      <div class="toggle-hide" id="toggle-edit-need">
-        <%= form_tag(needs_path, method: 'patch') do %>
-          <%= hidden_field_tag(:type, 'need')%>
-          <h4 class="center-align">Edit a Need</h4>
-          <%= render partial: 'edit_card' %>
-        <% end %>
-      </div>
+      <% if @edit_card %>
+        <div class="toggle-hide" id="toggle-edit-card">
+          <%= form_tag("/card/#{@edit_card.id}", method: 'patch') do %>
+            <%= hidden_field_tag(:type, 'need')%>
+            <h4 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h4>
+            <%= render partial: 'edit_card' %>
+          <% end %>
+        </div>
+      <% end %>
 
 
-      <div class="toggle-hide" id="toggle-edit-offer">
-        <%= form_tag(offers_path, method: 'patch') do %>
-          <%= hidden_field_tag(:type, 'offer') %>
+<!--       <div class="toggle-hide" id="toggle-edit-offer">
+        <%# form_tag(offers_path, method: 'patch') do %>
+          <%# hidden_field_tag(:type, 'offer') %>
           <h4 class="center-align">Edit an Offer</h4>
-          <%= render partial: 'edit_card' %>
-        <% end %>
-      </div>
+          <%# render partial: 'edit_card' %>
+        <%# end %>
+      </div> -->
 
     </div>
     <br>

@@ -1,7 +1,6 @@
 class DashboardController < ApplicationController
 
   def show
-
     if !current_user
       redirect_to login_path
 
@@ -13,8 +12,11 @@ class DashboardController < ApplicationController
                     .order(active: :desc)
 
       @goods_types = GoodsType.all.pluck(:name, :id)
-
       @goods_types.unshift(['Select a type', 0])
+
+      if params[:format]
+        @edit_card = GoodsTypesOrganization.where(organization_id: @org.id, id: params[:format]).first
+      end
     else
       redirect_to root_path
     end

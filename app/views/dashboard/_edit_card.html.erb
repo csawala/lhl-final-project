@@ -1,7 +1,57 @@
 <div class="card-edit">
 
 
-  <%= render 'new_need_offer' %>
+  <%# render 'new_need_offer' %>
+  <!-- Description -->
+  <div class="need-offer-form edit input-field">
+
+    <%= hidden_field_tag(:org_id, @org.id)%>
+    <%= hidden_field_tag(:card_id, @edit_card.id)%>
+
+    <p class="center-align">
+      <input type="radio"
+             class="radio-btn toggle-radio"
+             id="active_card"
+             name="active"
+             style="font-size: 1.5em"
+             <%= @edit_card.active ? "checked" : '' %>
+      />
+      <label for="active_card" class="toggle-radio">Active</label>
+
+      <input type="radio"
+             class="radio-btn toggle-radio"
+             id="inactive_card"
+             name="active"
+             <%= @edit_card.active ? '' : "checked" %>
+      />
+      <label for="inactive_card" class="toggle-radio">Inactive</label>
+    </p>
+
+    <p><strong><em>Type:</em></strong></p>
+    <%= select_tag(:goods_type, options_for_select(@goods_types, @edit_card.goods_type_id)) %>
+
+    <p><strong><em>Description:</em></strong></p>
+    <%= text_field_tag(:description, value = nil, options =
+      {class:       "materialize-textarea active",
+      autofocus:   "autofocus",
+      value: "#{@edit_card.description}"})
+    %>
+
+    <!-- Submit Button -->
+    <div class="col s12 light-green lighten-4">
+      <div class="col s1 offset-s11">
+        <%= button_tag(method: "submit",
+                       class: "btn-floating tooltipped btn-small waves-effect waves-light green",
+                       "data-position": "left",
+                       "data-delay":    "50",
+                       "data-tooltip":  "Save Card") do %>
+
+          <i class="material-icons">done</i>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
   <!-- delete here -->
   <!-- active toggle here -->
 </div>

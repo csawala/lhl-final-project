@@ -3,17 +3,16 @@
     <% if card.needs %>
       <%# NEEDS cards %>
       <i class="material-icons circle orange">swap_horiz</i>
-      <%= link_to "#toggle-edit-need" do %>
+      <%= link_to "/card/#{card.id}" do %>
         <i class="material-icons circle orange darken-3 edit-btn">mode_edit</i>
       <% end %>
     <% else %>
     <%# OFFERS cards %>
       <i class="material-icons circle red lighten-1">swap_horiz</i>
-      <%= link_to "#toggle-edit-offer" do %>
+      <%= link_to "/card/#{card.id}" do %>
         <i class="material-icons circle red darken-2 edit-btn">mode_edit</i>
       <% end %>
     <% end %>
-
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
     <p><%= card.description %></p>
     <% if card.matches.length > 0 %>
@@ -31,13 +30,9 @@
   <div class="col s1 m1 l1">
     <p class="right-align">
       <% if card.active? %>
-        <input type="checkbox"
-               class="checkbox"
-               id="checkbox<%= card.id %>"
-               <%= card.active ? checked="checked" : '' %>
-               disabled="disabled"
-        />
-          <label for="checkbox<%= card.id %>"></label>
+
+        <i class="material-icons">done</i>
+
       <% end %>
     </p>
   </div>
