@@ -13,6 +13,9 @@ div.card.needs {
   }
 }
 
-.highlight-need {
+.card {
+  border: 3px solid white;
+}
+.card.highlight-need {
   border: 3px solid orange;
 }

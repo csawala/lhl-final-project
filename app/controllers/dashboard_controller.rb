@@ -11,6 +11,9 @@ class DashboardController < ApplicationController
       @offers = @org.goods_types_organizations.where(offers: true)
                     .order(active: :desc)
 
+      find_matches(@needs)
+      find_matches(@offers)
+
       @goods_types = GoodsType.all.pluck(:name, :id)
 
       @goods_types.unshift(['Select a type', 0])
@@ -25,6 +28,18 @@ class DashboardController < ApplicationController
   end
 
   protected
+
+  def find_matches(cards)
+    cards.each do |card|
+      if card.needs
+        GoodsTypesOrganization.where(offers: true, goods_type_id: card.goods_type_id)
+        # cards[card]
+      else
+        # needs work here
+        return
+      end
+    end
+  end
 
   def validate_organization(id)
     if Organization.where(id: id).count == 0
