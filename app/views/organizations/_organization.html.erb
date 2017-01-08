@@ -11,7 +11,7 @@
         <%= organization.name %>
       </span>
     </div>
-    <div class="card-action">
+    <div class="card-action valign-wrapper">
       <% if @user_org && organization.id == @user_org %>
         <%= link_to 'dashboard', dashboard_path, class: 'info-link' %>
       <% else %>

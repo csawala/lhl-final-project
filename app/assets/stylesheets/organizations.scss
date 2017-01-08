@@ -6,9 +6,6 @@ div.row.org-container {
   margin-left: 7.5vw;
   margin-right: 7.5vw;
 }
-div.top-offset {
-  padding-top: 5%
-}
 div.card.medium {
   word-wrap: break-word;
   margin: 5px;
@@ -25,8 +22,10 @@ div.card.medium {
     text-shadow: 0px 0px 1px grey;
   }
   div.card-action {
+    height: 10%;
     a.help-link, a.info-link {
       font-weight: 700;
+      left: 5%;
     }
     a.help-link {
       color: blue
