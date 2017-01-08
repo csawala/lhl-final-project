@@ -23,6 +23,14 @@ section.org-show {
   li.collection-item.offers-header,{
     background-color: #3EA4F0;
   }
+  li.empty-need-offer-header {
+    background-color: #ef6c00;
+    color: white;
+    + .collection-item {
+      font-size: 125%;
+    }
+  }
+
   li.card {
     height: 105px;
     a {
