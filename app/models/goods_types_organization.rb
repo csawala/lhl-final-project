@@ -38,6 +38,8 @@ class GoodsTypesOrganization < ApplicationRecord
 
   def self.create_with_params(params)
     @new_card = self.new
+    # params[:type] is either 'offers' or 'needs'
+    @new_card[params[:type]]  = true
     @new_card.organization_id = params[:org_id]
     @new_card.goods_type_id   = params[:goods_type].to_i
     @new_card.description     = params[:description]
