@@ -18,6 +18,13 @@ const toggleCardEditButtonVisibility = () => {
   })
 }
 
+const toggleActiveCheckbox = (target) => {
+  if (target.is(':checked')) {
+    return target.removeAttr('checked')
+  }
+  target.prop('checked', 'checked')
+}
+
 const toggleEditor = (target) => {
   hideOtherToggleForms(target[0])
   target.slideToggle("medium")
@@ -28,6 +35,7 @@ const showCardEditor = () => {
 
   if (editPath) toggleEditor($('#toggle-edit-card'))
 }
+
 
 $(document).ready(() => {
 
@@ -43,6 +51,12 @@ $(document).ready(() => {
   toggleCardEditButtonVisibility()
   showCardEditor()
 
+  // handle checkbox to toggle active state in card editor
+  $('label.toggle-active').on('click', function(e) {
+    toggleActiveCheckbox($(this).siblings('input'))
+  })
+
+  // --- Form button handlers ---
   $( "#toggle-new-need-button" ).on('click', () => {
     toggleEditor($('#toggle-new-need'))
   })
@@ -54,6 +68,5 @@ $(document).ready(() => {
   $( "#toggle-org-form-button" ).on('click', () => {
     toggleEditor($('#toggle-org-form'))
   })
-
-
+  // --- end button handlers ---
 })

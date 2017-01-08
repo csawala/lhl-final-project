@@ -26,15 +26,17 @@
 
       <!-- Organization EDIT -->
       <div class="toggle-hide" id="toggle-org-form">
-          <%= render partial: 'org_form' %>
+        <%= render partial: 'org_form' %>
       </div>
 
       <!-- New NEED -->
       <div class="toggle-hide" id="toggle-new-need">
         <div class="row dashboard-form">
           <%= form_tag(cards_path) do %>
+
             <%= hidden_field_tag(:type, 'needs')%>
-            <h5 class="center-align">What Are You In Need Of?</h5>
+            <h5 class="center-align">What are you in need of?</h5>
+
             <%= render partial: 'new_need_offer' %>
           <% end %>
         </div>
@@ -44,8 +46,10 @@
       <div class="toggle-hide" id="toggle-new-offer">
         <div class="row dashboard-form">
           <%= form_tag(cards_path) do %>
+
             <%= hidden_field_tag(:type, 'offers') %>
-            <h5 class="center-align">What Are You Offering?</h5>
+            <h5 class="center-align">What are you offering?</h5>
+
             <%= render partial: 'new_need_offer' %>
           <% end %>
         </div>
@@ -59,8 +63,12 @@
 
             <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
 
-              <%= hidden_field_tag(:type, 'need')%>
-              <h5 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
+              <%= hidden_field_tag(:type, @edit_card.needs ? 'needs' : 'offers')%>
+
+              <h5 class="center-align">
+                Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card
+                <%= link_to (fa_icon "ban") + ' cancel', dashboard_path, id: "cancel-btn" %>
+              </h5>
               <%= render partial: 'edit_card' %>
 
             <% end %>

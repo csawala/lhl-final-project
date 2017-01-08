@@ -6,22 +6,15 @@
     <%= hidden_field_tag(:card_id, @edit_card.id)%>
 
     <p class="center-align">
-      <input type="radio"
-             class="radio-btn toggle-radio"
-             id="active_card"
-             name="active"
+      <input type="checkbox"
+             class="toggle-active"
+             name="setactive"
              style="font-size: 1.5em"
-             <%= @edit_card.active ? "checked" : '' %>
       />
-      <label for="active_card" class="toggle-radio">Active</label>
-
-      <input type="radio"
-             class="radio-btn toggle-radio"
-             id="inactive_card"
-             name="active"
-             <%= @edit_card.active ? '' : "checked" %>
-      />
-      <label for="inactive_card" class="toggle-radio">Inactive</label>
+      <label for="setactive"
+             class="toggle-active">
+        Make card <%= @edit_card.active ? 'in' : ''%>active
+      </label>
     </p>
 
     <p><strong><em>Type:</em></strong></p>
