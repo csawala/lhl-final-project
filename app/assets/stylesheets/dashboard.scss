@@ -3,11 +3,11 @@ section.org-show {
 
   width: 100vw;
   padding-top: 2em;
-
-  div.need-offer-form,
-  div.org-form {
-    width: 80vw;
-    margin-left: 10vw;
+  div.dashboard-form {
+    border: 1px dotted gray;
+    width: 81vw;
+    margin: auto;
+    padding: 5px;
   }
   .org-edit {
     .org-image {

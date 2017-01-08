@@ -1,104 +1,107 @@
 
-  <div class="row">
-    <h4 class="center-align">Edit organization details</h4>
+<div class="row dashboard-form">
+  <h4 class="center-align">Edit organization details</h4>
 
-    <%= form_for @org do |f| %>
+  <%= form_for @org do |f| %>
 
-      <!-- Form Input Fields: -->
-      <div class="org-form">
-        <!-- Organization Name -->
-        <div class="input-field">
-          <i class="material-icons prefix">account_circle</i>
-          <%= f.text_field :name, class: "validate" %>
-          <%= f.label "Organization Name", class: "active" %>
-        </div>
+    <!-- Form Input Fields: -->
+    <div>
+      <!-- Organization Name -->
+      <div class="input-field">
+        <i class="material-icons prefix">account_circle</i>
+        <%= f.text_field :name, class: "validate" %>
+        <%= f.label "Organization Name", class: "active" %>
+      </div>
 
-        <!-- Organization Image -->
-        <!-- Added div padding to allow for better layout -->
-        <div class="col s10 offset-s1 m3 offset-m3 l4 offset-l4">
-          <% if @org.image %>
-            <%= image_tag @org.image.full, class: "materialboxed z-depth-1", width: 300 %><br>
-          <% else %>
-            Your Organization Image Here
-          <% end %>
-        </div>
-        <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3">
-          <div class="file-field input-field">
-            <div class="btn">
-              <span>File</span>
-              <%= f.file_field(:image) %>
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" placeholder="Replace Image">
-            </div>
+      <!-- Organization Image -->
+      <!-- Added div padding to allow for better layout -->
+      <div class="col s10 offset-s1 m3 offset-m3 l4 offset-l4">
+        <% if @org.image %>
+          <%= image_tag @org.image.full, class: "materialboxed z-depth-1", width: 300 %><br>
+        <% else %>
+          Your Organization Image Here
+        <% end %>
+      </div>
+      <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <%= f.file_field(:image) %>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Replace Image">
           </div>
         </div>
-
-        <!-- Organization Description -->
-        <div class="input-field col s12 m12 l12">
-          <i class="material-icons prefix">comment</i>
-          <%= f.text_area :description, class: "materialize-textarea" %>
-          <%= f.label "Organization Description", class: "active" %>
-        </div>
-
-        <!-- Telephone -->
-        <!-- These may also be telephone_field -->
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">phone</i>
-          <%= f.text_field :primaryphone, class: "validate" %>
-          <%= f.label "Primary Phone", class: "active" %>
-        </div>
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">phone</i>
-          <%= f.text_field :secondaryphone, class: "validate" %>
-          <%= f.label "Secondary Phone", class: "active" %>
-        </div>
-
-        <!-- Email & Website -->
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">email</i>
-          <!-- This may also be email_field -->
-          <%= f.text_field :email, class: "validate" %>
-          <%= f.label "Email", class: "active" %>
-        </div>
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">web</i>
-          <!-- This may also be url_field -->
-          <%= f.text_field :url, class: "validate" %>
-          <%= f.label "Website URL", class: "active" %>
-        </div>
-
-        <!-- Address -->
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">location_on</i>
-          <%= f.text_field :address, class: "validate" %>
-          <%= f.label "Address line 1", class: "active" %>
-        </div>
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">location_on</i>
-          <%= f.text_field :suite, class: "validate" %>
-          <%= f.label "Address Line 2", class: "active" %>
-        </div>
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">location_on</i>
-          <%= f.text_field :city, class: "validate" %>
-          <%= f.label "City", class: "active" %>
-        </div>
-        <div class="input-field col s12 m6 l6">
-          <i class="material-icons prefix">location_on</i>
-          <%= f.text_field :postal, class: "validate" %>
-          <%= f.label "Postal Code", class: "active" %>
-        </div>
       </div>
 
-
-      <!-- Save Button -->
-      <div class="col s10 offset-s1 light-green lighten-4">
-        <div class="col s1 offset-s8 m1 offset-m9 l1 offset-l10">
-          <%= button_tag(method: "submit", class: "btn-floating tooltipped btn-large waves-effect waves-light green", "data-position": "left", "data-delay": "50", "data-tooltip": "Save Organization Info") do %>
-            <i class="material-icons">done</i>
-          <% end %>
-        </div>
+      <!-- Organization Description -->
+      <div class="input-field col s12 m12 l12">
+        <i class="material-icons prefix">comment</i>
+        <%= f.text_area :description, class: "materialize-textarea" %>
+        <%= f.label "Organization Description", class: "active" %>
       </div>
-    <% end %>
-  </div>
+
+      <!-- Telephone -->
+      <!-- These may also be telephone_field -->
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">phone</i>
+        <%= f.text_field :primaryphone, class: "validate" %>
+        <%= f.label "Primary Phone", class: "active" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">phone</i>
+        <%= f.text_field :secondaryphone, class: "validate" %>
+        <%= f.label "Secondary Phone", class: "active" %>
+      </div>
+
+      <!-- Email & Website -->
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">email</i>
+        <!-- This may also be email_field -->
+        <%= f.text_field :email, class: "validate" %>
+        <%= f.label "Email", class: "active" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">web</i>
+        <!-- This may also be url_field -->
+        <%= f.text_field :url, class: "validate" %>
+        <%= f.label "Website URL", class: "active" %>
+      </div>
+
+      <!-- Address -->
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :address, class: "validate" %>
+        <%= f.label "Address line 1", class: "active" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :suite, class: "validate" %>
+        <%= f.label "Address Line 2", class: "active" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :city, class: "validate" %>
+        <%= f.label "City", class: "active" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :postal, class: "validate" %>
+        <%= f.label "Postal Code", class: "active" %>
+      </div>
+    </div>
+
+    <!-- Save Button -->
+    <div class="col s12 light-green lighten-4">
+      <div class="col s1 offset-s11">
+        <%= button_tag(method: "submit",
+                       class: "btn-floating tooltipped btn-small waves-effect waves-light green",
+                        "data-position": "left",
+                        "data-delay": "50",
+                        "data-tooltip": "Save Organization Info") do %>
+          <i class="material-icons">done</i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

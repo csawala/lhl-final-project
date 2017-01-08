@@ -1,6 +1,6 @@
 <section class="org-show">
   <div class="dashboard-container">
-    <h4 class="center-align">Dashboard for: <strong><%= @org.name %></strong></h4>
+    <h4 class="center-align">Welcome, <strong><%= @org.name %></strong></h4>
 
     <!-- Toggle Render Section for Update Org Details -->
     <div class="center-align">
@@ -20,48 +20,51 @@
       </a>
     </div><br>
 
-    <!-- Organization edit toggle -->
-    <div class="toggle-hide" id="toggle-org-form">
-      <%= render partial: 'org_form' %>
-    </div>
 
-    <!-- New/Update need/offer toggles -->
+    <!-- Toggles -->
     <div class="row">
 
+      <!-- Organization EDIT -->
+      <div class="toggle-hide" id="toggle-org-form">
+        <%= render partial: 'org_form' %>
+      </div>
+
+      <!-- New NEED -->
       <div class="toggle-hide" id="toggle-new-need">
-        <%= form_tag(needs_path) do %>
-          <%= hidden_field_tag(:type, 'need')%>
-          <h4 class="center-align">What Are You In Need Of?</h4>
-          <%= render partial: 'new_need_offer' %>
-        <% end %>
+        <div class="row dashboard-form">
+          <%= form_tag(cards_path) do %>
+            <%= hidden_field_tag(:type, 'needs')%>
+            <h4 class="center-align">What Are You In Need Of?</h4>
+            <%= render partial: 'new_need_offer' %>
+          <% end %>
+        </div>
       </div>
 
+      <!-- New OFFER -->
       <div class="toggle-hide" id="toggle-new-offer">
-        <%= form_tag(offers_path) do %>
-          <%= hidden_field_tag(:type, 'offer') %>
-          <h4 class="center-align">What Are You Offering?</h4>
-          <%= render partial: 'new_need_offer' %>
-        <% end %>
+        <div class="row dashboard-form">
+          <%= form_tag(cards_path) do %>
+            <%= hidden_field_tag(:type, 'offers') %>
+            <h4 class="center-align">What Are You Offering?</h4>
+            <%= render partial: 'new_need_offer' %>
+          <% end %>
+        </div>
       </div>
 
+      <!-- edit card -->
       <% if @edit_card %>
+
         <div class="toggle-hide" id="toggle-edit-card">
-          <%= form_tag("/card/#{@edit_card.id}", method: 'patch') do %>
+          <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
+
             <%= hidden_field_tag(:type, 'need')%>
             <h4 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h4>
             <%= render partial: 'edit_card' %>
+
           <% end %>
         </div>
+
       <% end %>
-
-
-<!--       <div class="toggle-hide" id="toggle-edit-offer">
-        <%# form_tag(offers_path, method: 'patch') do %>
-          <%# hidden_field_tag(:type, 'offer') %>
-          <h4 class="center-align">Edit an Offer</h4>
-          <%# render partial: 'edit_card' %>
-        <%# end %>
-      </div> -->
 
     </div>
     <br>
