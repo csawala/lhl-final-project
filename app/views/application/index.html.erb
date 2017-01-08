@@ -9,7 +9,7 @@
           <h2 class="white-text">Make good happen</h2>
           <p class="white-text" id="homepage_title_text"><strong>inNeed</strong> is your one stop charitable hub connecting charities who don’t have enough with organizations and people who have something to give – from food to clothing to donations, and much more.</p>
           <br>
-          <button class="btn waves-effect waves-light homepage_get_started" name="action">Get started</button>
+          <button class="btn waves-effect green lighten-1 waves-light homepage_get_started" name="action">Get started</button>
         </div>
       </div>
   </div>
@@ -40,7 +40,7 @@
           <img src="/assets/communicate.png">
           <p class="center-align">Set up some cards to let others know what you’d like to give away or what you’re looking for — or browse existing offers and searches.</p>
           <br>
-          <button class="btn waves-effect waves-light homepage_get_started" name="action">Get started</button>
+          <button class="btn waves-effect waves-light homepage_get_started blue darken-1" name="action">Get started</button>
         </div>
 
         <div class="col s4 homepage-steps">
@@ -107,14 +107,11 @@ $(document).ready(function() {
   $('.parallax').parallax();
 
   // scrolls get started button to carousel at bottom
-
   $('.homepage_get_started').click(function() {
     $('html, body').animate({
-       scrollTop: $("#need-button").offset().top
-   }, 500);
-
+      scrollTop: $("#need-button").offset().top
+    }, 500);
 	});
-
 });
 
 </script>

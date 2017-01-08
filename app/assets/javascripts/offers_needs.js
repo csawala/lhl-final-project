@@ -1,6 +1,5 @@
 'use strict'
 
-
 const swapColourClass = (elem, target) => {
   elem.closest(target).removeClass('lighten-1')
   elem.closest(target).addClass('darken-3')
@@ -21,17 +20,12 @@ const highlightFilterButton = () => {
   })
 }
 
-const hideOwnedCardsInQuery = () => {
-
-}
-
 window.onload = () => {
-  // fix inaction when clicking outside of button text for filters
+  // fix inaction when clicking outside of Materialize button text
   $('i.cause-search').on('click', (e) => {
     $(e.target).children('input').click()
   })
 
   highlightFilterButton()
-  hideOwnedCardsInQuery()
 
 }
