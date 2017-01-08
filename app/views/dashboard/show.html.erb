@@ -34,7 +34,7 @@
         <div class="row dashboard-form">
           <%= form_tag(cards_path) do %>
             <%= hidden_field_tag(:type, 'needs')%>
-            <h4 class="center-align">What Are You In Need Of?</h4>
+            <h5 class="center-align">What Are You In Need Of?</h5>
             <%= render partial: 'new_need_offer' %>
           <% end %>
         </div>
@@ -45,7 +45,7 @@
         <div class="row dashboard-form">
           <%= form_tag(cards_path) do %>
             <%= hidden_field_tag(:type, 'offers') %>
-            <h4 class="center-align">What Are You Offering?</h4>
+            <h5 class="center-align">What Are You Offering?</h5>
             <%= render partial: 'new_need_offer' %>
           <% end %>
         </div>
@@ -58,7 +58,7 @@
           <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
 
             <%= hidden_field_tag(:type, 'need')%>
-            <h4 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h4>
+            <h5 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
             <%= render partial: 'edit_card' %>
 
           <% end %>
