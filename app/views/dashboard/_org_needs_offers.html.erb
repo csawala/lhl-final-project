@@ -32,9 +32,8 @@
       <!-- No Needs or Offers? -->
       <% if !@needs.present? && !@offers.present? %>
         <ul class="collection with-header">
-          <li class="collection-header">
-            <h5>You have no needs or offers posted - use the controls above to get started</h5>
-          </li>
+          <li class="collection-header empty-need-offer-header center-align"><h5>You Have No Needs or Offers Posted</h5></li>
+          <li class="collection-item center-align"><p>Get Started Using the Controls Above</p></li>
         </ul>
       <% end %>
   </div>
