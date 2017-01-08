@@ -26,7 +26,7 @@
 
       <!-- Organization EDIT -->
       <div class="toggle-hide" id="toggle-org-form">
-        <%= render partial: 'org_form' %>
+          <%= render partial: 'org_form' %>
       </div>
 
       <!-- New NEED -->
@@ -55,13 +55,16 @@
       <% if @edit_card %>
 
         <div class="toggle-hide" id="toggle-edit-card">
-          <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
+          <div class="row dashboard-form">
 
-            <%= hidden_field_tag(:type, 'need')%>
-            <h5 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
-            <%= render partial: 'edit_card' %>
+            <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
 
-          <% end %>
+              <%= hidden_field_tag(:type, 'need')%>
+              <h5 class="center-align">Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
+              <%= render partial: 'edit_card' %>
+
+            <% end %>
+          </div>
         </div>
 
       <% end %>
