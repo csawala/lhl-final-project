@@ -1,5 +1,9 @@
-div.map-container {
-  border: 1px dashed black;
-  height: 400px;
-  margin-top: 2%;
+div#map-container {
+  div#map {
+    height: 100%;
+    width: 100%;
+    border: 1px dashed black;
+    height: 400px;
+    margin-top: 2%;
+  }
 }

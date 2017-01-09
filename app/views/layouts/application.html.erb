@@ -8,7 +8,11 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag 'application' %>
+    <!-- Materialize -->
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %>
+    <!-- Google Maps -->
+    <%= javascript_include_tag "//maps.google.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}" %>
+    <%= javascript_include_tag "//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js" %>
   </head>
 
   <body>

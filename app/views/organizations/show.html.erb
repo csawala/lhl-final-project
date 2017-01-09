@@ -24,8 +24,30 @@
       <div class="divider"></div>
 
       <%= render 'org_contact' %>
-      <div class="col s12 map-container">MAP HERE</div>
+      <div class="col s12" id="map-container">
+        <div id="map"></div>
+      </div>
 
     </div>
   </div>
 </div>
+
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 0,
+        "lng": 0,
+        "picture": {
+          "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
