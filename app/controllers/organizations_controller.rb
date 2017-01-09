@@ -31,17 +31,18 @@ class OrganizationsController < ApplicationController
   def show
     @org    = Organization.find(params[:id])
 
-    if @needs = @org.goods_types_organizations
-                    .where(needs: true, active: true)
-      @needs
+    if @cards = @org.goods_types_organizations
+                    .where(active: true)
+                    .order(created_at: :asc)
+      @cards
     else return
     end
 
-    if @offers = @org.goods_types_organizations
-                     .where(offers: true, active: true)
-      @offers
-    else return
-    end
+    # if @offers = @org.goods_types_organizations
+    #                  .where(offers: true, active: true)
+    #   @offers
+    # else return
+    # end
   end
 
   private

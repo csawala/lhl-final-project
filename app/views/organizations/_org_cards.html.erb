@@ -1,0 +1,20 @@
+<% @cards.each do |card| %>
+
+  <div class="col s12">
+    <div class="card <%= card.needs ? 'needs' : 'offers' %>">
+      <div class="card-content white-text">
+        <p class="needs-offers-type">
+          <i class="tiny material-icons circle
+                    <%= card.needs ? 'orange' : 'red' %>">
+            swap_horiz
+          </i>
+          <%= card.needs ? 'needs' : 'has' %>
+          <%= card.goods_type.name %>
+        </p>
+        <br>
+        <p><%= card.description %></p>
+      </div>
+    </div>
+  </div>
+
+<% end %>

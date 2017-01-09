@@ -1,0 +1,46 @@
+.card {
+  border: 3px solid white;
+}
+p.needs-offers-type {
+  color: white;
+}
+div.card-action a {
+  position: absolute;
+  right: 0;
+}
+.needs-offers-type {
+  font-weight: 700
+}
+div.card.offers,
+div.card.needs {
+  .card-content {
+    height: 140px;
+    overflow: scroll;
+  }
+}
+// ---- NEEDS ----
+.card.highlight-need {
+  border: 3px solid orange;
+}
+div.card.needs {
+  .card-content {
+    background-color: #6BA472;
+  }
+  div.card-action {
+    background-color: #4B8656;
+    height: 30px;
+  }
+}
+// ---- OFFERS ----
+.highlight-offer {
+  border: 3px solid #F46176;
+}
+div.card.offers {
+  .card-content {
+    background-color: #3EA4F0;
+  }
+  div.card-action {
+    background-color: #0D71E1;
+    height: 30px;
+  }
+}

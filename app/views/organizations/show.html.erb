@@ -3,27 +3,17 @@
 
   <div class="divider"></div>
   <div class="col s12">
-    <% if @needs.size > 0 %>
+    <% if @cards.size > 0 %>
 
       <div class="col s12 l6">
-        <h5 class="center-align">needs:</h5>
-        <%= render 'org_needs' %>
+        <%= render 'org_cards' %>
       </div>
 
-    <% end %>
+    <% else %>
 
-    <% if @offers.size > 0 %>
-
-      <div class="col s12 l6">
-        <h5 class="center-align">offers:</h5>
-        <%= render 'org_offers' %>
-      </div>
+      <div class="cards-placeholder"></div>
 
     <% end %>
-  </div>
-  <div class="col s12">
-    <div class="divider"></div>
-
     <div class="col s12 l6">
       <h4><%= @org.name %></h4>
 
@@ -34,21 +24,8 @@
       <div class="divider"></div>
 
       <%= render 'org_contact' %>
-
-      <div class="divider"></div>
-
-      <% if @org.categories.count > 0 %>
-        <%# pluralize if more than one cause %>
-        <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
-        <ul>
-          <% @org.categories.each do |c|%>
-            <li><%= c.name %></li>
-          <% end %>
-        </ul>
-      <% end %>
+      <div class="col s12 map-container">MAP HERE</div>
 
     </div>
-
-    <div class="col s12 l6 map-container">MAP HERE</div>
   </div>
 </div>
