@@ -13,14 +13,18 @@
     </div>
     <div class="card-action valign-wrapper">
       <% if @user_org && organization.id == @user_org %>
+
         <%= link_to 'dashboard', dashboard_path, class: 'info-link' %>
+
       <% else %>
-      <%= link_to 'website', organization.url %>
+
+        <%= link_to 'website', organization.url %>
         <% if organization.orgtype == 'charity' %>
           <%= link_to 'how to help', organization_path(id: organization.id), class: 'help-link deep-orange-text accent-3' %>
         <% else %>
           <%= link_to 'donor info', organization_path(id: organization.id), class: 'info-link blue-text' %>
         <% end %>
+
       <% end %>
     </div>
     <%# expand card to view contact details %>
@@ -30,23 +34,26 @@
       <i class="material-icons right">close</i></span>
       <p>
         <% if organization.email %>
-          <span><i class="tiny material-icons">email</i>
-          <%= mail_to 'email', organization.email %><br></span>
+          <span>
+            <i class="tiny material-icons">email</i>
+            <%= mail_to 'email', organization.email %>
+          </span>
+          <br>
+          <br>
         <% end %>
         <i class="tiny material-icons">phone</i>
         <%# format phone number %>
-        <%= number_to_phone(organization.primaryphone, area_code: true) %><br><br>
-        <% if organization.secondaryphone %><br>
+        <%= number_to_phone(organization.primaryphone, area_code: true) %>
+        <% if organization.secondaryphone %>
+          <br>
           <i class="tiny material-icons">phone</i>
-          <%= number_to_phone(organization.secondaryphone, area_code: true) %><br>
+          <%= number_to_phone(organization.secondaryphone, area_code: true) %>
         <% end %>
-        <%= organization.address %><br>
-        <% if organization.suite %><br>
-          <%= organization.suite %><br>
-        <% end %>
-        <%= organization.city %><br>
+        <br>
+        <br>
+        <%= organization.address %><%= organization.suite.present? ? ', ' + organization.suite : nil %><br>
+        <%= "#{organization.city}, #{organization.province}"%><br>
         <%= organization.postal %><br>
-        <%= organization.province %><br>
       </p>
     </div>
   </div>

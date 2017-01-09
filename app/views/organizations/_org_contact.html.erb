@@ -1,21 +1,26 @@
 <%# contact details formatted%>
+<h5>Contact</h5>
 <p>
   <% if @org.email %>
+
     <span><i class="tiny material-icons">email</i>
     <%= mail_to 'email', @org.email %><br></span>
+
   <% end %>
+  <br>
   <i class="tiny material-icons">phone</i>
-  <%# format phone number %>
-  <%= number_to_phone(@org.primaryphone, area_code: true) %><br><br>
-  <% if @org.secondaryphone %><br>
+
+  <%= number_to_phone(@org.primaryphone, area_code: true) %>
+  <% if @org.secondaryphone %>
+    <br>
     <i class="tiny material-icons">phone</i>
-    <%= number_to_phone(@org.secondaryphone, area_code: true) %><br>
+    <%= number_to_phone(@org.secondaryphone, area_code: true) %>
+
   <% end %>
-  <%= @org.address %><br>
-  <% if @org.suite %>
-    <%= @org.suite %><br>
-  <% end %>
-  <%= @org.city %><br>
+  <br>
+  <br>
+
+  <%= @org.address %><%= @org.suite.present? ? ', ' + @org.suite : nil %><br>
+  <%= "#{@org.city}, #{@org.province}"%><br>
   <%= @org.postal %><br>
-  <%= @org.province %><br>
 </p>

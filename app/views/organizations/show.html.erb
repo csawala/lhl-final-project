@@ -1,43 +1,53 @@
 <div class="row org-container org-card-large col s12">
   <%= image_tag(@org.image.card) %>
 
-  <% if @org.description %>
+  <div class="divider"></div>
+  <div class="col s12">
+    <% if @needs.size > 0 %>
+
+      <div class="col s12 l6">
+        <h5 class="center-align">needs:</h5>
+        <%= render 'org_needs' %>
+      </div>
+
+    <% end %>
+
+    <% if @offers.size > 0 %>
+
+      <div class="col s12 l6">
+        <h5 class="center-align">offers:</h5>
+        <%= render 'org_offers' %>
+      </div>
+
+    <% end %>
+  </div>
+
+  <div class="col s12 l6">
+
     <div class="divider"></div>
-    <p><%= @org.description %></p>
-  <% end %>
 
-  <div class="divider"></div>
 
-  <h4><%= @org.name %></h4>
+    <h4><%= @org.name %></h4>
 
-  <%= render 'org_contact' %>
+    <% if @org.description %>
+      <p><%= @org.description %></p>
+    <% end %>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
+    <%= render 'org_contact' %>
 
-  <% if @org.categories.count > 0 %>
-    <%# pluralize if more than one cause %>
-    <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
-    <ul>
-      <% @org.categories.each do |c|%>
-        <li><%= c.name %></li>
-      <% end %>
-    </ul>
-  <% end %>
+    <div class="divider"></div>
 
-  <div class="divider"></div>
+    <% if @org.categories.count > 0 %>
+      <%# pluralize if more than one cause %>
+      <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
+      <ul>
+        <% @org.categories.each do |c|%>
+          <li><%= c.name %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-  <% if @needs.size > 0 %>
-    <div class="col s6">
-      <h5>needs:</h5>
-      <%= render 'org_needs' %>
-    </div>
-  <% end %>
-
-  <% if @offers.size > 0 %>
-    <div class="col s6">
-      <h5>offers:</h5>
-      <%= render 'org_offers' %>
-    </div>
-  <% end %>
-
+  </div>
+  <div class="col s12 l6 map-container">MAP HERE</div>
 </div>
