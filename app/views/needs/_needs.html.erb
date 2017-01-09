@@ -9,7 +9,7 @@
       </div>
       <div class="card-action valign-wrapper">
         <% if @org && card.organization.id == @org %>
-          <%= link_to('edit in your dashboard', dashboard_path) %>
+          <%= link_to('edit in your dashboard', dashboard_path + ".#{card.id}") %>
         <% else %>
           <%= link_to('contact', organization_path(card.organization_id)) %>
         <% end %>
