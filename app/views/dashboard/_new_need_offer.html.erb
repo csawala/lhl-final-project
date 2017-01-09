@@ -1,11 +1,12 @@
-<!-- Description -->
 <div class="input-field">
 
   <%= hidden_field_tag(:org_id, @org.id)%>
 
+  <!-- Type selector -->
   <p><strong><em>Type:</em></strong></p>
   <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
 
+  <!-- Description -->
   <p><strong><em>Description:</em></strong></p>
   <%= text_field_tag(:description, value = nil, options =
     {class:       "materialize-textarea active",

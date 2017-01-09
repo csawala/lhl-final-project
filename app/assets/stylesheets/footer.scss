@@ -1,6 +1,12 @@
 .footer-copyright {
-  div.container {
+  div.container.footer {
     position: absolute;
     min-height: 0px;
+    margin-left: 10px;
+    a {
+      text-decoration: none;
+      color: white;
+      cursor: default;
+    }
   }
 }

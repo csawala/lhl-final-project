@@ -1,22 +1,23 @@
-<li class="collection-item avatar card" id=<%= card.id %>>
+<li class="collection-item avatar card valign-wrapper" id=<%= card.id %>>
   <div class="col s10 m11 l11">
     <% if card.needs %>
       <%# NEEDS cards %>
-      <i class="material-icons circle orange">swap_horiz</i>
-
+      <i class="material-icons circle <%= card.active? ? 'orange' : 'blue-grey lighten-3' %>">swap_horiz</i>
       <%= link_to "/cards/#{card.id}" do %>
-        <i class="material-icons circle orange darken-3 edit-btn">mode_edit</i>
+        <i class="material-icons circle <%= card.active? ? 'orange darken-3' : 'blue-grey' %> edit-btn">mode_edit</i>
       <% end %>
 
     <% else %>
-    <%# OFFERS cards %>
-      <i class="material-icons circle red lighten-1">swap_horiz</i>
 
+    <%# OFFERS cards %>
+      <i class="material-icons circle <%= card.active? ? 'red lighten-1' : 'blue-grey lighten-3' %>">swap_horiz</i>
       <%= link_to "/cards/#{card.id}" do %>
-        <i class="material-icons circle red darken-2 edit-btn">mode_edit</i>
+        <i class="material-icons circle <%= card.active? ? 'red darken-2' : 'blue-grey' %> edit-btn">mode_edit</i>
       <% end %>
 
     <% end %>
+
+    <%# CARD information %>
     <p><strong><em><%= card.goods_type.name %></em></strong></p>
     <p><%= card.description %></p>
 
@@ -39,9 +40,7 @@
   <div class="col s1 m1 l1">
     <p class="right-align">
       <% if card.active? %>
-
         <i class="material-icons">done</i>
-
       <% end %>
     </p>
   </div>
