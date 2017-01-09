@@ -21,33 +21,34 @@
 
     <% end %>
   </div>
-
-  <div class="col s12 l6">
-
+  <div class="col s12">
     <div class="divider"></div>
 
+    <div class="col s12 l6">
+      <h4><%= @org.name %></h4>
 
-    <h4><%= @org.name %></h4>
+      <% if @org.description %>
+        <p><%= @org.description %></p>
+      <% end %>
 
-    <% if @org.description %>
-      <p><%= @org.description %></p>
-    <% end %>
+      <div class="divider"></div>
 
-    <div class="divider"></div>
-    <%= render 'org_contact' %>
+      <%= render 'org_contact' %>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <% if @org.categories.count > 0 %>
-      <%# pluralize if more than one cause %>
-      <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
-      <ul>
-        <% @org.categories.each do |c|%>
-          <li><%= c.name %></li>
-        <% end %>
-      </ul>
-    <% end %>
+      <% if @org.categories.count > 0 %>
+        <%# pluralize if more than one cause %>
+        <h5>supported cause<% if @org.categories.count > 1 %>s<% end %>:</h5>
+        <ul>
+          <% @org.categories.each do |c|%>
+            <li><%= c.name %></li>
+          <% end %>
+        </ul>
+      <% end %>
 
+    </div>
+
+    <div class="col s12 l6 map-container">MAP HERE</div>
   </div>
-  <div class="col s12 l6 map-container">MAP HERE</div>
 </div>
