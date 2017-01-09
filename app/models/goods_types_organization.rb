@@ -2,9 +2,9 @@ class GoodsTypesOrganization < ApplicationRecord
 
   belongs_to :goods_type
   belongs_to :organization
-
   before_save :default_values
 
+  validates :goods_type, presence: true
   validates :description, presence: true
 
   def matches
@@ -12,7 +12,6 @@ class GoodsTypesOrganization < ApplicationRecord
       .where(goods_type_id: goods_type_id)
       .where.not(organization_id: organization_id,
                            needs: needs)
-      # needs and offers will never both be true, therefore looking for !needs
   end
 
   def match_url
@@ -29,12 +28,6 @@ class GoodsTypesOrganization < ApplicationRecord
     self.offers ||= false
     self.urgent ||= false
   end
-
-  # def self.updatecard(card_id, params)
-  #   # something like (works in rails console!):
-  #   @org.goods_types_organizations.find(card_id)
-  #   # @card.active ? @card.active = false : @card.active = true
-  # end
 
   def self.create_with_params(params)
     @new_card = self.new

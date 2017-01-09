@@ -21,7 +21,7 @@ const highlightFilterButton = () => {
 }
 
 window.onload = () => {
-  // fix inaction when clicking outside of Materialize button text
+  // fix inaction when clicking outside of filter button text
   $('i.cause-search').on('click', (e) => {
     $(e.target).children('input').click()
   })

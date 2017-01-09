@@ -36,12 +36,6 @@ class DashboardController < ApplicationController
     create_need_offer(@offer, params, current_user)
   end
 
-  def updatecard(card_id)
-    # something like (works in rails console!):
-    # @card = @org.goods_types_organizations.find(card_id)
-    # @card.active ? @card.active = false : @card.active = true
-  end
-
   protected
 
   def create_need_offer(new_card, params, user)
