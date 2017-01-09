@@ -1,7 +1,7 @@
 'use strict'
 
 const makeClosestElementActive = (elem, target) => {
-  return elem.closest(target).addClass('active')
+  elem.closest(target).addClass('active')
 }
 // leverage Materlialize to highlight active pages in Nav
 const activeNavButtons = () => {

@@ -30,11 +30,11 @@ class GoodsTypesOrganization < ApplicationRecord
     self.urgent ||= false
   end
 
-  def self.updatecard(card_id, params)
-    # something like (works in rails console!):
-    @org.goods_types_organizations.find(card_id)
-    # @card.active ? @card.active = false : @card.active = true
-  end
+  # def self.updatecard(card_id, params)
+  #   # something like (works in rails console!):
+  #   @org.goods_types_organizations.find(card_id)
+  #   # @card.active ? @card.active = false : @card.active = true
+  # end
 
   def self.create_with_params(params)
     @new_card = self.new

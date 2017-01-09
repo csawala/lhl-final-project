@@ -23,9 +23,12 @@ div.card.medium {
   }
   div.card-action {
     height: 10%;
-    a.help-link, a.info-link {
+
+    a.help-link,
+    a.info-link {
       font-weight: 700;
       left: 5%;
+      width: 30%;
     }
     a.help-link {
       color: blue

@@ -1,0 +1,13 @@
+<% if organization.orgtype == 'charity' %>
+
+  <%= link_to 'How to help',
+      organization_path(id: organization.id),
+      class: 'help-link deep-orange-text accent-3' %>
+
+<% else %>
+
+  <%= link_to 'Donor info',
+      organization_path(id: organization.id),
+      class: 'info-link blue-text' %>
+
+<% end %>
