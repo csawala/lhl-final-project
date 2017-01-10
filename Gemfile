@@ -45,9 +45,9 @@ gem 'materialize-sass'
 gem 'flexbox-rails'
 
 # Maps
-gem 'gmaps4rails'
+# gem 'gmaps4rails'
 gem 'geocoder'
-gem 'underscore-rails'
+# gem 'underscore-rails'
 
 # Authentication & security
 # gem 'omniauth-facebook'

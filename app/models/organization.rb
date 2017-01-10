@@ -20,6 +20,14 @@ class Organization < ApplicationRecord
       .by_orgtype(params[:orgtype])
   end
 
+  def full_street_address
+    return "#{self.address}#{self.suite? ? ' ' + self.suite : ''} #{self.postal} #{self.city} #{self.province}"
+  end
+
+  def google_address
+    return "#{self.name} #{full_street_address}".split(' ').join('+')
+  end
+
   protected
 
   def self.by_city(city)
@@ -36,7 +44,4 @@ class Organization < ApplicationRecord
     orgtype.present? ? where(orgtype: orgtype) : all
   end
 
-  def full_street_address
-    "#{self.address}#{self.suite? ? ' ' + self.suite : ''} #{self.postal} #{self.city} #{self.province}"
-  end
 end

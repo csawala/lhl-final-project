@@ -37,6 +37,8 @@ class OrganizationsController < ApplicationController
       @cards
     else return
     end
+
+    @google_url = "https://www.google.com/maps/embed/v1/place?key=#{ ENV['GOOGLE_API_KEY'] }&q=#{ @org.google_address }"
   end
 
   private

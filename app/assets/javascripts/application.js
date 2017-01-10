@@ -14,6 +14,3 @@
 //= require jquery_ujs
 //= require_tree .
 
-// Google Maps requirements:
-//= require underscore
-//= require gmaps/google
