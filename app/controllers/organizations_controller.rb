@@ -37,12 +37,6 @@ class OrganizationsController < ApplicationController
       @cards
     else return
     end
-
-    # if @offers = @org.goods_types_organizations
-    #                  .where(offers: true, active: true)
-    #   @offers
-    # else return
-    # end
   end
 
   private

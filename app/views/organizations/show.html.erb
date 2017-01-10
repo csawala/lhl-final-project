@@ -3,6 +3,25 @@
 
   <div class="divider"></div>
   <div class="col s12">
+    <div class="col s12 l6">
+      <h4 id="org-name"><%= @org.name %></h4>
+
+      <% if @org.description %>
+        <p><%= @org.description %></p>
+      <% end %>
+
+      <div class="divider"></div>
+
+      <%= render 'org_contact' %>
+      <div class="col s12" id="map-container">
+        <div id="map"
+             data-longitude="<%= @org.longitude %>"
+             data-latitude="<%= @org.latitude %>"
+             data-org-name="<%= @org.name %>"
+        ></div>
+      </div>
+
+    </div>
     <% if @cards.size > 0 %>
 
       <div class="col s12 l6">
@@ -14,40 +33,23 @@
       <div class="cards-placeholder"></div>
 
     <% end %>
-    <div class="col s12 l6">
-      <h4><%= @org.name %></h4>
-
-      <% if @org.description %>
-        <p><%= @org.description %></p>
-      <% end %>
-
-      <div class="divider"></div>
-
-      <%= render 'org_contact' %>
-      <div class="col s12" id="map-container">
-        <div id="map"></div>
-      </div>
-
-    </div>
   </div>
 </div>
 
 <script>
+  // init google map element
   handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  handler.buildMap({ provider: { maxZoom: 16 }, internal: {id: 'map'}}, function(){
+    const mapDiv = $('#map');
     markers = handler.addMarkers([
       {
-        "lat": 0,
-        "lng": 0,
-        "picture": {
-          "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-          "width":  32,
-          "height": 32
-        },
-        "infowindow": "hello!"
+        "lat": mapDiv.data('latitude'),
+        "lng": mapDiv.data('longitude'),
+        "infowindow": mapDiv.data('org-name'),
       }
     ]);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
   });
+
 </script>

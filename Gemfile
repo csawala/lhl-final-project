@@ -46,6 +46,7 @@ gem 'flexbox-rails'
 
 # Maps
 gem 'gmaps4rails'
+gem 'geocoder'
 gem 'underscore-rails'
 
 # Authentication & security

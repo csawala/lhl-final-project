@@ -83,6 +83,7 @@ GEM
       rails (>= 3.1)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
@@ -228,6 +229,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   flexbox-rails
   font-awesome-rails
+  geocoder
   gmaps4rails
   jbuilder (~> 2.5)
   jquery-rails
