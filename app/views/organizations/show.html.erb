@@ -3,22 +3,22 @@
 
   <div class="divider"></div>
   <div class="col s12">
+    <!-- organization details -->
     <div class="col s12 l6">
       <h4 id="org-name"><%= @org.name %></h4>
 
       <% if @org.description %>
+
         <p><%= @org.description %></p>
+        <div class="divider"></div>
+
       <% end %>
 
-      <div class="divider"></div>
-
       <%= render 'org_contact' %>
+
+      <!-- Google Map -->
       <div class="col s12" id="map-container">
-        <div id="map"
-             data-longitude="<%= @org.longitude %>"
-             data-latitude="<%= @org.latitude %>"
-             data-org-name="<%= @org.name %>"
-        >
+        <div id="map">
           <iframe
             width="100%"
             height="100%"
@@ -26,38 +26,20 @@
             style="border:0"
             src="<%= @google_url %>" allowfullscreen>
           </iframe>
-
         </div>
       </div>
-
     </div>
+    <!-- render needs/offers cards -->
     <% if @cards.size > 0 %>
 
-      <div class="col s12 l6">
+      <div class="top-offset col s12 l6">
         <%= render 'org_cards' %>
       </div>
 
     <% else %>
 
-      <div class="cards-placeholder"></div>
+      <div class="cards-placeholder top-offset"></div>
 
     <% end %>
   </div>
 </div>
-
-<script>
-  // init google map element
-  // handler = Gmaps.build('Google');
-  // handler.buildMap({ provider: { maxZoom: 16 }, internal: {id: 'map'}}, function(){
-  //   const mapDiv = $('#map');
-  //   markers = handler.addMarkers([
-  //     {
-  //       "lat": mapDiv.data('latitude'),
-  //       "lng": mapDiv.data('longitude'),
-  //       "infowindow": mapDiv.data('org-name'),
-  //     }
-  //   ]);
-  //   handler.bounds.extendWith(markers);
-  //   handler.fitMapToBounds();
-  // });
-</script>

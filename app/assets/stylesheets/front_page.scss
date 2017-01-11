@@ -11,21 +11,9 @@ div.row {
 #form-carousel {
   height: 500px;
 }
-
 .carousel .carousel-item {
   padding-top: 4em;
   height:500px !important;
-}
-
-#radio_buttons_goodstype_select {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
-  justify-content: center;
-}
-
-#label_for_offers {
-  padding-right: 1em;
 }
 
 // CSS for Parallax homepage
@@ -34,12 +22,12 @@ div.row {
   width: 100vw;
 }
 
-#text_overlay_homepage {
+#text-overlay-homepage {
   margin-top: 8em;
   margin-left: 2em;
 }
 
-#homepage_title_text {
+#homepage-title-text {
   padding: 1em;
 }
 
@@ -66,57 +54,42 @@ div.row {
   margin-right: 4em;
   margin-top: 2em;
 }
-
-#slide2-div {
-  margin-top: 8em;
-}
-
-#slide3-div {
-  margin-top: 8em;
-}
-
-#slide6-div {
-  margin-top: 8em;
-}
-
+#slide2-div,
+#slide3-div,
+#slide6-div,
 #slide7-div {
-  padding-top: 3.5em;
+  margin-top: 8em;
 }
 
 #slide-1-title {
   align: center;
   padding-top: 2.5em;
 }
-
-#slide-4-title {
-  padding-top: 3.5em;
-}
-
+#slide-4-title,
 #slide-5-title {
   padding-top: 3.5em;
 }
-
-
 div.carousel.carousel-slider.center {
   width: 100vw;
 }
-
 .btn.waves-effect.waves-light.homepage.steps {
   margin: 0.5em;
 }
-
 div.col.s4.homepage-steps {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
+// 'meet the team' images
 .circle.responsive-img.homepage-team-images {
   height: 60%;
   width: 60%;
 }
-
+// carousel select menu
 .select-dropdown{
     overflow: auto !important;
+}
+h5.flash-notice {
+  color: orange;
 }

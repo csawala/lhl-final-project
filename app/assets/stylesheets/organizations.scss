@@ -5,6 +5,9 @@ div.row.org-container {
   width: 85vw;
   margin-left: 7.5vw;
   margin-right: 7.5vw;
+  div.top-offset {
+    margin-top: 15px;
+  }
 }
 div.card.medium {
   word-wrap: break-word;

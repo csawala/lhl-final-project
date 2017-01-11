@@ -1,5 +1,4 @@
 <%# contact details formatted%>
-<h5>contact</h5>
 <p>
   <% if @org.email %>
 
@@ -12,6 +11,7 @@
 
   <%= number_to_phone(@org.primaryphone, area_code: true) %>
   <% if @org.secondaryphone %>
+
     <br>
     <i class="tiny material-icons">phone</i>
     <%= number_to_phone(@org.secondaryphone, area_code: true) %>
@@ -20,7 +20,8 @@
   <br>
   <br>
 
-  <%= @org.address %><%= @org.suite.present? ? ', ' + @org.suite : nil %><br>
+  <%= @org.address %><%= @org.suite.present? ? ', ' + @org.suite : nil %>
+  <br>
   <%= "#{@org.city}, #{@org.province}"%><br>
   <%= @org.postal %><br>
 </p>

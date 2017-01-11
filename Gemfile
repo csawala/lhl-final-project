@@ -45,8 +45,10 @@ gem 'materialize-sass'
 gem 'flexbox-rails'
 
 # Maps
-# gem 'gmaps4rails'
 gem 'geocoder'
+# Next 2 gems for gmaps if/when using JS API
+# ...lat/long included in organizations model
+# gem 'gmaps4rails'
 # gem 'underscore-rails'
 
 # Authentication & security
