@@ -67,7 +67,14 @@
 
               <h5 class="center-align">
                 Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card
-                <%= link_to (fa_icon "ban") + ' cancel', dashboard_path, id: "cancel-btn" %>
+                <%= link_to dashboard_path,
+                    class: "btn-floating tooltipped btn-small waves-effect waves-light red",
+                        "data-position": "left",
+                        "data-delay": "50",
+                        "data-tooltip": "Cancel Edit",
+                    id: "cancel-btn" do %>
+                  <i class="material-icons">not_interested</i>
+                <% end %>
               </h5>
               <%= render partial: 'edit_card' %>
 
