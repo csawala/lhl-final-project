@@ -77,12 +77,14 @@ a#toggle-new-offer-button:hover {
   color: crimson;
   background-color: white;
 }
-a#cancel-btn {
-  position: absolute;
-  right: 14%;
-  // font-size: .7em;
-  // color: crimson;
+
+.submit-btn,
+.submit-btn:hover {
+  transition: all 0.2s ease 0s;
 }
-a#cancel-btn:hover {
-  // color: gray;
+.submit-btn {
+  background-color: #c8e6c9;
+}
+.submit-btn:hover {
+  background-color: #a5d6a7;
 }
