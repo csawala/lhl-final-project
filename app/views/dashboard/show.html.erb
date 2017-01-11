@@ -64,9 +64,10 @@
             <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
 
               <%= hidden_field_tag(:type, @edit_card.needs ? 'needs' : 'offers')%>
-
-              <h5 class="center-align">
-                Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card
+              <div class="col s10 m11 l11 center-align">
+                <h5>Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
+              </div>
+              <div class="col s2 m1 l1 right-align">
                 <%= link_to dashboard_path,
                     class: "btn-floating tooltipped btn-small waves-effect waves-light red",
                         "data-position": "left",
@@ -75,7 +76,7 @@
                     id: "cancel-btn" do %>
                   <i class="material-icons">not_interested</i>
                 <% end %>
-              </h5>
+              </div>
               <%= render partial: 'edit_card' %>
 
             <% end %>
