@@ -11,6 +11,7 @@ const highlightFilterButton = () => {
 
   $sortButtons.each((_, button) => {
     let filterText = button.value.split(' ').join('+')
+
     if (searchURL.includes(`=${filterText}`)) {
       swapColourClass($(button), 'i')
     }
@@ -22,10 +23,15 @@ const highlightFilterButton = () => {
 
 window.onload = () => {
   // fix inaction when clicking outside of Materialize button text
-  $('i.cause-search').on('click', (e) => {
+  $('i.filter-btn').on('click', (e) => {
     $(e.target).children('input').click()
   })
 
+  $('#urgent').on('click', (e) => {
+    e.preventDefault()
+
+
+  })
   highlightFilterButton()
 
 }

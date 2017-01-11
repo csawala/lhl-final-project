@@ -30,12 +30,6 @@ class GoodsTypesOrganization < ApplicationRecord
     self.urgent ||= false
   end
 
-  def self.updatecard(card_id, params)
-    # something like (works in rails console!):
-    @org.goods_types_organizations.find(card_id)
-    # @card.active ? @card.active = false : @card.active = true
-  end
-
   def self.create_with_params(params)
     @new_card = self.new
     # params[:type] is either 'offers' or 'needs'
@@ -50,7 +44,15 @@ class GoodsTypesOrganization < ApplicationRecord
   def self.filter_by_params(params)
     return all unless params.present?
 
+    byebug
     by_goods_types(params[:goods_types], params[:exclude])
+      .by_urgent(params[:urgent])
+  end
+
+  def self.by_urgent(urgent)
+    return all unless urgent.present?
+
+    where(urgent: true)
   end
 
   def self.by_goods_types(types, org_id)
