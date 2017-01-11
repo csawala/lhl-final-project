@@ -6,15 +6,38 @@
     <%= hidden_field_tag(:card_id, @edit_card.id)%>
 
     <p class="center-align">
-      <input type="checkbox"
-             class="toggle-active"
-             name="setactive"
-             style="font-size: 1.5em"
-      />
-      <label for="setactive"
-             class="toggle-active">
-        Make card <%= @edit_card.active ? 'in' : ''%>active
-      </label>
+      <!-- ACTIVE toggle -->
+      <span>
+        <input type="checkbox"
+               class="toggle-active"
+               name="setactive"
+               style="font-size: 1.5em"
+        />
+
+        <label for="setactive"
+               class="toggle-active form-toggle">
+          Make card <%= @edit_card.active ? 'in' : ''%>active
+        </label>
+      </span>
+      <!-- URGENT toggle -->
+      <% if @edit_card.needs %>
+        <span>
+          <input type="checkbox"
+                 class="toggle-active form-toggle"
+                 name="seturgent"
+                 style="font-size: 1.5em"
+          />
+
+          <label for="seturgent" class="toggle-urgent form-toggle">
+            <% if @edit_card.urgent? %>
+              Mark not urgent
+            <% else %>
+              Mark urgent
+              <i class="material-icons tiny urgent">error</i>
+            <% end %>
+          </label>
+        </span>
+      <% end %>
     </p>
 
     <p><strong><em>Type:</em></strong></p>
@@ -27,21 +50,7 @@
       value: "#{@edit_card.description}"})
     %>
 
-    <!-- Submit Button -->
-    <div class="col s12 light-green lighten-4">
-      <div class="col s1 offset-s11">
-        <%= button_tag(method: "submit",
-                       class: "btn-floating tooltipped btn-small waves-effect waves-light green",
-                       "data-position": "left",
-                       "data-delay":    "50",
-                       "data-tooltip":  "Save Card") do %>
-
-          <i class="material-icons">done</i>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'form_submit_button' %>
 
   </div>
-  <!-- delete here -->
-  <!-- active toggle here -->
 </div>

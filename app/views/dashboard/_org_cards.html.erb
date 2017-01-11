@@ -18,7 +18,13 @@
     <% end %>
 
     <%# CARD information %>
-    <p><strong><em><%= card.goods_type.name %></em></strong></p>
+    <p>
+      <strong><em><%= card.goods_type.name %></em></strong>
+
+      <% if card.urgent? && card.active? %>
+        <i class="material-icons tiny urgent">error</i>
+      <% end %>
+    </p>
     <p><%= card.description %></p>
 
     <!-- show match number with URL if the card is 'active' -->

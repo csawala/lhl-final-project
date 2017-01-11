@@ -1,17 +1,30 @@
 <% @needs.each do |card| %>
   <div class="col s12 l6">
-    <div class="card needs hoverable <%= @org && card.organization.id == @org ? 'highlight-need' : '' %>">
+    <div class="card needs hoverable
+               <%= @org && card.organization.id == @org ? 'highlight-need' : '' %>
+               <%= card.urgent ? 'highlight-urgent' : '' %>">
+
       <div class="card-content white-text">
         <span class="card-title">
           <%= card.organization.name %>
         </span>
         <p><%= card.description %></p>
+        <% if card.urgent %>
+
+          <i class="material-icons urgent">error</i>
+
+        <% end %>
       </div>
+
       <div class="card-action valign-wrapper">
         <% if @org && card.organization.id == @org %>
+
           <%= link_to('edit in your dashboard', "/cards/#{card.id}") %>
+
         <% else %>
+
           <%= link_to('contact', organization_path(card.organization_id)) %>
+
         <% end %>
 
         <p class="needs-offers-type">

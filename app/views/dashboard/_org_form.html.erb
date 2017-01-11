@@ -92,16 +92,7 @@
     </div>
 
     <!-- Save Button -->
-    <div class="col s12 light-green lighten-4">
-      <div class="col s1 offset-s11">
-        <%= button_tag(method: "submit",
-                       class: "btn-floating tooltipped btn-small waves-effect waves-light green",
-                        "data-position": "left",
-                        "data-delay": "50",
-                        "data-tooltip": "Save Organization Info") do %>
-          <i class="material-icons">done</i>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'form_submit_button' %>
+
   <% end %>
 </div>

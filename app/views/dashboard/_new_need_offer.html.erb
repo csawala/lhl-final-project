@@ -2,6 +2,17 @@
 
   <%= hidden_field_tag(:org_id, @org.id)%>
 
+  <p class="center-align">
+    <input type="checkbox"
+           class="toggle-active"
+           name="seturgent"
+           style="font-size: 1.5em"
+    />
+    <label for="seturgent" class="toggle-urgent">Mark urgent
+    <i class="material-icons tiny urgent">error</i>
+</label>
+  </p>
+
   <!-- Type selector -->
   <p><strong><em>Type:</em></strong></p>
   <%= select_tag(:goods_type, options_for_select(@goods_types)) %>
@@ -14,17 +25,6 @@
     placeholder: "Please add a clear description"})
   %>
 
-  <!-- Submit Button -->
-  <div class="col s12 light-green lighten-4">
-    <div class="col s1 offset-s11">
-      <%= button_tag(method: "submit",
-                     class: "btn-floating tooltipped btn-small waves-effect waves-light green",
-                     "data-position": "left",
-                     "data-delay":    "50",
-                     "data-tooltip":  "Save Card") do %>
-        <i class="material-icons">done</i>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'form_submit_button' %>
 
 </div>

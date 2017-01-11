@@ -60,6 +60,10 @@ $(document).ready(() => {
   $('label.toggle-active').on('click', function(e) {
     toggleActiveCheckbox($(this).siblings('input'))
   })
+  // handle checkbox for urgent toggle
+  $('label.toggle-urgent').on('click', function(e) {
+    toggleActiveCheckbox($(this).siblings('input'))
+  })
 
   toggleCardEditButtonVisibility()
   showCardEditor()
@@ -67,10 +71,12 @@ $(document).ready(() => {
   // --- Form button handlers ---
   $( "#toggle-new-need-button" ).on('click', () => {
     toggleEditor($('#toggle-new-need'))
+    $('label.toggle-urgent').show()
   })
 
   $( "#toggle-new-offer-button" ).on('click', () => {
     toggleEditor($('#toggle-new-offer'))
+    $('label.toggle-urgent').hide()
   })
 
   $( "#toggle-org-form-button" ).on('click', () => {
