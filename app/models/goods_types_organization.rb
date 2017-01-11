@@ -44,7 +44,7 @@ class GoodsTypesOrganization < ApplicationRecord
   def self.filter_by_params(params)
     return all unless params.present?
 
-    byebug
+    # byebug
     by_goods_types(params[:goods_types], params[:exclude])
       .by_urgent(params[:urgent])
   end

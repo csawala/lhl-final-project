@@ -18,6 +18,15 @@ div.card.needs {
   }
 }
 // ---- NEEDS ----
+.card.highlight-urgent {
+  border: 3px solid #673ab7;
+  i.urgent {
+    color: #673ab7;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
 .card.highlight-need {
   border: 3px solid orange;
 }

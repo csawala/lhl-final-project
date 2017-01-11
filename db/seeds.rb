@@ -470,6 +470,7 @@ puts "Re-creating organizations' goods data"
 org1.goods_types_organizations.create!({
   goods_type_id: 7,
   needs: true,
+  urgent: true,
   description: 'We are always looking for adults to donate to our blood bank'
 })
 org2.goods_types_organizations.create!({
@@ -510,6 +511,7 @@ org3.goods_types_organizations.create!({
 org4.goods_types_organizations.create!({
   goods_type_id: 7,
   needs: true,
+  urgent: true,
   description: 'Contribute to your community by connecting to families who need your support'
 })
 org4.goods_types_organizations.create!({
@@ -557,7 +559,8 @@ org6.goods_types_organizations.create!({
 org6.goods_types_organizations.create!({
   goods_type_id: 7,
   needs: true,
-  description: 'We need help walking dogs, petting cats & rats, and cuddling bunnies. Really!'
+  urgent: true,
+  description: 'We desperately need help walking dogs, petting cats & rats, and cuddling bunnies. Really!'
 })
 org6.goods_types_organizations.create!({
   goods_type_id: 10,
@@ -587,7 +590,8 @@ org7.goods_types_organizations.create!({
 org8.goods_types_organizations.create!({
   goods_type_id: 10,
   needs: true,
-  description: 'Sponsor a child in need today - making a difference is easy'
+  urgent: true,
+  description: 'Sponsor a child in need today - making a difference is easy and thousands of kids need your help'
 })
 org8.goods_types_organizations.create!({
   goods_type_id: 7,
@@ -612,6 +616,7 @@ org9.goods_types_organizations.create!({
 org9.goods_types_organizations.create!({
   goods_type_id: 9,
   needs: true,
+  urgent: true,
   description: 'Help with our 50/50 ticket program at the Air Canada Centre, get free pizza and watch the 3rd period of the Leafs game!'
 })
 org10.goods_types_organizations.create!({
@@ -642,7 +647,7 @@ org13.goods_types_organizations.create!({
 org13.goods_types_organizations.create!({
   goods_type_id: 3,
   offers: true,
-  description: 'Several pieces of quality furniture made lovingly by the good folks of Carpenters Local - also open to new projects if there is a specific need, please contact'
+  description: 'We have some furniture made lovingly by the good folks of Carpenters Local - also open to new projects if there is a specific need, please contact'
 })
 org13.goods_types_organizations.create!({
   goods_type_id: 1,

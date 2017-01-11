@@ -12,7 +12,7 @@ const highlightFilterButton = () => {
   $sortButtons.each((_, button) => {
     let filterText = button.value.split(' ').join('+')
 
-    if (searchURL.includes(`=${filterText}`)) {
+    if (searchURL.includes(`${filterText}`)) {
       swapColourClass($(button), 'i')
     }
     else if (!searchURL) {
@@ -27,11 +27,13 @@ window.onload = () => {
     $(e.target).children('input').click()
   })
 
-  $('#urgent').on('click', (e) => {
-    e.preventDefault()
+  // $('#urgent').on('click', (e) => {
+  //   e.preventDefault()
 
-
-  })
+  //   console.log(window.location.search)
+  //   window.location += "&urgent=true"
+  //   swapColourClass($('#urgent'), 'i')
+  // })
   highlightFilterButton()
 
 }
