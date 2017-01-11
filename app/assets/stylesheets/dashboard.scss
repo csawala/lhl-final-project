@@ -1,6 +1,5 @@
 main.container
 section.org-show {
-
   width: 100vw;
   padding-top: 2em;
 
@@ -33,7 +32,6 @@ section.org-show {
       font-size: 115%;
     }
   }
-
   li.card {
     height: 105px;
     a {
@@ -49,11 +47,15 @@ section.org-show {
     padding-right: .5em
   }
 }
-
+label.form-toggle {
+  margin-right: 20px;
+}
 i.edit-btn:hover {
   cursor: pointer;
 }
-
+i.urgent {
+  color: #673ab7;
+}
 a#toggle-org-form-button {
   background-color: #3165D7;
 }

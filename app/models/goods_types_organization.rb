@@ -34,9 +34,11 @@ class GoodsTypesOrganization < ApplicationRecord
     @new_card = self.new
     # params[:type] is either 'offers' or 'needs'
     @new_card[params[:type]]  = true
+
     @new_card.organization_id = params[:org_id]
     @new_card.goods_type_id   = params[:goods_type].to_i
     @new_card.description     = params[:description]
+    @new_card.urgent          = params[:setactive] ? true : false
 
     @new_card
   end
@@ -44,7 +46,6 @@ class GoodsTypesOrganization < ApplicationRecord
   def self.filter_by_params(params)
     return all unless params.present?
 
-    # byebug
     by_goods_types(params[:goods_types], params[:exclude])
       .by_urgent(params[:urgent])
   end
