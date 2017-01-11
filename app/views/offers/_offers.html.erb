@@ -8,9 +8,9 @@
         </span>
         <p><%= card.description %></p>
       </div>
-      <div class="card-action valign-wrapper">
+      <div class="card-action red-text valign-wrapper">
         <% if @org && card.organization.id == @org %>
-          <%= link_to('edit in your dashboard', "/cards/#{card.id}", style: 'color: #F46176') %>
+          <%= link_to('edit in your dashboard', "/cards/#{card.id}", class: "red-text") %>
         <% else %>
         <%= link_to('contact', organization_path(card.organization_id), style: 'color: #F46176') %>
         <% end %>

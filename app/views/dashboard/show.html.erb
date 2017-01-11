@@ -33,8 +33,8 @@
       <div class="toggle-hide" id="toggle-new-need">
         <div class="row dashboard-form">
           <%= form_tag(cards_path) do %>
-
             <%= hidden_field_tag(:type, 'needs')%>
+
             <h5 class="center-align">What are you in need of?</h5>
 
             <%= render partial: 'new_need_offer' %>
@@ -60,25 +60,11 @@
 
         <div class="toggle-hide" id="toggle-edit-card">
           <div class="row dashboard-form">
-
             <%= form_tag("/cards/#{@edit_card.id}", method: 'patch') do %>
 
               <%= hidden_field_tag(:type, @edit_card.needs ? 'needs' : 'offers')%>
-              <div class="col s10 m11 l11 center-align">
-                <h5>Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
-              </div>
-              <div class="col s2 m1 l1 right-align">
-                <%= link_to dashboard_path,
-                    class: "btn-floating tooltipped btn-small waves-effect waves-light red",
-                        "data-position": "left",
-                        "data-delay": "50",
-                        "data-tooltip": "Cancel Edit",
-                    id: "cancel-btn" do %>
-                  <i class="material-icons">not_interested</i>
-                <% end %>
-              </div>
-              <%= render partial: 'edit_card' %>
 
+              <%= render partial: 'edit_card' %>
             <% end %>
           </div>
         </div>

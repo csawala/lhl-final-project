@@ -8,6 +8,11 @@ section.org-show {
     width: 81vw;
     margin: auto;
     padding: 5px;
+    div.cancel-btn {
+      position: absolute;
+      right: 11vw;
+
+    }
   }
   .org-edit {
     .org-image {

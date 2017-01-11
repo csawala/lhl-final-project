@@ -69,6 +69,7 @@ $(document).ready(() => {
   showCardEditor()
 
   // --- Form button handlers ---
+
   $( "#toggle-new-need-button" ).on('click', () => {
     toggleEditor($('#toggle-new-need'))
     $('label.toggle-urgent').show()
