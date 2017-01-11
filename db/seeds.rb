@@ -527,6 +527,7 @@ org5.goods_types_organizations.create!({
 org5.goods_types_organizations.create!({
   goods_type_id: 10,
   needs: true,
+  urgent: true,
   description: 'Your donations are used to help feed families in need'
 })
 org5.goods_types_organizations.create!({
