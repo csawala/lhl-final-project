@@ -20,11 +20,6 @@ div.card.needs {
 // ---- NEEDS ----
 .card.highlight-urgent {
   border: 3px solid #673ab7;
-  i.urgent {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
 }
 .card.highlight-need {
   border: 3px solid orange;
@@ -35,6 +30,11 @@ div.card.needs {
     background-color: #4B8656;
     height: 30px;
   }
+}
+i.urgent {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 // ---- OFFERS ----
 .highlight-offer {

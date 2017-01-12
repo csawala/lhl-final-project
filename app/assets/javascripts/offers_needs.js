@@ -12,7 +12,7 @@ const highlightFilterButton = () => {
   $sortButtons.each((_, button) => {
     let filterText = button.value.split(' ').join('+')
 
-    if (searchURL.includes(`${filterText}`)) {
+    if (searchURL.includes(`=${filterText}`)) {
       swapColourClass($(button), 'i')
     }
     else if (!searchURL) {

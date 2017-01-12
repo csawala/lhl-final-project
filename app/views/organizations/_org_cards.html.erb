@@ -1,7 +1,8 @@
 <% @cards.each do |card| %>
 
   <div class="col s12">
-    <div class="card <%= card.needs ? 'needs' : 'offers' %>">
+    <div class="card <%= card.needs ? 'needs' : 'offers' %>
+                <%= card.urgent ? 'highlight-urgent' : '' %>">
       <div class="card-content white-text">
         <p class="needs-offers-type">
           <i class="tiny material-icons circle
@@ -13,6 +14,11 @@
         </p>
         <br>
         <p><%= card.description %></p>
+        <% if card.urgent %>
+
+          <i class="material-icons urgent">error</i>
+
+        <% end %>
       </div>
     </div>
   </div>
