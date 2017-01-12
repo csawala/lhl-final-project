@@ -44,6 +44,17 @@ const showCardEditor = () => {
   if (editPath) toggleEditor($('#toggle-edit-card'))
 }
 
+const cancelButtonHandler = () => {
+  $('a#cancel-btn').on('click', function(e) {
+    e.preventDefault()
+    let $form = $(this).closest('div.toggle-hide')
+
+    if ($form[0] === $('#toggle-edit-card')[0]) {
+      return toggleEditorWithRedirect($(this).closest('div.toggle-hide'), '/dashboard')
+    }
+    toggleEditor($form)
+  })
+}
 
 $(document).ready(() => {
 
@@ -67,6 +78,7 @@ $(document).ready(() => {
 
   toggleCardEditButtonVisibility()
   showCardEditor()
+  cancelButtonHandler()
 
   // --- Form button handlers ---
   $( "#toggle-new-need-button" ).on('click', () => {
@@ -81,12 +93,6 @@ $(document).ready(() => {
 
   $( "#toggle-org-form-button" ).on('click', () => {
     toggleEditor($('#toggle-org-form'))
-  })
-
-  // --- Edit Card Cancel Button ---
-  $('a#cancel-btn').on('click', (e) => {
-    e.preventDefault()
-    toggleEditorWithRedirect($('#toggle-edit-card'), '/dashboard')
   })
 
 })
