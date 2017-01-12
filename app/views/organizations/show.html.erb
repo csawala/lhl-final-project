@@ -10,9 +10,13 @@
       <% if @org.description %>
 
         <p><%= @org.description %></p>
-        <div class="divider"></div>
 
       <% end %>
+
+      <p>
+        <%= link_to 'Website', @org.url %>
+      </p>
+      <div class="divider"></div>
 
       <%= render 'org_contact' %>
 
