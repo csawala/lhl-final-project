@@ -93,3 +93,8 @@ div.col.s4.homepage-steps {
 h5.flash-notice {
   color: orange;
 }
+.homepage-steps > p > a {
+  text-decoration: none;
+  font-style: italic;
+  color: black;
+}
