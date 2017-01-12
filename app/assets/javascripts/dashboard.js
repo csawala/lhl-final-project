@@ -44,6 +44,16 @@ const showCardEditor = () => {
   if (editPath) toggleEditor($('#toggle-edit-card'))
 }
 
+const cancelEditBtnHover = () => {
+  $('#cancel-btn').hover(
+    function() {
+      $('#toggle-edit-card div.dashboard-form').addClass('cancelEditBtnHover')
+    }, function() {
+      $('#toggle-edit-card div.dashboard-form').removeClass('cancelEditBtnHover')
+  })
+}
+
+
 
 $(document).ready(() => {
 
@@ -83,9 +93,11 @@ $(document).ready(() => {
     toggleEditor($('#toggle-org-form'))
   })
 
+  // --- Edit Card Cancel Button ---
   $('a#cancel-btn').on('click', (e) => {
     e.preventDefault()
     toggleEditorWithRedirect($('#toggle-edit-card'), '/dashboard')
   })
+  cancelEditBtnHover()
 
 })
