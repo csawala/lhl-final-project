@@ -1,17 +1,7 @@
 <div class="center-align">
   <!-- cancel button -->
-  <div class="cancel-btn right-align">
-    <%= link_to dashboard_path,
-        class: "btn-floating tooltipped btn-small waves-effect waves-light red",
-            "data-position": "left",
-            "data-delay": "50",
-            "data-tooltip": "Cancel Edit",
-        id: "cancel-btn" do %>
-      <i class="material-icons">not_interested</i>
-    <% end %>
-  </div>
-  <!-- title -->
   <h5>Edit your <%= @edit_card.needs ? 'need' : 'offer' %> card</h5>
+  <!-- title -->
 </div>
 
 <div class="card-edit">

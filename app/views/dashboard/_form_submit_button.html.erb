@@ -1,10 +1,22 @@
-<div class="col s12 submit-btn">
+<!-- CANCEL -->
+<div class="col s3 submit-bar cancel-btn">
+  <%= link_to dashboard_path,
+      class: "btn-floating tooltipped btn-small waves-effect waves-light red",
+          "data-position": "right",
+          "data-delay": "50",
+          "data-tooltip": "Cancel",
+      id: "cancel-btn" do %>
+    <i class="material-icons">not_interested</i>
+  <% end %>
+</div>
+<!-- SUBMIT -->
+<div class="col s9 submit-bar submit-btn">
   <div class="right-align">
     <%= button_tag(method: "submit",
                    class: "btn-floating tooltipped btn-small waves-effect waves-light green darken-3",
                    "data-position": "left",
                    "data-delay":    "50",
-                   "data-tooltip":  "Save Card") do %>
+                   "data-tooltip":  "Save") do %>
       <i class="material-icons">done</i>
     <% end %>
   </div>

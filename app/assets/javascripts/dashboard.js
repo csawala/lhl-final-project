@@ -44,16 +44,6 @@ const showCardEditor = () => {
   if (editPath) toggleEditor($('#toggle-edit-card'))
 }
 
-const cancelEditBtnHover = () => {
-  $('#cancel-btn').hover(
-    function() {
-      $('#toggle-edit-card div.dashboard-form').addClass('cancelEditBtnHover')
-    }, function() {
-      $('#toggle-edit-card div.dashboard-form').removeClass('cancelEditBtnHover')
-  })
-}
-
-
 
 $(document).ready(() => {
 
@@ -98,6 +88,5 @@ $(document).ready(() => {
     e.preventDefault()
     toggleEditorWithRedirect($('#toggle-edit-card'), '/dashboard')
   })
-  cancelEditBtnHover()
 
 })

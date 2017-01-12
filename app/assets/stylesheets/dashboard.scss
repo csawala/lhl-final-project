@@ -8,11 +8,6 @@ section.org-show {
     width: 81vw;
     margin: auto;
     padding: 5px;
-    div.cancel-btn {
-      position: absolute;
-      right: 11vw;
-
-    }
   }
   .org-edit {
     .org-image {
@@ -83,8 +78,8 @@ a#toggle-new-offer-button:hover {
   background-color: white;
 }
 
-.submit-btn,
-.submit-btn:hover {
+.submit-bar,
+.submit-bar:hover {
   transition: all 0.2s ease 0s;
 }
 .submit-btn {
@@ -93,7 +88,12 @@ a#toggle-new-offer-button:hover {
 .submit-btn:hover {
   background-color: #a5d6a7;
 }
-
+.cancel-btn {
+  background-color: #ffcdd2;
+}
+.cancel-btn:hover {
+  background-color: #ef9a9a;
+}
 .cancelEditBtnHover {
   background-color: #FFF7F8;
   transition: all 0.3s ease 0.1s;
