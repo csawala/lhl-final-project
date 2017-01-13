@@ -10,19 +10,18 @@ A community-focussed app that helps connect charities in need with businesses an
 - leveraging ERB partials and SASS for DRY & modular HTML/CSS code
 ***
 
-* #### Bright, colourful front page designed to get you quickly to what you're looking for
+#### Bright, colourful front page designed to get you quickly to what you're looking for
 ![front page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/front-page.png)
 ***
 
-* #### Contact a charity or business with minimal navigation
+#### Contact a charity or business with minimal navigation
 ![organization contact](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/contact.png)
 ***
 
-* #### Needs and offers pages show filterable cards
+#### Needs and offers pages show filterable cards
 ![needs page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/needs.png)
 ***
 
 
-* #### Organization dashboard allows easy creation / editing of cards or modification of info
+#### Organization dashboard allows easy creation / editing of cards or modification of info
 ![organization dashboard](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/dashboard.png)
-***
