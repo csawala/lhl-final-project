@@ -15,14 +15,14 @@ A community-focussed app that helps connect charities in need with businesses an
 ***
 
 * #### Contact a charity or business with minimal navigation
-![front page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/contact.png)
+![organization contact](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/contact.png)
 ***
 
 * #### Needs and offers pages show filterable cards
-![front page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/needs.png)
+![needs page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/needs.png)
 ***
 
 
 * #### Organization dashboard allows easy creation / editing of cards or modification of info
-![front page](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/dashboard.png)
+![organization dashboard](https://raw.githubusercontent.com/csawala/lhl-final-project/demo/demo-images/dashboard.png)
 ***
